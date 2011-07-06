@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Core C# and .NET</name>
+        <author>Stephen C. Perry</author>
+        <website>http://digilife.be/</website>
+        <original_file>http://www.cheat-sheets.org/saved-copy/Core%20CSharp%20and%20.NET%20Quick%20Reference.pdf</original_file>
+    </info>
+    <section title="Data Types">
+        <item>
+            <text><bold>Primitive</bold></text>
+            <text pos="right"><bold>Size</bold></text>
+        </item>
+        <item>
+            <text><code>string</code></text>
+            <text pos="right">2 bytes/char</text>
+            <text pos="bottom"><light>s = "reference";</light></text>
+        </item>
+        <item>
+            <text><code>bool</code></text>
+            <text pos="bottom"><light>b = true;</light></text>
+        </item>
+        <item>
+            <text><code>char</code></text>
+            <text pos="right">2 bytes</text>
+            <text pos="bottom"><light>ch = 'a';</light></text>
+        </item>
+        <item>
+            <text><code>byte</code></text>
+            <text pos="right">1 byte</text>
+            <text pos="bottom"><light>b = 0x78;</light></text>
+        </item>
+        <item>
+            <text><code>short</code></text>
+            <text pos="right">2 bytes</text>
+            <text pos="bottom"><light>Ival = 54;</light></text>
+        </item>
+        <item>
+            <text><code>int</code></text>
+            <text pos="right">4 bytes</text>
+            <text pos="bottom"><light>Ival = 540;</light></text>
+        </item>
+        <item>
+            <text><code>long</code></text>
+            <text pos="right">8 bytes</text>
+            <text pos="bottom"><light>ival = 5400;</light></text>
+        </item>
+        <item>
+            <text><code>float</code></text>
+            <text pos="right">4 bytes</text>
+            <text pos="bottom"><light>val = 54.0F;</light></text>
+        </item>
+        <item>
+            <text><code>double</code></text>
+            <text pos="right">8 bytes</text>
+            <text pos="bottom"><light>val = 54.0D;</light></text>
+        </item>
+        <item>
+            <text><code>decimal</code></text>
+            <text pos="right">16 bytes</text>
+            <text pos="bottom"><light>val = 54.0M;</light></text>
+        </item>
+    </section>
+    <section title="Arrays">
+        <subsection title="Declaration">
+            <item>
+                <code>int[] numArray = {1903, 1907, 1910};</code>
+            </item>
+            <item>
+                <code>int[] numArray = new int[3];</code>
+            </item>
+            <item>
+                <text>3 rows and 2 columns int[ , ]</text>
+                <code pos="bottom">nums = {{1907, 1990}, {1904, 1986}, {1910, 1980}};</code>
+            </item>
+        </subsection>
+        <subsection title="Array Operations">
+            <item>
+                <text>sort ascending</text>
+                <code pos="bottom">Array.<bold>Sort</bold>(numArray);</code>
+            </item>
+            <item>
+                <text>Sort begins at element 4 and sorts 10 elements</text>
+                <code pos="bottom">Array.<bold>Sort</bold>(numArray, 4,10);</code>
+            </item>
+            <item>
+                <text>Use one array as a key and sort two arrays</text>
+                <code pos="bottom">
+                    string[] values = {"Cary", "Gary", "Barbara"};<br/>
+                    string[] keys = {"Grant", "Cooper", "Stanwyck"};<br/>
+                    Array.<bold>Sort</bold>(keys, values);
+                </code>
+            </item>
+            <item>
+                <text>Clear elements in array (array, 1<sup>st</sup> element, # elements)</text>
+                <code pos="bottom">Array.<bold>Clear</bold>(numArray, 0, numArray.Length);</code>
+            </item>
+            <item>
+                <text>Copy elements from one array to another</text>
+                <code pos="bottom">Array.<bold>Copy</bold>(src, target, numelements);</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="String Operations">
+        <item>
+            <code>String.<bold>Compare</bold>(stra, strb, case, ci)</code>
+            <text pos="bottom"><light>
+                bool case - true for case insensitive <br/>
+                ci - new CultureInfo("en-US") <br/>
+                returns: &lt;0 if a&lt;b,	0 if a=b, 1 if a&gt;b
+            </light></text>
+        </item>
+        <item>
+            <code>str.<bold>IndexOf</bold>(val, start, num)</code>
+            <text pos="bottom"><light>
+                val - string to search for <br/>
+                start - where to begin in string <br/>
+                num - number of chars to search <br/>
+                returns (-1) if no match.
+            </light></text>
+        </item>
+        <item>
+            <code><bold>LastIndexOf</bold></code>
+            <text pos="bottom"><light>Search from end of string.</light></text>
+        </item>
+        <item>
+            <code>newstr = oldstr.<bold>Replace</bold>("old","new");</code>
+        </item>
+        <item>
+            <code>
+                Char[] delim= {' ', ','};<br/>
+                string w = "Kim, Joanna Leslie";<br/>
+                <light>// create array with three names string[]</light> <br/>
+                names= w.<bold>Split</bold>(delim);
+            </code>
+        </item>
+        <item>
+            <code>
+                mystring.<bold>Substring</bold>(ndx, len) <br/>
+                string alpha = "abcdef";<br/>
+                <light>// returns "cdef"</light><br/>
+                string s= alpha.Substring(2);<br/>
+                <light>// returns "de"</light><br/>
+                s = alpha.Substring(3,2);
+            </code>
+        </item>
+        <item>
+            <text>Places selected characters in a string in a char array:</text>
+            <code pos="bottom">
+                String vowel = "aeiou"; <br/>
+                <light>// create array of 5 vowels char[] </light><br/>
+                c = vowel.ToCharArray(); <br/>
+                <light>// create array of 'i' and 'o'. </light><br/>
+                char[] c = vowel.ToCharArray(2,2);
+            </code>
+        </item>
+    </section>
+    <section title="StringBuilder">
+        <item>
+            <text><bold>System.Text.StringBuilder</bold></text>
+        </item>
+        <item>
+            <text>Constructor</text>
+            <code pos="bottom">
+                StringBuilder sb = new StringBuilder();<br/>
+                StringBuilder sb = new StringBuilder(mystring);<br/>
+                StringBuilder sb = new StringBuilder(mystring,capacity);
+            </code>
+        </item>
+        <item>
+            <code>mystring</code>
+            <text pos="right">Initial value of StringBuilder object</text>
+        </item>
+        <item>
+            <code>capacity</code>
+            <text pos="right">Initial size (characters) of buffer.</text>
+        </item>
+        <item>
+            <text>Using StringBuilderMembers</text>
+            <code pos="bottom">
+                decimal bmi = 22.2M;<br/>
+                int wt=168;<br/>
+                StringBuilder sb = new StringBuilder("My weight is ");<br/>
+                sb = sb.<bold>Append</bold>(wt); <light>// can append number</light> <br/>
+                sb= sb.Append(" and my bmi is ").Append(bmi);<br/>
+                <light>// my weight is 168 and my bmi is 22.2</light> <br/>
+                sb= sb.Replace("22.2","22.4");<br/>
+                string s = sb.ToString();<br/>
+                <light>// Clear and set to new value</light> <br/>
+                sb.<bold>Length</bold>=0;<br/>
+                sb.Append("Xanadu");
+            </code>
+        </item>
+    </section>
+    <section title="DateTime and TimeSpan">
+        <item>
+            <text>DateTime Constructor</text>
+            <code pos="bottom">
+                DateTime(yr, mo, day)<br/>
+                DateTime(yr, mo, day, hr, min, sec)
+            </code>
+        </item>
+        <item>
+            <code>
+                DateTime bday = new DateTime(1964,12,20,11,2,0);<br/>
+                DateTime newyr= DateTime.Parse("1/1/2005");<br/>
+                DateTime currdt = DateTime.Now;<br/>
+                <light>// also AddHours, AddMonths, AddYears</light> <br/>
+                DateTime tomorrow = currdt.AddDays(1);<br/>
+                TimeSpan diff = currdt.Subtract(bday);<br/>
+                <light>// 14795 days from 12/20/64 to 6/24/05</light> <br/>
+                Console.WriteLine("{0}", diff.Days);<br/>
+            </code>
+        </item>
+        <item>
+            <code>
+                <light>// TimeSpan(hrs, min, sec)</light><br/>
+                TimeSpan ts = new TimeSpan(6, 30, 10);<br/>
+                <light>// also FromMinutes, FromHours, FromDays</light><br/>
+                <light>TimeSpan ts = TimeSpan.FromSeconds(120);</light><br/>
+                TimeSpan ts = ts2 - ts1; <light>// +,-,&gt;,&lt;,==, !=</light>
+            </code>
+        </item>
+    </section>
+    <section title="Formatting Numeric and Date Values">
+        <item>
+            <text><bold>Format Item Syntax: <code>{index[,alignment] [:format string]}</code></bold></text>
+        </item>
+        <item>
+            <code>index</code>
+            <text pos="bottom">Specifies element in list of values to which format is applied.</text>
+        </item>
+        <item>
+            <code>alignment</code>
+            <text pos="bottom">Indicates minimum width (in characters) to display value.</text>
+        </item>
+        <item>
+            <code>format string</code>
+            <text pos="bottom">Contains the code that specifies the format of the displayed value.</text>
+        </item>
+        <item>
+            <text><bold>Example:</bold></text>
+            <code pos="bottom">
+                String.Format("Price is: {0:C2}", 49.95);<br/>
+                <light>// output: Price is: $ 49.95</light>
+            </code>
+        </item>
+        <subsection title="Numeric Formatting">
+            <item>
+                <text width="23%"><bold>Format Specifier</bold></text>
+                <text width="43%"><bold>Pattern</bold></text>
+                <text><bold>Value</bold></text>
+            </item>
+            <item>
+                <text width="23%"><bold>C</bold> or <bold>c</bold></text>
+                <text width="43%">{0:C2}, 1388.55</text>
+                <code>$ 1388.55</code>
+                <text pos="bottom"><light>Currency.</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>D</bold> or <bold>d</bold></text>
+                <text width="43%">{0:D5}, 45</text>
+                <code>00045</code>
+                <text pos="bottom"><light>Must be integer value.</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>E</bold> or <bold>e</bold></text>
+                <text width="43%">{0,9:E2}, 1388.55</text>
+                <code>1.39+E003</code>
+                <text pos="bottom"><light>Must be floating point.</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>F</bold> or <bold>f</bold></text>
+                <text width="43%">{0,9:F2}, 1388.55</text>
+                <code>1388.55</code>
+                <text pos="bottom"><light>Fixed Point representation.</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>N</bold> or <bold>n</bold></text>
+                <text width="43%">{0,9:N1}, 1388.55</text>
+                <code>1,388.6</code>
+                <text pos="bottom"><light>Insert commas</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>P</bold> or <bold>p</bold></text>
+                <text width="43%">{0,9:P3}, .7865</text>
+                <code>78.650%</code>
+                <text pos="bottom"><light>Converts to percent.</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>R</bold> or <bold>r</bold></text>
+                <text width="43%">{0,9:R}, 3.14159</text>
+                <code>3.14159</code>
+                <text pos="bottom"><light>Retains all decimal places.</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>X</bold> or <bold>x</bold></text>
+                <text width="43%">{0,9:X4}, 31</text>
+                <code>001f</code>
+                <text pos="bottom"><light>Converts to Hex.</light></text>
+            </item>
+        </subsection>
+        <hr/>
+        <item>
+            <text>Example:</text>
+            <code pos="bottom">
+                <light>// German culture</light><br/>
+                CultureInfo ci = new CultureInfo("de-DE");<br/>
+                <light>// 29 Juni</light><br/>
+                string curdt = String.Format(ci,"{0:M}",DateTime.Now); 
+            </code>
+        </item>
+        <subsection title="DateTime Formatting">
+            <item>
+                <text><bold>Format</bold></text>
+                <text pos="right"><bold>Value Displayed</bold></text>
+            </item>
+            <item>
+                <text><bold>d</bold></text>
+                <text pos="right">1/19/2005</text>
+            </item>
+            <item>
+                <text><bold>D</bold></text>
+                <text pos="right">Wednesday, January 19, 2005</text>
+            </item>
+            <item>
+                <text><bold>f</bold></text>
+                <text pos="right">Wednesday, January 19, 2005 4:05:20 PM</text>
+            </item>
+            <item>
+                <text><bold>F</bold></text>
+                <text pos="right">Wednesday, January 19, 2005 4:05 PM</text>
+            </item>
+            <item>
+                <text><bold>g</bold></text>
+                <text pos="right">1/19/2005 4:05 PM</text>
+            </item>
+            <item>
+                <text><bold>G</bold></text>
+                <text pos="right">1/19/2005 4:05:20 PM</text>
+            </item>
+            <item>
+                <text><bold>M</bold> or <bold>m</bold></text>
+                <text pos="right">January 19</text>
+            </item>
+            <item>
+                <text><bold>Y</bold> or <bold>y</bold></text>
+                <text pos="right">January, 2005</text>
+            </item>
+            <item>
+                <text><bold>t</bold></text>
+                <text pos="right">4:05 PM</text>
+            </item>
+            <item>
+                <text><bold>T</bold></text>
+                <text pos="right">4:05:20 PM</text>
+            </item>
+            <item>
+                <text><bold>s</bold></text>
+                <text pos="right">2005-01-19T16:05:20</text>
+            </item>
+            <item>
+                <text><bold>u</bold></text>
+                <text pos="right">2005-01-19 16:05:20Z</text>
+            </item>
+            <item>
+                <text><bold>U</bold></text>
+                <text pos="right">Wednesday, January 19, 2005 21:05:20PM</text>
+            </item>
+        </subsection>
+    </section>
+    <section title="Regular Expression">
+        <item>
+            <text><bold>System.Text.RegularExpressions.Regex</bold></text>
+        </item>
+        <item>
+            <text>Example:</text>
+            <code pos="bottom">
+                string zipexp = @"\d{5}((-|\s)?\d{4})?$";<br/>
+                string addr = "W.44th St, New York, NY 10017-0233";<br/>
+                Match m = <bold>Regex.Match</bold>(addr,zipexp); // Static method <br/>
+                Regex zipRegex= new Regex(zipexp); <br/>
+                m = zipRegex.Match(addr); // Use Regex Object <br/>
+                Console.WriteLine(m.Value); // 10017-0233
+            </code>
+        </item>
+        <item>
+            <text><light>For more information, refer to the Regular Expression cheatsheet.</light></text>
+        </item>
+    </section>
+    <split/>
+    <section title="Using the C# Compiler at the Command Line">
+        <item>
+            <code>
+                C:\&gt;<br/>
+                <indent/><bold>csc</bold> /t:library /out:reslib.dll mysource.cs <br/>
+                <indent/><bold>csc</bold> /t:winexe /r:ctls1.dll /r:ctls2.dll winapp.cs <br/>
+                <indent/><bold>csc</bold> /keyfile:strongkey.snk secure.cs
+            </code>
+        </item>
+        <item>
+            <text><bold>Option</bold></text>
+        </item>
+        <item>
+            <code>/<bold>addmodule</bold></code>
+            <text pos="bottom">Import metadata from a file that does not contain a manifest.</text>
+        </item>
+        <item>
+            <code>/<bold>debug</bold></code>
+            <text pos="bottom">Tells	compiler	to	emit	debugging	info.</text>
+        </item>
+        <item>
+            <code>/<bold>doc</bold></code>
+            <text pos="bottom">Specifies an XML documentation file to be created during compilation.</text>
+        </item>
+        <item>
+            <code>/<bold>keyfile</bold></code>
+            <text pos="bottom">Specifies file containing key used to create a strong named assembly.</text>
+        </item>
+        <item>
+            <code>/<bold>lib</bold></code>
+            <text pos="bottom">Specifies directory to search for external referenced assemblies.</text>
+        </item>
+        <item>
+            <code>/<bold>out</bold></code>
+            <text pos="bottom">Name of compiled output file.</text>
+        </item>
+        <item>
+            <code>/<bold>reference</bold> (/<bold>r</bold>)</code>
+            <text pos="bottom">Reference to an external assembly.</text>
+        </item>
+        <item>
+            <code>/<bold>resource</bold></code>
+            <text pos="bottom">Resource file to embed in output.</text>
+        </item>
+        <item>
+            <code>/<bold>target</bold> (/<bold>t</bold>)</code>
+            <code pos="bottom">/t:exe /t:library /t:module /t:winexe</code>
+        </item>
+    </section>
+    <section title="Language Fundamentals">
+        <subsection title="Control Flow Statements">
+            <item>
+                <code>
+                    <bold>switch</bold> (<italic>expression</italic>)<br/>
+                    {<br/>
+                    <indent/>case <italic>expression</italic>:<br/>
+                    <indent/><indent/><light>// statements</light><br/>
+                    <indent/><indent/>break / goto / return()<br/>
+                    <indent/>case ...<br/>
+                    <indent/>default:<br/>
+                    <indent/><indent/><light>// statements</light><br/>
+                    <indent/><indent/>break / goto / return()<br/>
+                    }
+                </code>
+            </item>
+            <item>
+                <text><code><italic>expression</italic></code> may be 
+                <code>integer</code>, <code>string</code>, or <code>enum</code>.</text>
+            </item>
+            <item>
+                <code>
+                    <bold>if</bold> (condition) {<br/>
+                    <indent/><light>// statements</light><br/>
+                    } else {<br/>
+                    <indent/><light>// statements</light><br/>
+                    }
+                </code>
+            </item>
+        </subsection>
+        <subsection title="Loop Constructs">
+            <item>
+                <code><bold>while</bold> (condition) <br/>{body}</code>
+            </item>
+            <item>
+                <code><bold>do</bold> { body } <br/>while (condition);</code>
+            </item>
+            <item>
+                <code>
+                    <bold>for</bold> (initializer; termination condition; iteration;)<br/>
+                    { <light>// statements</light> }
+                </code>
+            </item>
+            <item>
+                <code><bold>foreach</bold> (type identifier in collection)<br/>
+                {	<light>// statements</light> }</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Class Definition">
+        <subsection title="Class">
+            <item>
+                <code>[public | protected | internal | private]</code>
+            </item>
+            <item>
+                <code>[abstract | sealed | static]</code>
+            </item>
+            <item>
+                <code><bold>class</bold> <italic>class name</italic> [:class/interfaces inherited from]</code>
+            </item>
+        </subsection>
+        <subsection title="Constructor">
+            <item>
+                <code>[access modifier] class name (parameters) [:initializer]</code>
+            </item>
+            <item>
+                <code>initializer</code>
+                <text pos="bottom">
+                    <bold>base</bold> calls constructor in base class.<br/>
+                    <bold>this</bold> calls constructor within class.
+                </text>
+            </item>
+            <item>
+                <code>
+                    public class Shirt: Apparel {<br/>
+                    <indent/>public Shirt(decimal p, string v) : <bold>base</bold>(p,v)<br/>
+                    <indent/>{ constructor body }
+                </code>
+            </item>
+        </subsection>
+        <subsection title="Method">
+            <item>
+                <code>[access modifier]</code>
+            </item>
+            <item>
+                <code>[static | virtual | override | new | sealed | abstract ]</code>
+            </item>
+            <item>
+                <code><italic>method name</italic> (parameter list) { body }</code>
+            </item>
+            <hr/>
+            <item>
+                <code>virtual</code>
+                <text pos="right">method can be overridden in subclass.</text>
+            </item>
+            <item>
+                <code>override</code>
+                <text pos="right">overrides virtual method in base class.</text>
+            </item>
+            <item>
+                <code>new</code>
+                <text pos="right">hides non-virtual method in base class.</text>
+            </item>
+            <item>
+                <code>sealed</code>
+                <text pos="right">prevents derived class from inheriting.</text>
+            </item>
+            <item>
+                <code>abstract</code>
+                <text pos="right">must be implemented by subclass.</text>
+            </item>
+            <hr/>
+            <item>
+                <text><bold>Passing Parameters:</bold></text>
+                <text pos="bottom">
+                    a. By default, parameters are passed by value.<br/>
+                    b. Passing by reference: <bold>ref</bold> and <bold>out</bold> modifiers
+                </text>
+            </item>
+            <item>
+                <code>
+                    <light>// caller initializes ref</light><br/>
+                    string id= "gm";<br/>
+                    <light>// called method initializes</light><br/>
+                    int weight;<br/>
+                    GetFactor(ref id, out weight);<br/>
+                    <light>// ... other code here</light><br/>
+                    static void GetFactor(ref string id, out int wt)<br/>
+                    {<br/>
+                    <indent/>if (id=="gm") wt = 454; else wt=1;<br/>
+                    <indent/>return;<br/>
+                    }
+                </code>
+            </item>
+        </subsection>
+        <subsection title="Property">
+            <item>
+                <code>
+                    [modifier] &lt;datatype&gt; <italic>property name</italic> {<br/>
+                    public string VendorName <br/>
+                    {<br/>
+                    <indent/><bold>get</bold> { return vendorName; }<br/>
+                    <indent/><light>// note value keyword</light><br/>
+                    <indent/><bold>set</bold> { vendorName = value; }<br/>
+                    }
+                </code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Delegates and Events">
+        <subsection title="Delegates">
+            <item>
+                <code>[modifiers] <bold>delegate</bold> result-type delegate name ([parameter list]);</code>
+            </item>
+            <item>
+                <code>
+                    <light>// (1) Define a delegate that calls method(s) having a single string parameter</light><br/>
+                    public delegate void StringPrinter(string s);<br/>
+                    <light>// (2) Register methods to be called by delegate</light><br/>
+                    StringPrinter prt = new StringPrinter(PrintLower);<br/>
+                    prt += new StringPrinter(PrintUpper);<br/>
+                    <light>// execute PrintLower and PrintUpper</light><br/>
+                    prt("Copyright was obtained in 2005"); 
+                </code>
+            </item>
+            <item>
+                <text>Using Anonymous Methods with a Delegate <br/>
+                Rather than calling a method, a delegate encapsulates code that is executed:</text>
+            </item>
+            <item>
+                <code>
+                    prt =	delegate(string s) { Console.WriteLine(s.ToLower()); };<br/>
+                    prt += delegate(string s) { Console.WriteLine(s.ToUpper()); };<br/>
+                    prt("Print this in lower and upper case.");
+                </code>
+            </item>
+        </subsection>
+        <subsection title="Events">
+            <item>
+                <code>
+                    <light>// class.event += new delegate(event handler method);</light><br/>
+                    Button Total = new Button();<br/>
+                    Total.Click += new EventHandler(GetTotal);<br/>
+                    <light>// Event Handler method must have signature specified by delegate</light><br/>
+                    private void GetTotal( object sender, EventArgs e) {
+                </code>
+            </item>
+        </subsection>
+        <subsection title="Commonly used Control Events">
+            <item>
+                <text><bold>Event and Delegate</bold></text>
+            </item>
+            <item>
+                <code><bold>Click, DoubleClick, MouseEnter, MouseLeave</bold></code>
+                <code pos="bottom"><light><bold>EventHandler</bold>( object sender, EventArgs e)</light></code>
+            </item>
+            <item>
+                <code><bold>MouseDown, Mouseup, MouseMove</bold></code>
+                <text pos="bottom">
+                    <light><code><bold>MouseEventHandler</bold>(object sender, MouseEventArgs e)</code><br/>
+                    <code>e.X</code>, <code>e.Y</code> - x and y coordinates <br/>
+                    <code>e.Button</code> - MouseButton.Left, Middle, Right</light>
+                </text>
+            </item>
+            <item>
+                <code><bold>KeyUp, KeyDown</bold></code>
+                <text pos="bottom">
+                    <light><code><bold>KeyEventHandler</bold>(object sndr, KeyEventArgs e)</code><br/>
+                    <code>e.Handled</code> - Indicates whether event is handled.<br/>
+                    <code>e.KeyCode</code> - Keys enumeration, e.g., Keys.V <br/>
+                    <code>e.Modifiers</code> - Indicates if Alt, Ctrl, or Shift key.</light>
+                </text>
+            </item>
+            <item>
+                <code><bold>KeyPress</bold></code>
+                <code pos="bottom"><light><bold>KeyPressEventHandler</bold>(object sender, KeyPressEventArgs e)</light></code>
+            </item>
+        </subsection>
+    </section>
+    <section title="struct">
+        <item>
+            <code>[attribute][modifier] <bold>struct</bold> name [:interfaces] { struct-body}</code>
+        </item>
+        <item>
+            <text><bold>Differences from class:</bold></text>
+        </item>
+        <item>
+            <text>- is a value type</text>
+        </item>
+        <item>
+            <text>- fields cannot have initializer</text>
+        </item>
+        <item>
+            <text>cannot inherit from a class or be inherited</text>
+        </item>
+        <item>
+            <text>explicit constructor must have a parameter</text>
+        </item>
+    </section>
+    <section title="enum (Enumerated Type)">
+        <item>
+            <text><bold>enum</bold></text>
+            <code pos="bottom">
+                enum Fabric: int {<br/>
+                <indent/>cotton = 1,<br/>
+                <indent/>silk = 2,<br/>
+                <indent/>wool = 4,<br/>
+                <indent/>rayon = 8 <br/>
+                }
+            </code>
+        </item>
+        <item>
+            <text><bold>enum Operations</bold></text>
+            <code pos="bottom">
+                int cotNum = (int) Fabric.cotton; <light>// 1</light> <br/>
+                string cotName = Fabric.cotton.ToString(); <light>// cotton</light> <br/>
+                string s = Enum.GetName(typeof(Fabric),2); <light>// silk</light><br/>
+                <light>// Create instance of wool enum if it is valid</light><br/>
+                if(Enum.IsDefined(typeof(Fabric), "wool")<br/>
+                <indent/>Fabric woolFab = (Fabric)Enum.Parse(typeof(Fabric),"wool");
+            </code>
+        </item>
+    </section>
+</cheatsheet>

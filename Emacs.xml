@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Emacs</name>
+        <author>Peteris Krumins</author>
+        <website>http://www.catonmat.net/</website>
+        <original_file>http://www.catonmat.net/download/readline-emacs-editing-mode-cheat-sheet.pdf</original_file>
+    </info>
+    <section title="Commands for Moving">
+        <item>
+            <code>C-a</code>
+            <text pos="right">beginning-of-line</text>
+        </item>
+        <item>
+            <code>C-e</code>
+            <text pos="right">end-of-line</text>
+        </item>
+        <item>
+            <code>C-f</code>
+            <text pos="right">forward-char</text>
+        </item>
+        <item>
+            <code>C-b</code>
+            <text pos="right">backward-char</text>
+        </item>
+        <item>
+            <code>M-f</code>
+            <text pos="right">forward-word</text>
+        </item>
+        <item>
+            <code>M-b</code>
+            <text pos="right">backward-word</text>
+        </item>
+        <item>
+            <code>C-l</code>
+            <text pos="right">clear-screen</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">clear-screen</text>
+        </item>
+    </section>
+    <section title="Commands for Changing Text">
+        <item>
+            <code>C-d</code>
+            <text pos="right">delete-char</text>
+        </item>
+        <item>
+            <code>Rubout</code>
+            <text pos="right">backward-delete-char</text>
+        </item>
+        <item>
+            <code>C-q or C-v</code>
+            <text pos="right">quoted-insert</text>
+        </item>
+        <item>
+            <code>M-TAB or M-C-i</code>
+            <text pos="right">tab-insert</text>
+        </item>
+        <item>
+            <code>a, b, A, 1, !, ...</code>
+            <text pos="right">self-insert</text>
+        </item>
+        <item>
+            <code>C-t</code>
+            <text pos="right">transpose-chars</text>
+        </item>
+        <item>
+            <code>M-t</code>
+            <text pos="right">transpose-words</text>
+        </item>
+        <item>
+            <code>M-u</code>
+            <text pos="right">upcase-word</text>
+        </item>
+        <item>
+            <code>M-l</code>
+            <text pos="right">downcase-word</text>
+        </item>
+        <item>
+            <code>M-c</code>
+            <text pos="right">capitalize-word</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">overwrite-mode</text>
+        </item>
+    </section>
+    <section title="Killing and Yanking">
+        <item>
+            <code>C-k</code>
+            <text pos="right">kill-line</text>
+        </item>
+        <item>
+            <code>C-x Rubout</code>
+            <text pos="right">backward-kill-line</text>
+        </item>
+        <item>
+            <code>C-u</code>
+            <text pos="right">unix-line-discard</text>
+        </item>
+        <item>
+            <code>M-d</code>
+            <text pos="right">kill-word</text>
+        </item>
+        <item>
+            <code>M-Rubout</code>
+            <text pos="right">backward-kill-word</text>
+        </item>
+        <item>
+            <code>C-w</code>
+            <text pos="right">unix-word-rubout</text>
+        </item>
+        <item>
+            <code>M-\</code>
+            <text pos="right">delete-horizontal-space</text>
+        </item>
+        <item>
+            <code>C-y</code>
+            <text pos="right">yank</text>
+        </item>
+        <item>
+            <code>M-y</code>
+            <text pos="right">yank-pop</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">kill-whole-line</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">kill-region</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">copy-region-as-kill</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">copy-backward-word</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">copy-forward-word</text>
+        </item>
+    </section>
+    <section title="Keyboard Macros">
+        <item>
+            <code>C-x (</code>
+            <text pos="right">start-kbd-macro</text>
+        </item>
+        <item>
+            <code>C-x )</code>
+            <text pos="right">end-kbd-macro</text>
+        </item>
+        <item>
+            <code>C-x e</code>
+            <text pos="right">call-last-kbd-macro</text>
+        </item>
+    </section>
+    <split/>
+    <section title="Commands for Manipulating the History">
+        <item>
+            <code>Return</code>
+            <text pos="right">accept-line</text>
+        </item>
+        <item>
+            <code>C-p</code>
+            <text pos="right">previous-history</text>
+        </item>
+        <item>
+            <code>C-n</code>
+            <text pos="right">next-history</text>
+        </item>
+        <item>
+            <code>M-&lt;</code>
+            <text pos="right">beginning-of-history</text>
+        </item>
+        <item>
+            <code>M-&gt;</code>
+            <text pos="right">end-of-history</text>
+        </item>
+        <item>
+            <code>C-r</code>
+            <text pos="right">reverse-search-history</text>
+        </item>
+        <item>
+            <code>C-s</code>
+            <text pos="right">forward-search-history</text>
+        </item>
+        <item>
+            <code>M-p</code>
+            <text pos="right">non-incremental-reverse- search-history</text>
+        </item>
+        <item>
+            <code>M-n</code>
+            <text pos="right">non-incremental-forward- search-history</text>
+        </item>
+        <item>
+            <code>M-C-y</code>
+            <text pos="right">yank-nth-arg</text>
+        </item>
+        <item>
+            <code>M-. or M-_</code>
+            <text pos="right">yank-last-arg</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">history-search-backward</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">history-search-forward</text>
+        </item>
+    </section>
+    <section title="Completing">
+        <item>
+            <code>TA</code>
+            <text pos="right">complete</text>
+        </item>
+        <item>
+            <code>M-?</code>
+            <text pos="right">possible-completions</text>
+        </item>
+        <item>
+            <code>M-*</code>
+            <text pos="right">insert-completions</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">menu-complete</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">delete-char-or-list</text>
+        </item>
+    </section>
+    <section title="Miscellaneous:">
+        <item>
+            <code>C-x C-r</code>
+            <text pos="right">re-read-init-file</text>
+        </item>
+        <item>
+            <code>C-g</code>
+            <text pos="right">abort</text>
+        </item>
+        <item>
+            <code>M-a, M-b, M-x, ...</code>
+            <text pos="right">do-uppercase-version</text>
+        </item>
+        <item>
+            <code>ESC</code>
+            <text pos="right">prefix-meta</text>
+        </item>
+        <item>
+            <code>C-_ or C-x C-u</code>
+            <text pos="right">undo</text>
+        </item>
+        <item>
+            <code>M-r</code>
+            <text pos="right">revert-line</text>
+        </item>
+        <item>
+            <code>M-&amp;</code>
+            <text pos="right">tilde-expand</text>
+        </item>
+        <item>
+            <code>C-@ or M-&lt;space&gt;</code>
+            <text pos="right">set-mark</text>
+        </item>
+        <item>
+            <code>C-x C-x</code>
+            <text pos="right">exchange-point-and-mark</text>
+        </item>
+        <item>
+            <code>C-]</code>
+            <text pos="right">character-search</text>
+        </item>
+        <item>
+            <code>M-C-]</code>
+            <text pos="right">character-search- backward</text>
+        </item>
+        <item>
+            <code>M-#</code>
+            <text pos="right">insert-comment</text>
+        </item>
+        <item>
+            <code>C-e</code>
+            <text pos="right">emacs-editing-mode</text>
+        </item>
+        <item>
+            <code>M-C-j</code>
+            <text pos="right">vi-editing-mode</text>
+        </item>
+        <item>
+            <code>M-0, M-1, ..., M-</code>
+            <text pos="right">digit-argument</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">dump-functions</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">dump-variables</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">dump-macros</text>
+        </item>
+        <item>
+            <text>(unbound)</text>
+            <text pos="right">universal-argument</text>
+        </item>
+    </section>
+</cheatsheet>

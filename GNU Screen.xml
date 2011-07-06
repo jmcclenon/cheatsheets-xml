@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>GNU Screen</name>
+        <website>http://tuxtraining.com/2009/01/30/gnu-screen-cheat-sheet</website>
+        <original_file>http://tuxtraining.com/wp-content/uploads/2009/01/screen_cheatsheet.pdf</original_file>
+    </info>
+    <section title="Getting in">
+        <item>
+            <code>Screen</code>
+            <text pos="right">start a new screen session</text>
+        </item>
+        <item>
+            <code>screen -S</code>
+            <text pos="right">start session with id after S</text>
+        </item>
+        <item>
+            <code>screen -r</code>
+            <text pos="right">attach to running detached session</text>
+        </item>
+        <item>
+            <code>screen -r id</code>
+            <text pos="right">attach to session id</text>
+        </item>
+        <item>
+            <code>screen -ls</code>
+            <text pos="right">list sessions</text>
+        </item>
+        <item>
+            <code>screen -dRR</code>
+            <text pos="right">if session is attached elsewhere it detaches and reattaches; if no session exists it creates on; if multiple exist it attaches to the first</text>
+        </item>
+        <item>
+            <code>C-a ?</code>
+            <text pos="right">displays help once in</text>
+        </item>
+    </section>
+    <section title="Getting out">
+        <item>
+            <code>C-a d</code>
+            <text pos="right">detaches session</text>
+        </item>
+        <item>
+            <code>C-a D D</code>
+            <text pos="right">detach and logout</text>
+        </item>
+        <item>
+            <code>exit screen</code>
+            <text pos="right">will exit all the programs in screen</text>
+        </item>
+        <item>
+            <code>C-a C-\</code>
+            <text pos="right">force exit</text>
+        </item>
+    </section>
+    <section title="Escape Key">
+        <item>
+            <text pos="left">All screen commands are prefixed by an escape key, by default C-a (that's Control-a, sometimes written ^A). To send a literal C-a to the programs in screen, use C-a a.</text>
+        </item>
+    </section>
+    <split/>
+    <section title="Window Management">
+        <item>
+            <code>C-a c</code>
+            <text pos="right">creates a new window</text>
+        </item>
+        <item>
+            <code>C-a C-a</code>
+            <text pos="right">change to last visited</text>
+        </item>
+        <item>
+            <code>C-a #</code>
+            <text pos="right">goto window 0-9</text>
+        </item>
+        <item>
+            <code>C-a n</code>
+            <text pos="right">goto next window</text>
+        </item>
+        <item>
+            <code>C-a p</code>
+            <text pos="right">goto previous window</text>
+        </item>
+        <item>
+            <code>C-a “</code>
+            <text pos="right">see window list</text>
+        </item>
+        <item>
+            <code>C-a w</code>
+            <text pos="right">show winbar</text>
+        </item>
+        <item>
+            <code>C-a k</code>
+            <text pos="right">kill current window</text>
+        </item>
+        <item>
+            <code>C-a A</code>
+            <text pos="right">rename current window</text>
+        </item>
+    </section>
+    <section title="Split Screen">
+        <item>
+            <code>C-a S</code>
+            <text pos="right">split screen</text>
+        </item>
+        <item>
+            <code>C-a tab</code>
+            <text pos="right">switch display region</text>
+        </item>
+        <item>
+            <code>C-a X</code>
+            <text pos="right">close current display region</text>
+        </item>
+        <item>
+            <code>C-a Q</code>
+            <text pos="right">remove all regions but current</text>
+        </item>
+    </section>
+    <section title="Misc">
+        <item>
+            <code>C-a C-l</code>
+            <text pos="right">redraw window</text>
+        </item>
+        <item>
+            <code>C-a [</code>
+            <text pos="right">view scrollback buffer</text>
+        </item>
+        <item>
+            <code>C-a [ &lt;space&gt; + nav</code>
+            <text pos="right">copy mode</text>
+        </item>
+        <item>
+            <code>C-a ]</code>
+            <text pos="right">paste</text>
+        </item>
+        <item>
+            <code>C-a M</code>
+            <text pos="right">monitor window for activity</text>
+        </item>
+        <item>
+            <code>C-a _</code>
+            <text pos="right">monitor window for inactivity</text>
+        </item>
+        <item>
+            <code>C-a C-v</code>
+            <text pos="right">enter digraph</text>
+        </item>
+        <item>
+            <code>C-a x</code>
+            <text pos="right">lock screen</text>
+        </item>
+        <item>
+            <code>C-a :</code>
+            <text pos="right">enter screen cmd</text>
+        </item>
+    </section>
+</cheatsheet>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Subversion</name>
+        <author>Dave Child</author>
+        <website>http://www.addedbytes.com</website>
+        <original_file>http://www.addedbytes.com/download/subversion-cheat-sheet-v1/pdf/</original_file>
+    </info>
+    <section title="Subversion components">
+        <item>
+            <code>svn</code>
+            <text pos="right">Command line program</text>
+        </item>
+        <item>
+            <code>svnversion</code>
+            <text pos="right">Revision of working copy</text>
+        </item>
+        <item>
+            <code>svnlook</code>
+            <text pos="right">Inspect repository</text>
+        </item>
+        <item>
+            <code>svnadmin</code>
+            <text pos="right">Repository administration</text>
+        </item>
+        <item>
+            <code>svndumpfilter</code>
+            <text pos="right">Filter repository stream</text>
+        </item>
+        <item>
+            <code>mod_dav_svn</code>
+            <text pos="right">Apache module</text>
+        </item>
+        <item>
+            <code>svnserve</code>
+            <text pos="right">SVN server (SVN protocol)</text>
+        </item>
+        <item>
+            <code>svnsync</code>
+            <text pos="right">Mirror repository</text>
+        </item>
+    </section>
+    <section title="Subversion protocols">
+        <item>
+            <code>file://</code>
+            <text pos="right">Local machine</text>
+        </item>
+        <item>
+            <code>http://</code>
+            <text pos="right">HTTP (Apache)</text>
+        </item>
+        <item>
+            <code>https://</code>
+            <text pos="right">HTTPS (SSL)</text>
+        </item>
+        <item>
+            <code>svn://</code>
+            <text pos="right">SVN (svnserve)</text>
+        </item>
+        <item>
+            <code>svn+ssh://</code>
+            <text pos="right">SVN over SSH</text>
+        </item>
+    </section>
+    <section title="Subversion help">
+        <item>
+            <code>svn help</code>
+        </item>
+        <item>
+            <code>svn help import</code>
+            <text pos="right">Show help for "import" command</text>
+        </item>
+    </section>
+    <section title="Repository administration">
+        <item>
+            <code>svnadmin create "/path/to/repository"</code>
+            <text pos="right">Create repository</text>
+        </item>
+        <item>
+            <code>svnadmin setlog "path" -r 7 message.txt</code>
+            <text pos="right">Change log message for revision 7 of "path" to contents of message.txt</text>
+        </item>
+        <item>
+            <code>svnadmin dump "repository" &gt; filename</code>
+            <text pos="right">Dump contents of repository to file</text>
+        </item>
+        <item>
+            <code>svnadmin load "repository" &lt; filename</code>
+            <text pos="right"></text>
+        </item>
+    </section>
+    <section title="Add local folder to repository">
+        <item>
+            <code>svn import folder "/path/to/repository"</code>
+        </item>
+    </section>
+    <section title="Checkout working copy">
+        <item>
+            <code>svn checkout "/path/to/repository/folder"</code>
+            <text pos="right">Creates working copy of "folder"</text>
+        </item>
+        <item>
+            <code>svn checkout "/path" foldername</code>
+            <text pos="right">Checkout into new folder "foldername"</text>
+        </item>
+    </section>
+    <section title="Update working copy from repository">
+        <item>
+            <code>svn update "/path"</code>
+        </item>
+        <item>
+            <code>svn update -r9 "/path"</code>
+            <text pos="right">Update to revision 9</text>
+        </item>
+    </section>
+    <section title="Add files or folders">
+        <item>
+            <code>svn add *</code>
+            <text pos="right">Add all items in folder, and recurse (ignores versioned directories)</text>
+        </item>
+        <item>
+            <code>svn add itemname</code>
+            <text pos="right">If itemname is folder, all subfolders and files will also be added</text>
+        </item>
+        <item>
+            <code>svn add * --force</code>
+            <text pos="right">Force recurse into versioned directories</text>
+        </item>
+    </section>
+    <section title="Deleting, copying and moving">
+        <item>
+            <code>svn delete "/path"</code>
+        </item>
+        <item>
+            <code>svn -m "Deleting" delete "/path"</code>
+            <text pos="right">Deletes with message "Deleting"</text>
+        </item>
+        <item>
+            <code>svn copy "sourcepath" "targetpath"</code>
+            <text pos="right">Copy source to target</text>
+        </item>
+        <item>
+            <code>svn move "sourcepath" "targetpath"</code>
+            <text pos="right">Move source to target</text>
+        </item>
+    </section>
+    <section title="Revert local (uncommitted) changes">
+        <item>
+            <code>svn revert "/path/filename"</code>
+            <text pos="right">Reverts changes to file</text>
+        </item>
+        <item>
+            <code>svn revert -R "/path/folder"</code>
+            <text pos="right">Reverts changes to folder recursively</text>
+        </item>
+    </section>
+    <split/>
+    <section title="Logs and blame">
+        <item>
+            <code>svn log "/path"</code>
+            <text pos="right">Show log messages from repository</text>
+        </item>
+        <item>
+            <code>svn blame "/path"</code>
+            <text pos="right">Show commits with messages for path</text>
+        </item>
+    </section>
+    <section title="Differences between files">
+        <item>
+            <code>svn diff "/path/file"</code>
+            <text pos="right">See what has changed in "\path\file"</text>
+        </item>
+        <item>
+            <code>svn diff "/path/file@2" "/path/file@7"</code>
+            <text pos="right">Compares file in revision 2 and 7</text>
+        </item>
+        <item>
+            <code>svn diff -r 2:7 "/path/folder"</code>
+            <text pos="right">Compared all files in revisions 2 and 7</text>
+        </item>
+    </section>
+    <section title="Merge changes">
+        <item>
+            <code>svn merge -r 2:7 "item" "/path/file"</code>
+            <text pos="right">Apply the diff between revisions 2 and 7 of "item" to "/path/file"</text>
+        </item>
+        <item>
+            <code>svn merge "url1" "url2" "/pathfile"</code>
+            <text pos="right">Apply the diff between "url1" and "url2" to "/path/file"</text>
+        </item>
+    </section>
+    <section title="Commit changes to repository">
+        <item>
+            <code>svn commit "/path"</code>
+            <text pos="right">Commit changes to file or folder</text>
+        </item>
+        <item>
+            <code>svn commit -m "Message" "/path"</code>
+            <text pos="right">Commit with message "Message"</text>
+        </item>
+        <item>
+            <code>svn commit -N "/path"</code>
+            <text pos="right">Commit changes to folder without recurse</text>
+        </item>
+    </section>
+    <section title="Miscellaneous Commands ($ svn ... )">
+        <item>
+            <code>resolve "/path"</code>
+            <text pos="right">Resolve conflict</text>
+        </item>
+        <item>
+            <code>cleanup "/path"</code>
+            <text pos="right">Recursively remove locks and complete operations</text>
+        </item>
+        <item>
+            <code>lock "/path"</code>
+            <text pos="right">Lock path</text>
+        </item>
+        <item>
+            <code>unlock "/path"</code>
+            <text pos="right">Unlock path</text>
+        </item>
+        <item>
+            <code>cat "/path"</code>
+            <text pos="right">View file contents</text>
+        </item>
+        <item>
+            <code>status "/path"</code>
+            <text pos="right">Get path status</text>
+        </item>
+    </section>
+    <section title="Item and property statuses">
+        <item>
+            <code>''</code>
+            <text pos="right">No modifications</text>
+        </item>
+        <item>
+            <code>'A'</code>
+            <text pos="right">Addition</text>
+        </item>
+        <item>
+            <code>'D'</code>
+            <text pos="right">Deletion</text>
+        </item>
+        <item>
+            <code>'M'</code>
+            <text pos="right">Modified</text>
+        </item>
+        <item>
+            <code>'R'</code>
+            <text pos="right">Item replaced</text>
+        </item>
+        <item>
+            <code>'C'</code>
+            <text pos="right">In conflict</text>
+        </item>
+        <item>
+            <code>'X'</code>
+            <text pos="right">Externals definition</text>
+        </item>
+        <item>
+            <code>'I'</code>
+            <text pos="right">Ignored</text>
+        </item>
+        <item>
+            <code>'&amp;'</code>
+            <text pos="right">Not in repository</text>
+        </item>
+        <item>
+            <code>'!'</code>
+            <text pos="right">Item missing</text>
+        </item>
+        <item>
+            <code>'~'</code>
+            <text pos="right">Object type changed</text>
+        </item>
+    </section>
+    <section title="Property commands ($ svn ...)">
+        <item>
+            <code>proplist "/path"</code>
+            <text pos="right">List properties</text>
+        </item>
+        <item>
+            <code>propset PROP VAL "/path"</code>
+            <text pos="right">Set property "PROP" to value "VAL"</text>
+        </item>
+        <item>
+            <code>propget PROP "/path"</code>
+            <text pos="right">Get value of "PROP"</text>
+        </item>
+        <item>
+            <code>propedit PROP "/path"</code>
+            <text pos="right">Edit "PROP"</text>
+        </item>
+        <item>
+            <code>propdel PROP "/path"</code>
+            <text pos="right">Delete "PROP"</text>
+        </item>
+    </section>
+    <section title="Argument shortcuts">
+        <item>
+            <code>-m "Message"</code>
+            <code pos="right">--message</code>
+        </item>
+        <item>
+            <code>-q</code>
+            <code pos="right">--quiet</code>
+        </item>
+        <item>
+            <code>-v</code>
+            <code pos="right">--verbose</code>
+        </item>
+        <item>
+            <code>-r</code>
+            <code pos="right">--revision</code>
+        </item>
+        <item>
+            <code>-c</code>
+            <code pos="right">--change</code>
+        </item>
+        <item>
+            <code>-t</code>
+            <code pos="right">--transaction</code>
+        </item>
+        <item>
+            <code>-R</code>
+            <code pos="right">--recursive</code>
+        </item>
+        <item>
+            <code>-N</code>
+            <code pos="right">--non-recursive</code>
+        </item>
+    </section>
+</cheatsheet>

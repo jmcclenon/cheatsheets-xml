@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Cheatsheet name</name>
+        <author>Author name</author>
+        <website>http://...</website>
+        <original_file>http://...</original_file>
+    </info>
+    <section title="First Section on the Left">
+        <item>
+            <text pos="top">Top</text>
+            <text>Left</text>
+            <text pos="right">Right</text>
+            <text pos="bottom">Bottom</text>
+        </item>
+        <item>
+            <code>Code style text on the left</code>
+            <text pos="right">Text on the right</text>
+        </item>
+        <subsection title="Subsection">
+            <item>
+                <text>item in a subsection</text>
+            </item>
+        </subsection>
+    </section>
+    <section title="Examples">
+        <item>
+            <code>Screen</code>
+            <text pos="right">start a new screen session</text>
+        </item>
+        <item>
+            <code>&lt;head&gt;</code>
+            <text pos="right">Page information</text>
+        </item>
+        <item>
+            <text width="33%">&#x0393; <light>\Gamma</light></text>
+            <text width="33%">&#x03B1; <light>\alpha</light></text>
+            <text>&#x03BE; <light>\xi</light></text>
+        </item>
+        <item>
+            <code>(?&lt;=<placeholder/>)<placeholder/></code>
+            <text pos="right">Following</text>
+        </item>
+        <item>
+            <text><color value="#0000FF">info:</color></text>
+            <text pos="right">Info about a page</text>
+            <text pos="bottom"><light>
+                <bold>info:www.stanford.edu</bold><br/>
+                (Find information about the Stanford University website.)
+            </light></text>
+        </item>
+    </section>
+    <split/>
+    <section title="First Section on the Right">
+        <item>
+            <text>&lt;split/&gt; is the tag that splits left and right</text>
+        </item>
+        <hr/>
+        <subsection title="More Examples">
+            <item>
+                <code>
+                    <bold>for i=1:10 <br/>
+                    <indent/>procedure <br/>
+                    end</bold>
+                </code>
+                <text pos="bottom"><light>Iterates over <code>procedure</code> incrementing <code>i</code> from 1 to 10 by 1</light></text>
+            </item>
+            <item>
+                <text width="23%"><bold>C</bold> or <bold>c</bold></text>
+                <text width="43%">{0:C2}, 1388.55</text>
+                <code>$ 1388.55</code>
+                <text pos="bottom"><light>Currency.</light></text>
+            </item>
+        </subsection>
+    </section>
+</cheatsheet>

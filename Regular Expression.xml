@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Regular Expression</name>
+        <original_file>http://opencompany.org/download/regex-cheatsheet.pdf</original_file>
+    </info>
+    <section title="Anchors">
+        <item>
+            <code>^</code>
+            <text pos="right">start of line</text>
+        </item>
+        <item>
+            <code>$</code>
+            <text pos="right">end of line</text>
+        </item>
+        <item>
+            <code>\b</code>
+            <text pos="right">word boundary</text>
+        </item>
+        <item>
+            <code>\B</code>
+            <text pos="right">not at word boundary</text>
+        </item>
+        <item>
+            <code>\A</code>
+            <text pos="right">start of subject</text>
+        </item>
+        <item>
+            <code>\G</code>
+            <text pos="right">first match in subject</text>
+        </item>
+        <item>
+            <code>\z</code>
+            <text pos="right">end of subject</text>
+        </item>
+        <item>
+            <code>\Z</code>
+            <text pos="right">end of subject or before newline at end</text>
+        </item>
+    </section>
+    <section title="Non-printing characters">
+        <item>
+            <code>\a</code>
+            <text pos="right">alarm (BEL, hex 07)</text>
+        </item>
+        <item>
+            <code>\cx</code>
+            <text pos="right">"control-<code>x</code>"</text>
+        </item>
+        <item>
+            <code>\e</code>
+            <text pos="right">escape (hex 1B)</text>
+        </item>
+        <item>
+            <code>\f</code>
+            <text pos="right">formfeed (hex 0C)</text>
+        </item>
+        <item>
+            <code>\n</code>
+            <text pos="right">newline (hex 0A)</text>
+        </item>
+        <item>
+            <code>\r</code>
+            <text pos="right">carriage return (hex OD)</text>
+        </item>
+        <item>
+            <code>\t</code>
+            <text pos="right">tab (hex 09)</text>
+        </item>
+        <item>
+            <code>\ddd</code>
+            <text pos="right">octal code <code>ddd</code></text>
+        </item>
+        <item>
+            <code>\xhh</code>
+            <text pos="right">hex code <code>hh</code></text>
+        </item>
+        <item>
+            <code>\x{hhh..}</code>
+            <text pos="right">hex code <code>hhh..</code></text>
+        </item>
+    </section>
+    <section title="Generic character types">
+        <item>
+            <code>\d</code>
+            <text pos="right">decimal digit</text>
+        </item>
+        <item>
+            <code>\D</code>
+            <text pos="right">not a decimal digit</text>
+        </item>
+        <item>
+            <code>\s</code>
+            <text pos="right">whitespace character</text>
+        </item>
+        <item>
+            <code>\S</code>
+            <text pos="right">not a whitespace char</text>
+        </item>
+        <item>
+            <code>\w</code>
+            <text pos="right">"word" character</text>
+        </item>
+        <item>
+            <code>\W</code>
+            <text pos="right">"non-word" character</text>
+        </item>
+    </section>
+    <section title="POSIX character classes">
+        <item>
+            <code>alnum</code>
+            <text pos="right">letters and digits</text>
+        </item>
+        <item>
+            <code>alpha</code>
+            <text pos="right">letters</text>
+        </item>
+        <item>
+            <code>ascii</code>
+            <text pos="right">character codes 0-127</text>
+        </item>
+        <item>
+            <code>blank</code>
+            <text pos="right">space or tab only</text>
+        </item>
+        <item>
+            <code>cntrl</code>
+            <text pos="right">control characters</text>
+        </item>
+        <item>
+            <code>digit</code>
+            <text pos="right">decimal digits</text>
+        </item>
+        <item>
+            <code>graph</code>
+            <text pos="right">printing chars -space</text>
+        </item>
+        <item>
+            <code>lower</code>
+            <text pos="right">lower case letters</text>
+        </item>
+        <item>
+            <code>print</code>
+            <text pos="right">printing chars +space</text>
+        </item>
+        <item>
+            <code>punct</code>
+            <text pos="right">printing chars -alnum</text>
+        </item>
+        <item>
+            <code>space</code>
+            <text pos="right">white space</text>
+        </item>
+        <item>
+            <code>upper</code>
+            <text pos="right">upper case letters</text>
+        </item>
+        <item>
+            <code>word</code>
+            <text pos="right">"word" characters</text>
+        </item>
+        <item>
+            <code>xdigit</code>
+            <text pos="right">hexadecimal digits</text>
+        </item>
+    </section>
+    <section title="Literal Characters">
+        <item>
+            <code>ax B 70</code>
+            <text pos="right">Letters and digits match exactly</text>
+        </item>
+        <item>
+            <code>@- = %</code>
+            <text pos="right">Some special characters match exactly</text>
+        </item>
+        <item>
+            <code>\. \\ \$ \[</code>
+            <text pos="right">Escape other specials with backslash</text>
+        </item>
+    </section>
+    <section title="Character Groups">
+        <item>
+            <code>.</code>
+            <text pos="right">Almost any character (usually not newline)</text>
+        </item>
+        <item>
+            <code>[<placeholder/>]</code>
+            <text pos="right">Lists and ranges of characters</text>
+        </item>
+        <item>
+            <code>[^<placeholder/>]</code>
+            <text pos="right">Any character except those listed</text>
+        </item>
+    </section>
+    <section title="Counts (add ? for non-greedy)">
+        <item>
+            <code><placeholder/>*</code>
+            <text pos="right">0 or more ("perhaps some")</text>
+        </item>
+        <item>
+            <code><placeholder/>?</code>
+            <text pos="right">0 or 1 ("perhaps a")</text>
+        </item>
+        <item>
+            <code><placeholder/>+</code>
+            <text pos="right">1 or more ("some")</text>
+        </item>
+        <item>
+            <code><placeholder/>{n,m}</code>
+            <text pos="right">Between "n" and "m" of</text>
+        </item>
+        <item>
+            <code><placeholder/>{n}</code>
+            <text pos="right">Exactly "n"</text>
+        </item>
+        <item>
+            <code><placeholder/>{n,}</code>
+            <text pos="right">"n" or more</text>
+        </item>
+    </section>
+    <split/>
+    <section title="Alternation">
+        <item>
+            <code><placeholder/>|<placeholder/></code>
+            <text pos="right">Either/or</text>
+        </item>
+    </section>
+    <section title="Lookahead and Lookbehind">
+        <item>
+            <code><placeholder/>(?=<placeholder/>)</code>
+            <text pos="right">Followed by</text>
+        </item>
+        <item>
+            <code><placeholder/>(?!<placeholder/>)</code>
+            <text pos="right">NOT followed by</text>
+        </item>
+        <item>
+            <code>(?&lt;=<placeholder/>)<placeholder/></code>
+            <text pos="right">Following</text>
+        </item>
+        <item>
+            <code>(?&lt;!<placeholder/>)<placeholder/></code>
+            <text pos="right">NOT following</text>
+        </item>
+    </section>
+    <section title="Grouping">
+        <item>
+            <code>(<placeholder/>)</code>
+            <text pos="right">For capture and counts</text>
+        </item>
+        <item>
+            <code>(?:<placeholder/>)</code>
+            <text pos="right">Non-capturing</text>
+        </item>
+        <item>
+            <code>(?&lt;name&gt;<placeholder/>)</code>
+            <text pos="right">Named captures</text>
+        </item>
+    </section>
+    <section title="Back references">
+        <item>
+            <code>\n \gn \g{n}</code>
+            <text pos="right">Numbered</text>
+        </item>
+        <item>
+            <code>\g{-n}</code>
+            <text pos="right">Relative</text>
+        </item>
+        <item>
+            <code>\k&lt;name&gt;</code>
+            <text pos="right">Named</text>
+        </item>
+    </section>
+    <section title="Character group contents">
+        <item>
+            <code>x</code>
+            <text pos="right">individual chars</text>
+        </item>
+        <item>
+            <code>x-y</code>
+            <text pos="right">character range</text>
+        </item>
+        <item>
+            <code>[:class:]</code>
+            <text pos="right">posix char class</text>
+        </item>
+        <item>
+            <code>[^:class:]</code>
+            <text pos="right">negated class</text>
+        </item>
+        <subsection title="Examples">
+            <item>
+                <code>[a-zA-Z0-9_]</code>
+            </item>
+            <item>
+                <code>[[:alnum:]_]</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Comments">
+        <item>
+            <code>(?#comment)</code>
+        </item>
+    </section>
+    <section title="Conditional subpatterns">
+        <item>
+            <code>(?(condition)yes-pattern)</code>
+        </item>
+        <item>
+            <code>(?(condition)yes|no-pattern)</code>
+        </item>
+    </section>
+    <section title="Recursive patterns">
+        <item>
+            <code>(?n)</code>
+            <text pos="right">Numbered</text>
+        </item>
+        <item>
+            <code>(?0) (?R)</code>
+            <text pos="right">Entire regex</text>
+        </item>
+        <item>
+            <code>(?&amp;name)</code>
+            <text pos="right">Named</text>
+        </item>
+    </section>
+    <section title="Replacements">
+        <item>
+            <code>$n</code>
+            <text pos="right">reference capture</text>
+        </item>
+    </section>
+    <section title="Case foldings">
+        <item>
+            <code>\u</code>
+            <text pos="right">upper case next char</text>
+        </item>
+        <item>
+            <code>\U</code>
+            <text pos="right">upper case following</text>
+        </item>
+        <item>
+            <code>\l</code>
+            <text pos="right">lower case next char</text>
+        </item>
+        <item>
+            <code>\L</code>
+            <text pos="right">lower case following</text>
+        </item>
+        <item>
+            <code>\E</code>
+            <text pos="right">end case folding</text>
+        </item>
+    </section>
+    <section title="Conditional insertions">
+        <item>
+            <code>(&amp;n:insertion)</code>
+        </item>
+        <item>
+            <code>(&amp;n:insertion:otherwise)</code>
+        </item>
+    </section>
+</cheatsheet>

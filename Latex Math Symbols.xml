@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Latex Math Symbols</name>
+        <author>L. Kocbach</author>
+        <website>http://web.ift.uib.no/~ladi/</website>
+        <original_file>http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html</original_file>
+    </info>
+    <section title="Greek Letters">
+        <item>
+            <text width="33%">&#x0393; <light>\Gamma</light></text>
+            <text width="33%">&#x03B1; <light>\alpha</light></text>
+            <text>&#x03BE; <light>\xi</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x0394; <light>\Delta</light></text>
+            <text width="33%">&#x03B2; <light>\beta</light></text>
+            <text>&#x03C0; <light>\pi</light></text>
+        </item>
+        <item>
+            <text width="33%">&#923; <light>\Lambda</light></text>
+            <text width="33%">&#947; <light>\gamma</light></text>
+            <text>&#x03C1; <light>\rho</light></text>
+        </item>
+        <item>
+            <text width="33%">&#934; <light>\Phi</light></text>
+            <text width="33%">&#948; <light>\delta</light></text>
+            <text>&#963; <light>\sigma</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x03A0; <light>\Pi</light></text>
+            <text width="33%">&#x03F5; <light>\epsilon</light></text>
+            <text>&#x03C4; <light>\tau</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x03A8; <light>\Psi</light></text>
+            <text width="33%">&#x03B6; <light>\zeta</light></text>
+            <text>&#x03C5; <light>\upsilon</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x03A3; <light>\Sigma</light></text>
+            <text width="33%">&#x03B7; <light>\eta</light></text>
+            <text>&#x03D5; <light>\phi</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x0398; <light>\Theta</light></text>
+            <text width="33%">&#x03B8; <light>\theta</light></text>
+            <text>&#x03C7; <light>\chi</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x03A5; <light>\Upsilon</light></text>
+            <text width="33%">&#x03B9; <light>\iota</light></text>
+            <text>&#x03C8; <light>\psi</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x039E; <light>\Xi</light></text>
+            <text width="33%">&#x03BA; <light>\kappa</light></text>
+            <text>&#x03C9; <light>\omega</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x03A9; <light>\Omega</light></text>
+            <text width="33%">&#x03BB; <light>\lambda</light></text>
+            <text>&#x03DC; <light>\digamma</light></text>
+        </item>
+        <item>
+            <text width="33%">&#160;</text>
+            <text width="33%">&#x03BC; <light>\mu</light></text>
+            <text>&#x03B5; <light>\varepsilon</light></text>
+        </item>
+        <item>
+            <text width="33%">&#160;</text>
+            <text width="33%">&#x03BD; <light>\nu</light></text>
+            <text>&#x03F0; <light>\varkappa</light></text>
+        </item>
+        <item>
+            <text width="33%">&#160;</text>
+            <text width="33%">&#160;</text>
+            <text>&#x03C6; <light>\varphi</light></text>
+        </item>
+        <item>
+            <text width="33%">&#160;</text>
+            <text width="33%">&#160;</text>
+            <text>&#x03F1; <light>\varrho</light></text>
+        </item>
+        <item>
+            <text width="33%">&#160;</text>
+            <text width="33%">&#160;</text>
+            <text>&#x03C2; <light>\varsigma</light></text>
+        </item>
+        <item>
+            <text width="33%">&#160;</text>
+            <text width="33%">&#160;</text>
+            <text>&#x03D1; <light>\vartheta</light></text>
+        </item>
+    </section>
+    <section title="Binary Operation Symbols">
+        <item>
+            <text width="50%">&#xB1; <light>\pm</light></text>
+            <text>&#x2229; <light>\cap</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2213; <light>\mp</light></text>
+            <text>&#x222A; <light>\cup</light></text>
+        </item>
+        <item>
+            <text width="50%">&#xD7; <light>\times</light></text>
+            <text>&#x228E; <light>\uplus</light></text>
+        </item>
+        <item>
+            <text width="50%">&#xF7; <light>\div</light></text>
+            <text>&#x2293; <light>\sqcap</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2217; <light>\ast</light></text>
+            <text>&#x2294; <light>\sqcup</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22C6; <light>\star</light></text>
+            <text>&#x2228; <light>\vee</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2218; <light>\circ</light></text>
+            <text>&#x2227; <light>\wedge</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2219; <light>\bullet</light></text>
+            <text>&#x2216; <light>\setminus</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22C5; <light>\cdot</light></text>
+            <text>&#x2240; <light>\wr</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22C4; <light>\diamond</light></text>
+            <text>&#x2295; <light>\oplus</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x25B3; <light>\bigtriangleup</light></text>
+            <text>&#x2296; <light>\ominus</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x25BD; <light>\bigtriangledown</light></text>
+            <text>&#x2297; <light>\otimes</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x25C1; <light>\triangleleft</light></text>
+            <text>&#x2298; <light>\oslash</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x25B7; <light>\triangleright</light></text>
+            <text>&#x2299; <light>\odot</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22B2; <light>\lhd</light></text>
+            <text>&#x25CB; <light>\bigcirc</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22B3; <light>\rhd</light></text>
+            <text>&#x2020; <light>\dagger</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22B4; <light>\unlhd</light></text>
+            <text>&#x2021; <light>\ddagger</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22B5; <light>\unrhd</light></text>
+            <text>&#x2210; <light>\amalg</light></text>
+        </item>
+    </section>
+    <section title="Relation Symbols">
+        <item>
+            <text width="50%">&#x2264; <light>\leq</light></text>
+            <text>&#x2265; <light>\geq</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x227A; <light>\prec</light></text>
+            <text>&#x227B; <light>\succ</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x227C; <light>\preceq</light></text>
+            <text>&#x227D; <light>\succeq</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x226A; <light>\ll</light></text>
+            <text>&#x226B; <light>\gg</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2282; <light>\subset</light></text>
+            <text>&#x2283; <light>\supset</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2286; <light>\subseteq</light></text>
+            <text>&#x2287; <light>\supseteq</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x228F; <light>\sqsubset</light></text>
+            <text>&#x2290; <light>\sqsupset</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2291; <light>\sqsubseteq</light></text>
+            <text>&#x2292; <light>\sqsupseteq</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2208; <light>\in</light></text>
+            <text>&#x220B; <light>\ni</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22A2; <light>\vdash</light></text>
+            <text>&#x22A3; <light>\dashv</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2261; <light>\equiv</light></text>
+            <text>&#x22A8; <light>\models</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x223C; <light>\sim</light></text>
+            <text>&#x22A5; <light>\perp</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2243; <light>\simeq</light></text>
+            <text>&#x2223; <light>\mid</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x224D; <light>\asymp</light></text>
+            <text>|| <light>\parallel</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2248; <light>\approx</light></text>
+            <text>&#x22C8; <light>\bowtie</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2245; <light>\cong</light></text>
+            <text>&#x22C8; <light>\Join</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2260; <light>\neq</light></text>
+            <text>&#x2323; <light>\smile</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2250; <light>\doteq</light></text>
+            <text>&#x2322; <light>\frown</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x221D; <light>\propto</light></text>
+        </item>
+    </section>
+    <section title="Arrow Symbols">
+        <item>
+            <text width="50%">&#x2190; <light>\leftarrow</light></text>
+            <text>&#x2190; <light>\longleftarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21D0; <light>\Leftarrow</light></text>
+            <text>&#x21D0; <light>\Longleftarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2192; <light>\rightarrow</light></text>
+            <text>&#x2192; <light>longrightarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21D2; <light>\Rightarrow</light></text>
+            <text>&#x21D2; <light>\Longrightarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2194; <light>\leftrightarrow</light></text>
+            <text>&#x2194; <light>\longleftrightarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21D4; <light>\Leftrightarrow</light></text>
+            <text>&#x21D4; <light>\Longleftrightarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21A6; <light>\mapsto</light></text>
+            <text>&#x21A6; <light>\longmapsto</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21A9; <light>\hookleftarrow</light></text>
+            <text>&#x21AA; <light>\hookrightarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21BC; <light>\leftharpoonup</light></text>
+            <text>&#x21C0; <light>\rightharpoonup</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21BD; <light>\leftharpoondown</light></text>
+            <text>&#x21C1; <light>\rightharpoondown</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x21CC; <light>\rightleftharpoons</light></text>
+            <text>&#x219D; <light>\leadsto</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2191; <light>\uparrow</light></text>
+            <text>&#x21D1; <light>\Uparrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2193; <light>\downarrow</light></text>
+            <text>&#x21D3; <light>\Downarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2195; <light>\updownarrow</light></text>
+            <text>&#x21D5; <light>\Updownarrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2197; <light>\nearrow</light></text>
+            <text>&#x2198; <light>\searrow</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2199; <light>\swarrow</light></text>
+            <text>&#x2196; <light>\nwarrow</light></text>
+        </item>
+    </section>
+    <split/>
+    <section title="Miscellaneous Symbols">
+        <item>
+            <text width="50%">&#x2026; <light>\ldots</light></text>
+            <text>&#x22EF; <light>\cdots</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x22EE; <light>\vdots</light></text>
+            <text>&#x22F1; <light>\ddots</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x5D0; <light>\aleph</light></text>
+            <text>&#x2032; <light>\prime</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x210F; <light>\hbar</light></text>
+            <text>&#x2205; <light>\emptyset</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x0131; <light>\imath</light></text>
+            <text>&#x2207; <light>\nabla</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x0237; <light>\jmath</light></text>
+            <text>&#x221A; <light>\surd</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2113; <light>\ell</light></text>
+            <text>&#x22A4; <light>\top</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2118; <light>\wp</light></text>
+            <text>&#x22A5; <light>\bot</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x211C; <light>\Re</light></text>
+            <text>| <light>\|</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2111; <light>\Im</light></text>
+            <text>&#x2220; <light>\angle</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2127; <light>\mho</light></text>
+            <text>. <light>.</light></text>
+        </item>
+    </section>
+    <section title="Variable-sized Symbols">
+        <item>
+            <text width="50%">&#x2211; <light>\sum</light></text>
+            <text>&#x22C2; <light>\bigcap</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x220F; <light>\prod</light></text>
+            <text>&#x22C3; <light>\bigcup</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2210; <light>\coprod</light></text>
+            <text>&#x2294; <light>\bigsqcup</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x222B; <light>\int</light></text>
+            <text>&#x22C1; <light>\bigvee</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x222E; <light>\oint</light></text>
+            <text>&#x22C0; <light>\bigwedge</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2299; <light>\bigodot</light></text>
+            <text>&#x2297; <light>\bigotimes</light></text>
+        </item>
+        <item>
+            <text width="50%">&#x2295; <light>\bigoplus</light></text>
+            <text>&#x228E; <light>\biguplus</light></text>
+        </item>
+    </section>
+    <section title="Log-like Symbols">
+        <item>
+            <text width="33%">\arccos</text>
+            <text width="33%">\arcsin</text>
+            <text>\arctan</text>
+        </item>
+        <item>
+            <text width="33%">\arg</text>
+            <text width="33%">\cos</text>
+            <text>\cosh</text>
+        </item>
+        <item>
+            <text width="33%">\cot</text>
+            <text width="33%">\coth</text>
+            <text>\csc</text>
+        </item>
+        <item>
+            <text width="33%">\deg</text>
+            <text width="33%">\det</text>
+            <text>\dim</text>
+        </item>
+        <item>
+            <text width="33%">\exp</text>
+            <text width="33%">\gcd</text>
+            <text>\hom</text>
+        </item>
+        <item>
+            <text width="33%">\inf</text>
+            <text width="33%">\ker</text>
+            <text>\lg</text>
+        </item>
+        <item>
+            <text width="33%">\lim</text>
+            <text width="33%">\liminf</text>
+            <text>\limsup</text>
+        </item>
+        <item>
+            <text width="33%">\ln</text>
+            <text width="33%">\log</text>
+            <text>\max</text>
+        </item>
+        <item>
+            <text width="33%">\min</text>
+            <text width="33%">\Pr</text>
+            <text>\sec</text>
+        </item>
+        <item>
+            <text width="33%">\sin</text>
+            <text width="33%">\sinh</text>
+            <text>\sup</text>
+        </item>
+        <item>
+            <text width="33%">\tan</text>
+            <text width="33%">\tanh</text>
+        </item>
+    </section>
+    <section title="Delimiters">
+        <item>
+            <text>( <light>(</light></text>
+            <text pos="right">) <light>)</light></text>
+        </item>
+        <item>
+            <text>[ <light>[</light></text>
+            <text pos="right">] <light>]</light></text>
+        </item>
+        <item>
+            <text>{ <light>\{</light></text>
+            <text pos="right">} <light>\}</light></text>
+        </item>
+        <item>
+            <text>&#x230A; <light>\lfloor</light></text>
+            <text pos="right">&#x230B; <light>\rfloor</light></text>
+        </item>
+        <item>
+            <text>&#x2329; <light>\langle</light></text>
+            <text pos="right">&#x232A; <light>\rangle</light></text>
+        </item>
+        <item>
+            <text>| <light>|</light></text>
+            <text pos="right">|| <light>\|</light></text>
+        </item>
+        <item>
+            <text>&#x2191; <light>\uparrow</light></text>
+            <text pos="right">&#x21D1; <light>\Uparrow</light></text>
+        </item>
+        <item>
+            <text>&#x2193; <light>\downarrow</light></text>
+            <text pos="right">&#x21D3; <light>\Downarrow</light></text>
+        </item>
+        <item>
+            <text>&#x2195; <light>\updownarrow</light></text>
+            <text pos="right">&#x21D5; <light>\Updownarrow</light></text>
+        </item>
+        <item>
+            <text>&#x2308; <light>\lceil</light></text>
+            <text pos="right">&#x2309; <light>\rceil</light></text>
+        </item>
+        <item>
+            <text>/ <light>/</light></text>
+            <text pos="right">\ <light>\backslash</light></text>
+        </item>
+    </section>
+    <section title="Math mode accents">
+        <item>
+            <text width="33%">&#xE2; <light>\hat{a}</light></text>
+            <text width="33%">&#xE1; <light>\acute{a}</light></text>
+            <text>&#x101; <light>\bar{a}</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x1CE; <light>\check{a}</light></text>
+            <text width="33%">&#xE0; <light>\grave{a}</light></text>
+            <text>&#x20D7; <light>\vec{a}</light></text>
+        </item>
+        <item>
+            <text width="33%">&#x227; <light>\dot{a}</light></text>
+            <text width="33%">&#x103; <light>\breve{a}</light></text>
+            <text>&#xE4; <light>\ddot{a}</light></text>
+        </item>
+        <item>
+            <text>&#xE3; <light>\tilde{a}</light></text>
+        </item>
+    </section>
+</cheatsheet>
+
+
+
+
+
+
+
+

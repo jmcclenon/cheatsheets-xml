@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>The Web Developer's SEO Cheat Sheet</name>
+        <author>Danny Dover</author>
+        <website>http://www.seomoz.org/blog/the-web-developers-seo-cheat-sheet</website>
+        <original_file>http://static.seomoz.org/user_files/SEO_Web_Developer_Cheat_Sheet.pdf</original_file>
+    </info>
+    <section title="Important SEO HTML tags">
+        <item>
+            <text><bold>Title Tag</bold></text>
+            <code pos="right">
+                &lt;head&gt;<br/>
+                <indent/>&lt;title&gt;Keyword&lt;/title&gt;<br/>
+                &lt;/head&gt;
+            </code>
+        </item>
+        <item>
+            <text><bold>H1,H2,H3</bold></text>
+            <code pos="right">
+                &lt;h1&gt;Most Important&lt;/h1&gt;<br/>
+                &lt;h2&gt;Second Most Important&lt;/h2&gt;<br/>
+                &lt;h3&gt;Third Most Important&lt;/h3&gt;
+            </code>
+        </item>
+        <item>
+            <text><bold>Bold, Strong<br/>(Same Worth)</bold></text>
+            <code pos="right">
+                &lt;b&gt;Keyword&lt;/b&gt;<br/>
+                &lt;strong&gt;Keyword&lt;/strong&gt;
+            </code>
+        </item>
+        <item>
+            <text><bold>Image<br/>(XHTML)</bold></text>
+            <code pos="right">
+                &lt;img src="keyword.jpg" alt="keyword" /&gt;
+            </code>
+        </item>
+        <item>
+            <text><bold>Hyperlink</bold></text>
+            <code pos="right">
+                &lt;a href="http://www.mysite.com/page.html" 
+                title="keyword"&gt;Keyword in Anchor Text&lt;/a&gt;
+            </code>
+        </item>
+        <item>
+            <text><bold>Hyperlink <br/>(No Followed)</bold></text>
+            <code pos="right">
+                &lt;a href="http://www.mysite.com/page.html" title="keyword" rel="nofollow"&gt;Keyword in Anchor Text&lt;/a&gt;
+            </code>
+        </item>
+    </section>
+    <section title="Recommended TitleTag Syntax">
+        <item>
+            <code>Keyword &lt; Category | Website Title</code>
+        </item>
+    </section>
+    <section title="Search Engine Indexing Limits">
+        <item>
+            <text><light>*Does not apply to websites with significant authority</light></text>
+        </item>
+        <item>
+            <text><bold>Page File Size</bold></text>
+            <text pos="right">
+                No more than 150 kilobytes <light>(Before Images, CSS and other Attachments)</light>
+            </text>
+        </item>
+        <item>
+            <text><bold>Amount of links</bold></text>
+            <text pos="right">
+                No more than 100 unique links per page
+            </text>
+        </item>
+        <item>
+            <text><bold>TitleTag</bold></text>
+            <text pos="right">
+                No more than 70 characters
+            </text>
+        </item>
+        <item>
+            <text><bold>Meta Description</bold></text>
+            <text pos="right">
+                No more than 155 characters
+            </text>
+        </item>
+        <item>
+            <text><bold>Parameters in URL</bold></text>
+            <text pos="right">
+                No more than 2
+            </text>
+            <text pos="bottom"><light>
+                <bold>Bad Example:</bold><br/>
+                http://www.mysite.com/brands.php?object=1&amp;type=2&amp;kind=3&amp;node=5&amp;arg=6 <br/>
+                <bold>Good Example:</bold><br/>
+                http://www.mysite.com/brands.php?nike
+            </light></text>
+        </item>
+        <item>
+            <text><bold>Depth of URL</bold></text>
+            <text pos="right">
+                No more than 4
+            </text>
+            <text pos="bottom"><light>
+                <bold>Bad Example:</bold><br/>
+                http://www.mysite.com/people/ places/things/noun/danny/car <br/>
+                <bold>*Best Practice:</bold><br/>
+                http://www.mysite.com/brands.php?nike
+            </light></text>
+        </item>
+    </section>
+    <section title="Common Canonical Homepage Issue">
+        <item>
+            <text><bold>Bad</bold></text>
+            <text pos="bottom">
+                http://www.mysite.com <br/>
+                http://mysite.com <br/>
+                http://www.mysite.com/index.html <br/>
+                http://mysite.com/index.html
+            </text>
+        </item>
+        <item>
+            <text><bold>Good</bold></text>
+            <text pos="bottom">
+                http://www.mysite.com/
+            </text>
+        </item>
+        <item>
+            <text>To condense the four default homepages into one homepage, use 301 redirects (See table on right) to correct for erroneous incoming links and make all internal links point to your domain using the syntax 'http://www.mysite.com/'.Always include trailing "/" on folders.</text>
+        </item>
+    </section>
+    <section title="301 Redirect for Apache">
+        <item>
+            <text><light>Write to file called '.htaccess'.The file is named only as an extension. Hidden files must be viewable in operating system. mod_rewrite must be enabled</light></text>
+        </item>
+        <item>
+            <code>
+                <bold>Redirect 301 /oldpage.html http://www.newdomain.com/newpage.html
+</bold>
+            </code>
+            <text pos="bottom">
+                Redirect single file or directory to a new file or directory on a different domain
+            </text>
+        </item>
+        <item>
+            <code>
+                <bold>
+                    RewriteEngine on <br/>
+                    RewriteCond %{HTTP_HOST} ^mysite\.com [NC]<br/>
+                    RewriteRule (.*) http://www.mysite.com/$1 [L,R=301]
+</bold>
+            </code>
+            <text pos="bottom">
+                Redirect http://mysite.com to http:// www.mysite.com.Affects entire domain.
+            </text>
+        </item>
+        <item>
+            <code><bold>
+                Entire site: <br/>
+                Redirect 301 / http://www.newdomain.com/ <br/>
+                Redirect permanent /old http://www.newdomain.com/new
+            </bold></code>
+            <text pos="bottom">
+                Redirect entire domain to a new domain as either a 301 (recommended) or 302
+            </text>
+        </item>
+    </section>
+    <section title="Common Robot Traps">
+        <item>
+            <text><bold>
+                &#x2022; Input Forms <br/>
+                &#x2022; Session IDs in URL <br/>
+                &#x2022; Pages Restricted by Cookies <br/>
+                &#x2022; Frames <br/>
+                &#x2022; Logins
+            </bold></text>
+        </item>
+    </section>
+    <section title="Robots.txt Syntax">
+        <item>
+            <code>
+                User-agent: * <br/>
+                Disallow: /privatefolder/ <br/>
+                Disallow: /privatefile.html <br/>
+                <br/>
+                User-agent: Googlebot/2.1 <br/>
+                Disallow: /nogoogle.html <br/>
+                Sitemap: http://www.mysite.com/sitemap.xml
+            </code>
+        </item>
+    </section>
+    <split/>
+    <section title="Important Search Engine Robots">
+        <item>
+            <text><light>Last updated April 29th 2008. Check http://www.user-agents.org/ for updates</light></text>
+        </item>
+        <item>
+            <text><bold>Google Search</bold></text>
+            <text pos="right">
+                Googlebot/2.1 (http://www.google.com/bot.html)
+            </text>
+        </item>
+        <item>
+            <text><bold>Google Search</bold></text>
+            <text pos="right">
+                Googlebot/2.1 (http://www.googlebot.com/bot.html)
+            </text>
+        </item>
+        <item>
+            <text><bold>Google Image Search</bold></text>
+            <text pos="right">
+                Googlebot-Image/1.0
+            </text>
+        </item>
+        <item>
+            <text><bold>Google Image Search</bold></text>
+            <text pos="right">
+                Googlebot-Image/1.0 (http://www.googlebot.com/bot.html)
+            </text>
+        </item>
+        <hr/>
+        <item>
+            <text><bold>MSN Search</bold></text>
+            <text pos="right">
+                msnbot/x.xx (http://search.msn.com/msnbot.htm)
+            </text>
+        </item>
+        <item>
+            <text><bold>MSN Search</bold></text>
+            <text pos="right">
+                MSNBOT/0.xx (http://search.msn.com/msnbot.htm)
+            </text>
+        </item>
+        <item>
+            <text><bold>MSN Media Search Robot</bold></text>
+            <text pos="right">
+                msnbot-media/1.0 (+http://search.msn.com/msnbot.htm)
+            </text>
+        </item>
+        <item>
+            <text><bold>Windows Live Product Search</bold></text>
+            <text pos="right">
+                msnbot-Products/1.0 (+http://search.msn.com/msnbot.htm)
+            </text>
+        </item>
+        <item>
+            <text><bold>Microsoft Search for Mobiles</bold></text>
+            <text pos="right">
+                MSNBOT_Mobile MSMOBOT Mozilla/2.0 (compatible; MSIE 4.02;Windows CE; Default)
+            </text>
+        </item>
+        <hr/>
+        <item>
+            <text><bold>Alexa / The Internet Archive</bold></text>
+            <text pos="right">
+                ia_archiver
+            </text>
+        </item>
+        <item>
+            <text><bold>Alexa / The Internet Archive</bold></text>
+            <text pos="right">
+                ia_archiver-web.archive.org
+            </text>
+        </item>
+        <item>
+            <text><bold>Alexa / The Internet Archive</bold></text>
+            <text pos="right">
+                ia_archiver/1.6
+            </text>
+        </item>
+        <hr/>
+        <item>
+            <text><bold>Yahoo Blog Search</bold></text>
+            <text pos="right">
+                Yahoo-Blogs/v3.9 (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.com/help/ us/ysearch/crawling/crawling-02.html)
+            </text>
+        </item>
+        <item>
+            <text><bold>Yahoo Multimedia Search</bold></text>
+            <text pos="right">
+                Yahoo-MMAudVid/1.0 (mms dash mmaudvidcrawler dash support at yahoo dash inc dot com)
+            </text>
+        </item>
+        <item>
+            <text><bold>Yahoo Product Search</bold></text>
+            <text pos="right">
+                YahooSeeker/1.0 (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.com/help/us/shop/merchant/)
+            </text>
+        </item>
+        <item>
+            <text><bold>Yahoo Product Search</bold></text>
+            <text pos="right">
+                YahooSeeker/1.0 (compatible; Mozilla 4.0; MSIE 5.5; http://search.yahoo.com/yahooseeker.html)
+            </text>
+        </item>
+        <item>
+            <text><bold>Yahoo Product Search</bold></text>
+            <text pos="right">
+                YahooSeeker/1.1 (compatible; Mozilla 4.0; MSIE 5.5; http://help.yahoo.com/help/us/shop/merchant/)
+            </text>
+        </item>
+        <hr/>
+        <item>
+            <text><bold>Ask/Teoma Search</bold></text>
+            <text pos="right">
+                Mozilla/2.0 (compatible;Ask Jeeves)
+            </text>
+        </item>
+        <item>
+            <text><bold>Ask/Teoma Search</bold></text>
+            <text pos="right">
+                Mozilla/2.0 (compatible;Ask Jeeves/Teoma)
+            </text>
+        </item>
+        <item>
+            <text><bold>Ask/Teoma Search</bold></text>
+            <text pos="right">
+                Mozilla/2.0 (compatible; Ask Jeeves/Teoma; http://about.ask.com/en/ docs/about/webmasters.shtml)
+            </text>
+        </item>
+    </section>
+    <section title="Robots Meta Tag">
+        <item>
+            <code>&lt;meta name=&quot;ROBOT NAME&quot; content=&quot;ARGUMENTS&quot; /&gt;</code>
+        </item>
+        <item>
+            <text>ROBOT NAME can be either "robots" for all robots or the user-agent of a specific robot. See robot user-agent list above.</text>
+        </item>
+        <subsection title="Arguments">
+            <item>
+                <code><bold>noindex</bold></code>
+                <text pos="right">Page Not Indexed</text>
+                <text pos="bottom"><light>Google, Yahoo, Live, Ask</light></text>
+            </item>
+            <item>
+                <code><bold>nofollow</bold></code>
+                <text pos="right">All Links on Page Become No Followed</text>
+                <text pos="bottom"><light>Google, Yahoo, Live, Ask</light></text>
+            </item>
+            <item>
+                <code><bold>noarchive</bold></code>
+                <text pos="right">Page Not Cached</text>
+                <text pos="bottom"><light>Google, Yahoo, Live, Ask</light></text>
+            </item>
+            <item>
+                <code><bold>noodp</bold></code>
+                <text pos="right">Stops Description and Title Tag Overwrite by DMOZ <br/>
+                <light>(Only for Homepage)</light></text>
+                <text pos="bottom"><light>Google, Yahoo, Live</light></text>
+            </item>
+            <item>
+                <code><bold>noydir</bold></code>
+                <text pos="right">Stops Description and Title Tag Overwrite by Yahoo Directory</text>
+                <text pos="bottom"><light>Yahoo</light></text>
+            </item>
+            <item>
+                <code><bold>nosnippet</bold></code>
+                <text pos="right">Stops Google from Generating Description Based on On-page Text</text>
+                <text pos="bottom"><light>Google</light></text>
+            </item>
+        </subsection>
+    </section>
+    <section title="Sitemap Syntax">
+        <item>
+            <code>
+                &lt;?xml version=&quot;1.0&quot; encoding=&#x27;UTF-8&#x27;?&gt;<br/>
+                &lt;urlset xmlns=&#x27;http://www.sitemaps.org/ schemas/sitemap/0.9&#x27;&gt;<br/>
+                <indent/>&lt;url&gt;<br/>
+                <indent/><indent/>&lt;loc&gt;http://www.mysite.com/&lt;/loc&gt;<br/>
+                <indent/><indent/>&lt;lastmod&gt;1987-05-25&lt;/lastmod&gt;<br/>
+                <indent/><indent/>&lt;changefreq&gt;monthly&lt;/changefreq&gt;<br/>
+                <indent/><indent/>&lt;priority&gt;0.8&lt;/priority&gt;<br/>
+                <indent/>&lt;/url&gt;<br/>
+                &lt;/urlset&gt;
+            </code>
+        </item>
+        <item>
+            <text>
+                <bold>Default Locations Search Engines Look for Sitemaps</bold>
+            </text>
+            <text pos="bottom">
+                http://www.mysite.com/sitemap.xml <br/>
+                http://www.mysite.com/sitemap.xml.gz <br/>
+                http://www.mysite.com/sitemap.gz
+            </text>
+        </item>
+        <item>
+            <text>
+                <light>Visit http://www.xml-sitemaps.com/ for a free sitemap</light>
+            </text>
+        </item>
+    </section>
+</cheatsheet>

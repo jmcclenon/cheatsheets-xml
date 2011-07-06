@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Python</name>
+        <author>Dave Child</author>
+        <website>http://www.addedbytes.com</website>
+        <original_file>http://www.addedbytes.com/download/python-cheat-sheet-v1/pdf/</original_file>
+    </info>
+    <section title="sys Variables">
+        <item>
+            <code>argv</code>
+            <text pos="right">Command line args</text>
+        </item>
+        <item>
+            <code>builtin_module_names</code>
+            <text pos="right">Linked C modules</text>
+        </item>
+        <item>
+            <code>byteorder</code>
+            <text pos="right">Native byte order</text>
+        </item>
+        <item>
+            <code>check_interval</code>
+            <text pos="right">Signal check frequency</text>
+        </item>
+        <item>
+            <code>exec_prefix</code>
+            <text pos="right">Root directory</text>
+        </item>
+        <item>
+            <code>executable</code>
+            <text pos="right">Name of executable</text>
+        </item>
+        <item>
+            <code>exitfunc</code>
+            <text pos="right">Exit function name</text>
+        </item>
+        <item>
+            <code>modules</code>
+            <text pos="right">Loaded modules</text>
+        </item>
+        <item>
+            <code>path</code>
+            <text pos="right">Search path</text>
+        </item>
+        <item>
+            <code>platform</code>
+            <text pos="right">Current platform</text>
+        </item>
+        <item>
+            <code>stdin,stdout,stderr</code>
+            <text pos="right">File objects for I/O</text>
+        </item>
+        <item>
+            <code>version_info</code>
+            <text pos="right">Python version info</text>
+        </item>
+        <item>
+            <code>winver</code>
+            <text pos="right">Version number</text>
+        </item>
+    </section>
+    <section title="sys.argv for python foo.py bar -c qux --h">
+        <item>
+            <code>sys.argv[0]</code>
+            <code pos="right">foo.py</code>
+        </item>
+        <item>
+            <code>sys.argv[1]</code>
+            <code pos="right">bar</code>
+        </item>
+        <item>
+            <code>sys.argv[2]</code>
+            <code pos="right">-c</code>
+        </item>
+        <item>
+            <code>sys.argv[3]</code>
+            <code pos="right">qux</code>
+        </item>
+        <item>
+            <code>sys.argv[4]</code>
+            <code pos="right">--h</code>
+        </item>
+    </section>
+    <section title="os Variables">
+        <item>
+            <code>altsep</code>
+            <text pos="right">Alternative separator</text>
+        </item>
+        <item>
+            <code>curdir</code>
+            <text pos="right">Current dir string</text>
+        </item>
+        <item>
+            <code>defpath</code>
+            <text pos="right">Default search path</text>
+        </item>
+        <item>
+            <code>devnull</code>
+            <text pos="right">Path of null device</text>
+        </item>
+        <item>
+            <code>extsep</code>
+            <text pos="right">Extension separator</text>
+        </item>
+        <item>
+            <code>linesep</code>
+            <text pos="right">Line separator</text>
+        </item>
+        <item>
+            <code>name</code>
+            <text pos="right">Name of OS</text>
+        </item>
+        <item>
+            <code>pardir</code>
+            <text pos="right">Parent dir string</text>
+        </item>
+        <item>
+            <code>pathsep</code>
+            <text pos="right">Path separator</text>
+        </item>
+        <item>
+            <code>sep</code>
+            <text pos="right">Path separator</text>
+        </item>
+        <hr/>
+        <item>
+            <text><light>OS name can be posix, nt, mac, os2, ce, java  or riscos</light></text>
+        </item>
+    </section>
+    <section title="Class Special Methods">
+        <item>
+            <code>__new__(cls)</code>
+            <code pos="right">__lt__(self,other)</code>
+        </item>
+        <item>
+            <code>__init__(self,args)</code>
+            <code pos="right">__le__(self,other)</code>
+        </item>
+        <item>
+            <code>__del__(self)</code>
+            <code pos="right">__gt__(self,other)</code>
+        </item>
+        <item>
+            <code>__repr__(self)</code>
+            <code pos="right">__ge__(self,other)</code>
+        </item>
+        <item>
+            <code>__str__(self)</code>
+            <code pos="right">__eq__(self,other)</code>
+        </item>
+        <item>
+            <code>__cmp__(self,other)</code>
+            <code pos="right">__ne__(self,other)</code>
+        </item>
+        <item>
+            <code>__index__(self)</code>
+            <code pos="right">__nonzero__(self)</code>
+        </item>
+        <item>
+            <code>__hash__(self)</code>
+            <code pos="right">__call__(self,args,kwargs)</code>
+        </item>
+        <item>
+            <code>__getattr__(self,name)</code>
+            <code pos="right">__setattr__(self,name,attr)</code>
+        </item>
+        <item>
+            <code>__getattribute__(self,name)</code>
+            <code pos="right">__delattr__(self,name)</code>
+        </item>
+    </section>
+    <section title="String Methods">
+        <item>
+            <code>capitalize() *</code>
+            <code pos="right">lstrip()</code>
+        </item>
+        <item>
+            <code>center(width)</code>
+            <code pos="right">partition(sep)</code>
+        </item>
+        <item>
+            <code>count(sub,start,end)</code>
+            <code pos="right">replace(old,new)</code>
+        </item>
+        <item>
+            <code>decode()</code>
+            <code pos="right">rfind(sub,start,end)</code>
+        </item>
+        <item>
+            <code>encode()</code>
+            <code pos="right">rindex(sub,start,end)</code>
+        </item>
+        <item>
+            <code>endswith(sub)</code>
+            <code pos="right">rjust(width)</code>
+        </item>
+        <item>
+            <code>expandtabs()</code>
+            <code pos="right">rpartition(sep)</code>
+        </item>
+        <item>
+            <code>find(sub,start,end)</code>
+            <code pos="right">rsplit(sep)</code>
+        </item>
+        <item>
+            <code>index(sub,start,end)</code>
+            <code pos="right">rstrip()</code>
+        </item>
+        <item>
+            <code>isalnum() *</code>
+            <code pos="right">split(sep)</code>
+        </item>
+        <item>
+            <code>isalpha() *</code>
+            <code pos="right">splitlines()</code>
+        </item>
+        <item>
+            <code>isdigit() *</code>
+            <code pos="right">startswith(sub)</code>
+        </item>
+        <item>
+            <code>islower() *</code>
+            <code pos="right">strip()</code>
+        </item>
+        <item>
+            <code>isspace() *</code>
+            <code pos="right">swapcase() *</code>
+        </item>
+        <item>
+            <code>istitle() *</code>
+            <code pos="right">title() *</code>
+        </item>
+        <item>
+            <code>isupper() *</code>
+            <code pos="right">translate(table)</code>
+        </item>
+        <item>
+            <code>join()</code>
+            <code pos="right">upper() *</code>
+        </item>
+        <item>
+            <code>ljust(width)</code>
+            <code pos="right">zfill(width)</code>
+        </item>
+        <item>
+            <code>lower() *</code>
+        </item>
+        <hr/>
+        <item>
+            <text><light>Methods marked * are locale dependant for 8-bit strings</light></text>
+        </item>
+    </section>
+    <split/>
+    <section title="List Methods">
+        <item>
+            <code>append(item)</code>
+            <code pos="right">pop(position)</code>
+        </item>
+        <item>
+            <code>count(item)</code>
+            <code pos="right">remove(item)</code>
+        </item>
+        <item>
+            <code>extend(list)</code>
+            <code pos="right">reverse()</code>
+        </item>
+        <item>
+            <code>index(item)</code>
+            <code pos="right">sort()</code>
+        </item>
+        <item>
+            <code>insert(position,item)</code>
+        </item>
+    </section>
+    <section title="Indexes and Slices (of a=[0,1,2,3,4,5])">
+        <item>
+            <code>len(a)</code>
+            <code pos="right">6</code>
+        </item>
+        <item>
+            <code>a[0]</code>
+            <code pos="right">0</code>
+        </item>
+        <item>
+            <code>a[5]</code>
+            <code pos="right">5</code>
+        </item><item>
+            <code>a[-1]</code>
+            <code pos="right">5</code>
+        </item><item>
+            <code>a[-2]</code>
+            <code pos="right">4</code>
+        </item>
+        <item>
+            <code>a[1:]</code>
+            <code pos="right">[1,2,3,4,5]</code>
+        </item>
+        <item>
+            <code>a[:5]</code>
+            <code pos="right">[0,1,2,3,4]</code>
+        </item>
+        <item>
+            <code>a[:-2]</code>
+            <code pos="right">[0,1,2,3]</code>
+        </item>
+        <item>
+            <code>a[1:3]</code>
+            <code pos="right">[1,2]</code>
+        </item>
+        <item>
+            <code>a[1:-1]</code>
+            <code pos="right">[1,2,3,4]</code>
+        </item>
+    </section>
+    <section title="Datetime Methods">
+        <item>
+            <code>today()</code>
+            <code pos="right">	fromordinal(ordinal)</code>
+        </item>
+        <item>
+            <code>now(timezoneinfo)</code>
+            <code pos="right">combine(date,time)</code>
+        </item>
+        <item>
+            <code>utcnow()</code>
+            <code pos="right">strptime(date, format)</code>
+        </item>
+        <item>
+            <code>fromtimestamp(timestamp)</code>
+            <code pos="right">utcfromtimestamp(timestamp)</code>
+        </item>
+    </section>
+    <section title="Time Methods">
+        <item>
+            <code>replace()</code>
+            <code pos="right">utcoffset()</code>
+        </item>
+        <item>
+            <code>isoformat()</code>
+            <code pos="right">dst()</code>
+        </item>
+        <item>
+            <code>__str__()</code>
+            <code pos="right">tzname()</code>
+        </item>
+        <item>
+            <code>strftime(formato)</code>
+        </item>
+    </section>
+    <section title="Date Formatting (strfime and strptime)">
+        <item>
+            <code>%a</code>
+            <text pos="right">Abbreviated weekday (Sun)</text>
+        </item>
+        <item>
+            <code>%A</code>
+            <text pos="right">Weekday (Sunday)</text>
+        </item>
+        <item>
+            <code>%b</code>
+            <text pos="right">Abbreviated month name (Jan)</text>
+        </item>
+        <item>
+            <code>%B</code>
+            <text pos="right">Month name (January)</text>
+        </item>
+        <item>
+            <code>%c</code>
+            <text pos="right">Date and Time</text>
+        </item>
+        <item>
+            <code>%d</code>
+            <text pos="right">Day (leading zeros) (01 to 31)</text>
+        </item>
+        <item>
+            <code>%H</code>
+            <text pos="right">24 hour (leading zeros) (00 a 23)</text>
+        </item>
+        <item>
+            <code>%I</code>
+            <text pos="right">12 hour (leading zeros) (01 a 12)</text>
+        </item>
+        <item>
+            <code>%j</code>
+            <text pos="right">Day of the year (001 a 366)</text>
+        </item>
+        <item>
+            <code>%m</code>
+            <text pos="right">Month (01 a 12)</text>
+        </item>
+        <item>
+            <code>%M</code>
+            <text pos="right">Minute (00 a 59)</text>
+        </item>
+        <item>
+            <code>%p</code>
+            <text pos="right">AM or PM</text>
+        </item>
+        <item>
+            <code>%S</code>
+            <text pos="right">Second (00 a 61) [1]</text>
+        </item>
+        <item>
+            <code>%U</code>
+            <text pos="right">Week number [2] (00 a 53)</text>
+        </item>
+        <item>
+            <code>%w</code>
+            <text pos="right">Weekday [3] (0 a 6)</text>
+        </item>
+        <item>
+            <code>%W</code>
+            <text pos="right">Week number 4 (00 a 53)</text>
+        </item>
+        <item>
+            <code>%x</code>
+            <text pos="right">Date</text>
+        </item>
+        <item>
+            <code>%X</code>
+            <text pos="right">Time</text>
+        </item>
+        <item>
+            <code>%y</code>
+            <text pos="right">Year without century (00 a 99)</text>
+        </item>
+        <item>
+            <code>%Y</code>
+            <text pos="right">Year (2009)</text>
+        </item>
+        <item>
+            <code>%Z</code>
+            <text pos="right">Time zone (GMT)</text>
+        </item>
+        <item>
+            <code>%%</code>
+            <text pos="right">A literal "%" character (%)</text>
+        </item>
+        <hr/>
+        <item>
+            <text><light>1 -- Not a mistake. Range takes account of leap seconds</light></text>
+        </item>
+        <item>
+            <text><light>2 -- Sunday as start of week.</light></text>
+        </item>
+        <item>
+            <text><light>3 -- 0 is Sunday, 6 is Saturday.</light></text>
+        </item>
+        <item>
+            <text><light>4 -- Monday as start of week.</light></text>
+        </item>
+    </section>
+    <section title="File Methods">
+        <item>
+            <code>close()</code>
+            <code pos="right">readlines(size)</code>
+        </item>
+        <item>
+            <code>flush()</code>
+            <code pos="right">seek(offset)</code>
+        </item>
+        <item>
+            <code>fileno()</code>
+            <code pos="right">tell()</code>
+        </item>
+        <item>
+            <code>isatty()</code>
+            <code pos="right">truncate(size)</code>
+        </item>
+        <item>
+            <code>next()</code>
+            <code pos="right">write(string)</code>
+        </item>
+        <item>
+            <code>read(size)</code>
+            <code pos="right">writelines(list)</code>
+        </item>
+        <item>
+            <code>readlines(size)</code>
+            <code pos="right"></code>
+        </item>
+    </section>
+</cheatsheet>

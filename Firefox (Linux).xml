@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Mozilla Firefox Keyboard Shortcuts (Linux)</name>
+        <author>Mozilla</author>
+        <website>http://support.mozilla.com</website>
+        <original_file>http://support.mozilla.com/en-US/kb/Keyboard+shortcuts</original_file>
+    </info>
+    <section title="Navigation">
+        <item>
+            <text>Back</text>
+            <text pos="right">
+                Alt<light>+</light>Left Arrow <br/>
+                Ctrl<light>+</light>[
+            </text>
+        </item>
+        <item>
+            <text>Forward</text>
+            <text pos="right">
+                Alt<light>+</light>Right Arrow <br/>
+                Ctrl<light>+</light>]
+            </text>
+        </item>
+        <item>
+            <text>Home</text>
+            <text pos="right">
+                Alt<light>+</light>Home 
+            </text>
+        </item>
+        <item>
+            <text>Open File</text>
+            <text pos="right">
+                Ctrl<light>+</light>O
+            </text>
+        </item>
+        <item>
+            <text>Reload</text>
+            <text pos="right">
+                F5 <br/>
+                Ctrl<light>+</light>R
+            </text>
+        </item>
+        <item>
+            <text>Reload (override cache)</text>
+            <text pos="right">
+                Ctrl<light>+</light>F5 <br/>
+                Ctrl<light>+</light>Shift<light>+</light>R
+            </text>
+        </item>
+        <item>
+            <text>Stop</text>
+            <text pos="right">
+                Esc
+            </text>
+        </item>
+    </section>
+    <section title="Current Page">
+        <item>
+            <text>Go to Bottom of Page</text>
+            <text pos="right">
+                End
+            </text>
+        </item>
+        <item>
+            <text>Go to Top of Page</text>
+            <text pos="right">
+                Home
+            </text>
+        </item>
+        <item>
+            <text>Move to Next Frame</text>
+            <text pos="right">
+                F6
+            </text>
+        </item>
+        <item>
+            <text>Move to Previous Frame</text>
+            <text pos="right">
+                Shift<light>+</light>F6
+            </text>
+        </item>
+        <item>
+            <text>Page Info</text>
+            <text pos="right">
+                Ctrl<light>+</light>I
+            </text>
+        </item>
+        <item>
+            <text>Page Source</text>
+            <text pos="right">
+                Ctrl<light>+</light>U
+            </text>
+        </item>
+        <item>
+            <text>Print</text>
+            <text pos="right">
+                Ctrl<light>+</light>P
+            </text>
+        </item>
+        <item>
+            <text>Save Page As</text>
+            <text pos="right">
+                Ctrl<light>+</light>S
+            </text>
+        </item>
+        <item>
+            <text>Zoom In</text>
+            <text pos="right">
+                Ctrl<light>+</light>+
+            </text>
+        </item>
+        <item>
+            <text>Zoom Out</text>
+            <text pos="right">
+                Ctrl<light>+</light>-
+            </text>
+        </item>
+        <item>
+            <text>Zoom Reset</text>
+            <text pos="right">
+                Ctrl<light>+</light>0
+            </text>
+        </item>
+    </section>
+    <section title="Editing">
+        <item>
+            <text>Copy</text>
+            <text pos="right">
+                Ctrl<light>+</light>C
+            </text>
+        </item>
+        <item>
+            <text>Cut</text>
+            <text pos="right">
+                Ctrl<light>+</light>X
+            </text>
+        </item>
+        <item>
+            <text>Delete</text>
+            <text pos="right">
+                Delete
+            </text>
+        </item>
+        <item>
+            <text>Paste</text>
+            <text pos="right">
+                Ctrl<light>+</light>V
+            </text>
+        </item>
+        <item>
+            <text>Redo</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>Z
+            </text>
+        </item>
+        <item>
+            <text>Select All</text>
+            <text pos="right">
+                Ctrl<light>+</light>A
+            </text>
+        </item>
+        <item>
+            <text>Undo</text>
+            <text pos="right">
+                Ctrl<light>+</light>Z
+            </text>
+        </item>
+    </section>
+    <section title="Search">
+        <item>
+            <text>Find</text>
+            <text pos="right">
+                Ctrl<light>+</light>F
+            </text>
+        </item>
+        <item>
+            <text>Find Again</text>
+            <text pos="right">
+                F3 <br/>
+                Ctrl<light>+</light>G
+            </text>
+        </item>
+        <item>
+            <text>Find As You Type Link</text>
+            <text pos="right">
+                '
+            </text>
+        </item>
+        <item>
+            <text>Find As You Type Text</text>
+            <text pos="right">
+                /
+            </text>
+        </item>
+        <item>
+            <text>Find Previous</text>
+            <text pos="right">
+                Shift<light>+</light>F3
+            </text>
+        </item>
+        <item>
+            <text>Web Search</text>
+            <text pos="right">
+                Ctrl<light>+</light>K <br/>
+                Ctrl<light>+</light>J
+            </text>
+        </item>
+    </section>
+    <section title="Tools">
+        <item>
+            <text>Bookmark This Page</text>
+            <text pos="right">
+                Ctrl<light>+</light>D
+            </text>
+        </item>
+        <item>
+            <text>Bookmarks</text>
+            <text pos="right">
+                Ctrl<light>+</light>B
+            </text>
+        </item>
+        <item>
+            <text>Library window</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>O
+            </text>
+        </item>
+        <item>
+            <text>Caret Browsing</text>
+            <text pos="right">
+                F7
+            </text>
+        </item>
+        <item>
+            <text>Downloads</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>Y
+            </text>
+        </item>
+        <item>
+            <text>History</text>
+            <text pos="right">
+                Ctrl<light>+</light>H
+            </text>
+        </item>
+        <item>
+            <text>Toggle Private Browsing</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>P
+            </text>
+        </item>
+        <item>
+            <text>Clear Recent History</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>Del
+            </text>
+        </item>
+        <item>
+            <text>Error Console</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>J
+            </text>
+        </item>
+    </section>
+    <split/>
+    <section title="Windows &amp; Tabs">
+        <item>
+            <text>Close Tab</text>
+            <text pos="right">
+                Ctrl<light>+</light>W <br/>
+                Ctrl<light>+</light>F4
+            </text>
+        </item>
+        <item>
+            <text>Close Window</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>W <br/>
+                Alt<light>+</light>F4
+            </text>
+        </item>
+        <item>
+            <text>Move Tab Left <br/>
+            <light>(when tab is focused)</light></text>
+            <text pos="right">
+                Ctrl<light>+</light>Left Arrow <br/>
+                Ctrl<light>+</light>Up Arrow
+            </text>
+        </item>
+        <item>
+            <text>Move Tab Right <br/>
+            <light>(when tab is focused)</light></text>
+            <text pos="right">
+                Ctrl<light>+</light>Right Arrow <br/>
+                Ctrl<light>+</light>Down Arrow
+            </text>
+        </item>
+        <item>
+            <text>Move Tab to Beginning <br/>
+            <light>(when tab is focused)</light></text>
+            <text pos="right">
+                Ctrl<light>+</light>Home
+            </text>
+        </item>
+        <item>
+            <text>Move Tab to End <br/>
+            <light>(when tab is focused)</light></text>
+            <text pos="right">
+                Ctrl<light>+</light>End
+            </text>
+        </item>
+        <item>
+            <text>New Tab</text>
+            <text pos="right">
+                Ctrl<light>+</light>T
+            </text>
+        </item>
+        <item>
+            <text>New Window</text>
+            <text pos="right">
+                Ctrl<light>+</light>N
+            </text>
+        </item>
+        <item>
+            <text>Next Tab</text>
+            <text pos="right">
+                Ctrl<light>+</light>Tab <br/>
+                Ctrl<light>+</light>Page Down
+            </text>
+        </item>
+        <item>
+            <text>Open Address in New Tab <br/>
+            <light>(from Location Bar or Search Bar)</light></text>
+            <text pos="right">
+                Alt<light>+</light>Enter
+            </text>
+        </item>
+        <item>
+            <text>Previous Tab</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>Tab <br/>
+                Ctrl<light>+</light>Page Up
+            </text>
+        </item>
+        <item>
+            <text>Undo Close Tab</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>T
+            </text>
+        </item>
+        <item>
+            <text>Undo Close Window</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>T
+            </text>
+        </item>
+        <item>
+            <text>Select Tab (1 to 8)</text>
+            <text pos="right">
+                Alt<light>+</light>(1 to 8)
+            </text>
+        </item>
+        <item>
+            <text>Select Last Tab</text>
+            <text pos="right">
+                Alt<light>+</light>9
+            </text>
+        </item>
+    </section>
+    <section title="Miscellaneous">
+        <item>
+            <text>Complete .com Address</text>
+            <text pos="right">
+                Ctrl<light>+</light>Enter
+            </text>
+        </item>
+        <item>
+            <text>Complete .net Address</text>
+            <text pos="right">
+                Shift<light>+</light>Enter
+            </text>
+        </item>
+        <item>
+            <text>Complete .org Address</text>
+            <text pos="right">
+                Ctrl<light>+</light>Shift<light>+</light>Enter
+            </text>
+        </item>
+        <item>
+            <text>Delete Selected Autocomplete Entry</text>
+            <text pos="right">
+                Del
+            </text>
+        </item>
+        <item>
+            <text>Toggle Full Screen</text>
+            <text pos="right">
+                F11
+            </text>
+        </item>
+        <item>
+            <text>Help</text>
+            <text pos="right">
+                F1
+            </text>
+        </item>
+        <item>
+            <text>Select Location Bar</text>
+            <text pos="right">
+                Alt<light>+</light>D <br/>
+                F6 <br/>
+                Ctrl<light>+</light>L
+            </text>
+        </item>
+        <item>
+            <text>Select or Manage Search Engines <br/>
+            <light>(when Search Bar is focused)</light></text>
+            <text pos="right">
+                Alt<light>+</light>Up Arrow <br/>
+                Alt<light>+</light>Down Arrow <br/>
+                F4
+            </text>
+        </item>
+    </section>
+    <section title="Media shortcuts">
+        <item>
+            <text><light>OGG/Theora Videos Only</light></text>
+        </item>
+        <item>
+            <text>Toggle Play / Pause</text>
+            <text pos="right">
+                Space
+            </text>
+        </item>
+        <item>
+            <text>Decrease volume</text>
+            <text pos="right">
+                Arrow down
+            </text>
+        </item>
+        <item>
+            <text>Increase volume</text>
+            <text pos="right">
+                Arrow up
+            </text>
+        </item>
+        <item>
+            <text>Mute audio</text>
+            <text pos="right">
+                Ctrl<light>+</light>Down Arrow
+            </text>
+        </item>
+        <item>
+            <text>Unmute audio</text>
+            <text pos="right">
+                Ctrl<light>+</light>Arrow up
+            </text>
+        </item>
+        <item>
+            <text>Seek back 15 seconds</text>
+            <text pos="right">
+                Left Arrow
+            </text>
+        </item>
+        <item>
+            <text>Seek back 10 %</text>
+            <text pos="right">
+                Ctrl<light>+</light>Left Arrow
+            </text>
+        </item>
+        <item>
+            <text>Seek forward 15 seconds</text>
+            <text pos="right">
+                Right Arrow
+            </text>
+        </item>
+        <item>
+            <text>Seek forward 10 %</text>
+            <text pos="right">
+                Ctrl<light>+</light>Right Arrow
+            </text>
+        </item>
+        <item>
+            <text>Seek to the beginning</text>
+            <text pos="right">
+                Home
+            </text>
+        </item>
+        <item>
+            <text>Seek to the end</text>
+            <text pos="right">
+                End
+            </text>
+        </item>
+    </section>
+</cheatsheet>

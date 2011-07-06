@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Windows Internet Explorer</name>
+        <author>Microsoft</author>
+        <website>http://www.microsoft.com</website>
+        <original_file>http://www.microsoft.com/windows/products/winfamily/ie/ie7/quickref.mspx</original_file>
+    </info>
+    <section title="General">
+        <item>
+            <text>Turn Full Screen Mode on or off</text>
+            <text pos="right">
+                F11
+            </text>
+        </item>
+        <item>
+            <text>Cycle through the Address Bar, Refresh button, Search Box, and items on a web page</text>
+            <text pos="right">
+                TAB
+            </text>
+        </item>
+        <item>
+            <text>Find a word or phrase on a page</text>
+            <text pos="right">
+                	CTRL+F
+            </text>
+        </item>
+        <item>
+            <text>Open the current webpage in a new window</text>
+            <text pos="right">
+                window	CTRL+N
+            </text>
+        </item>
+        <item>
+            <text>Print the page</text>
+            <text pos="right">
+                CTRL+P
+            </text>
+        </item>
+        <item>
+            <text>Select all items on the page</text>
+            <text pos="right">
+                CTRL+A
+            </text>
+        </item>
+        <item>
+            <text>Zoom in</text>
+            <text pos="right">
+                CTRL+PLUS
+            </text>
+        </item>
+        <item>
+            <text>Zoom out</text>
+            <text pos="right">
+                	CTRL+MINUS
+            </text>
+        </item>
+        <item>
+            <text>Zoom to 100%</text>
+            <text pos="right">
+                CTRL+0
+            </text>
+        </item>
+    </section>
+    <section title="Navigation shortcuts">
+        <item>
+            <text>Go to home page </text>
+            <text pos="right">
+                ALT+HOME
+            </text>
+        </item>
+        <item>
+            <text>Go backward</text>
+            <text pos="right">
+                ALT+LEFT
+            </text>
+        </item>
+        <item>
+            <text>Go forward</text>
+            <text pos="right">
+                	ALT+RIGHT
+            </text>
+        </item>
+        <item>
+            <text>Refresh page</text>
+            <text pos="right">
+                	F5
+            </text>
+        </item>
+        <item>
+            <text>Refresh page and the cache </text>
+            <text pos="right">
+                CTRL+F5 
+            </text>
+        </item>
+        <item>
+            <text>Stop downloading page</text>
+            <text pos="right">
+                	 ESC 
+            </text>
+        </item>
+    </section>
+    <section title="Favorites Center shortcuts">
+        <item>
+            <text>Open Favorites </text>
+            <text pos="right">
+                CTRL+I 
+            </text>
+        </item>
+        <item>
+            <text>Open Favorites in pinned mode</text>
+            <text pos="right">
+                CTRL+SHIFT+I 
+            </text>
+        </item>
+        <item>
+            <text>Organize Favorites </text>
+            <text pos="right">
+                CTRL+B 
+            </text>
+        </item>
+        <item>
+            <text>Add current page to Favorites</text>
+            <text pos="right">
+                	 CTRL+D 
+            </text>
+        </item>
+        <item>
+            <text>Open Feeds</text>
+            <text pos="right">
+                CTRL+J 
+            </text>
+        </item>
+        <item>
+            <text>Open Feeds in pinned mode </text>
+            <text pos="right">
+                	 CTRL+SHIFT+J 
+            </text>
+        </item>
+        <item>
+            <text>Open History </text>
+            <text pos="right">
+                CTRL+H 
+            </text>
+        </item>
+        <item>
+            <text>Open History in pinned mode </text>
+            <text pos="right">
+                	 CTRL+SHIFT+H 
+            </text>
+        </item>
+    </section>
+    <section title="Tab shortcuts">
+        <item>
+            <text>Open link in new background tab</text>
+            <text pos="right">
+                Middle mouse button<br/>
+                CTRL+left mouse button
+            </text>
+        </item>
+        <item>
+            <text>Open link in new foreground tab</text>
+            <text pos="right">
+                CTRL+SHIFT+left mouse button<br/>
+                CTRL+SHIFT+middle mouse button
+            </text>
+        </item>
+        <item>
+            <text>Close tab<br/>
+            <light>(closes window if only one tab is open)</light></text>
+            <text pos="right">
+                Middle mouse button on the tab<br/>
+                CTRL+W
+            </text>
+        </item>
+        <item>
+            <text>Open Quick Tab view</text>
+            <text pos="right">
+                	CTRL+Q
+            </text>
+        </item>
+        <item>
+            <text>Open new tab</text>
+            <text pos="right">
+                	CTRL+T
+            </text>
+        </item>
+        <item>
+            <text>View list of open tabs</text>
+            <text pos="right">
+                CTRL+SHIFT+Q
+            </text>
+        </item>
+        <item>
+            <text>Switch to next tab</text>
+            <text pos="right">
+                CTRL+TAB
+            </text>
+        </item>
+        <item>
+            <text>Switch to previous tab</text>
+            <text pos="right">
+                	CTRL+SHIFT+TAB
+            </text>
+        </item>
+    </section>
+    <split/>
+    <section title="Address Bar shortcuts">
+        <item>
+            <text>Select the Address Bar</text>
+            <text pos="right">
+                	ALT+D
+            </text>
+        </item>
+        <item>
+            <text>Add "http://www." to the beginning and ".com" to the end of text in Address Bar</text>
+            <text pos="right">
+                CTRL+ENTER
+            </text>
+        </item>
+        <item>
+            <text>Add "http://www." to the beginning and the website address suffix you have specified to the end of text in the Address Bar*</text>
+            <text pos="right">
+                CTRL+SHIFT+ENTER
+            </text>
+        </item>
+        <item>
+            <text>Open the website address that is typed in the Address Bar in new tab</text>
+            <text pos="right">
+                ALT+ENTER
+            </text>
+        </item>
+        <item>
+            <text>View list of previously typed addresses</text>
+            <text pos="right">
+                F4
+            </text>
+        </item>
+        <item>
+            <text><light>* For example, if you chose "net" for the website suffix, pressing CTRL+SHIFT+ENTER would add "http://www." to the beginning and ".net" to the end of the address in the Address Bar.</light></text>
+        </item>
+    </section>
+    <section title="Common tasks">
+        <item>
+            <text><bold>Disable all add-ons</bold></text>
+            <text pos="bottom">
+                Windows logo key + R > iexplore.exe -extoff
+            </text>
+        </item>
+        <item>
+            <text><bold>Turn on AutoComplete so that website addresses will be automatically filled in for you if you begin to type them again</bold></text>
+            <text pos="bottom">
+                Tools > Internet Options > Advanced > Use inline AutoComplete
+            </text>
+        </item>
+        <item>
+            <text><bold>Change how tabs work in Internet Explorer</bold></text>
+            <text pos="bottom">
+                Tools > Internet Options > on the General tab, under Tabs, click Settings
+            </text>
+        </item>
+        <item>
+            <text><bold>Display the Menu Bar at the top of the screen</bold></text>
+            <text pos="bottom">
+                To display temporarily: press the ALT key <br/>
+                To display permanently: Tools > Menu Bar
+            </text>
+        </item>
+        <item>
+            <text><bold>Delete cookies, passwords, form data, history, and temporary Internet files</bold></text>
+            <text pos="bottom">
+                Tools > Delete Browsing History
+            </text>
+        </item>
+        <item>
+            <text><bold>Find and install add-ons</bold></text>
+            <text pos="bottom">
+                Tools > Manage Add-ons > Find More Add-ons
+            </text>
+        </item>
+        <item>
+            <text><bold>Print part of page</bold></text>
+            <text pos="bottom">
+                Select part of the page you want to print, press CTRL+P, click <bold>Selection</bold>, and then click <bold>Print</bold>
+            </text>
+        </item>
+        <item>
+            <text><bold>Change website address suffix*</bold></text>
+            <text pos="bottom">
+                Tools > Internet Options > Languages
+            </text>
+        </item>
+        <item>
+            <text><light>* For example, if you chose "net" for the website suffix, pressing CTRL+SHIFT+ENTER would add "http://www." to the beginning and ".net" to the end of the address in the Address Bar. </light></text>
+        </item>
+    </section>
+</cheatsheet>

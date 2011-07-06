@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Google Reader Keyboard Shortcuts</name>
+        <author>Google</author>
+        <website>http://www.google.com/reader/</website>
+        <original_file>http://www.google.com/reader/ui/1846950480-en-keyboard-help-tearoff?hl=en</original_file>
+    </info>
+    <section title="Navigation">
+        <item>
+            <text><bold>j</bold>/<bold>k</bold></text>
+            <text pos="right">
+                next/previous item
+            </text>
+        </item>
+        <item>
+            <text><bold>space</bold></text>
+            <text pos="right">
+                next item or page
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>space</bold></text>
+            <text pos="right">
+                previous item or page
+            </text>
+        </item>
+        <item>
+            <text><bold>n</bold>/<bold>p</bold></text>
+            <text pos="right">
+                item scan down/up (list only)
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>n</bold>/<bold>p</bold>:</text>
+            <text pos="right">
+                next/previous subscription
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>x</bold></text>
+            <text pos="right">
+                expand folder
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>o</bold></text>
+            <text pos="right">
+                open subscription or folder
+            </text>
+        </item>
+    </section>
+    <section title="Jumping">
+        <item>
+            <text><bold>g</bold> then <bold>h</bold></text>
+            <text pos="right">
+                go home
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>a</bold></text>
+            <text pos="right">
+                go to all items
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>s</bold></text>
+            <text pos="right">
+                go to starred items
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>&lt;Shift&gt;</bold> + <bold>s</bold></text>
+            <text pos="right">
+                go to shared items
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>u</bold></text>
+            <text pos="right">
+                open subscription selector
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>t</bold></text>
+            <text pos="right">
+                open tag selector
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>&lt;Shift&gt;</bold> + <bold>t</bold></text>
+            <text pos="right">
+                go to trends page
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>d</bold></text>
+            <text pos="right">
+                go to discovery page
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>f</bold></text>
+            <text pos="right">
+                open friend selector
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>&lt;Shift&gt;</bold> + <bold>f</bold></text>
+            <text pos="right">
+                go to friends' shared items
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>c</bold></text>
+            <text pos="right">
+                go to comment view
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>e</bold></text>
+            <text pos="right">
+                go to explore
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>p</bold></text>
+            <text pos="right">
+                go to popular items
+            </text>
+        </item>
+    </section>
+    <split/>
+    <section title="Acting on items">
+        <item>
+            <text><bold>s</bold></text>
+            <text pos="right">
+                star item
+            </text>
+        </item>
+        <item>
+            <text><bold>l</bold></text>
+            <text pos="right">
+                like item
+            </text>
+        </item>
+        <item>
+            <text><bold>t</bold></text>
+            <text pos="right">
+                tag item
+            </text>
+        </item>
+        <item>
+            <text><bold>e</bold></text>
+            <text pos="right">
+                email item
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>s</bold></text>
+            <text pos="right">
+                share item
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>d</bold></text>
+            <text pos="right">
+                share item with note
+            </text>
+        </item>
+        <item>
+            <text><bold>v</bold></text>
+            <text pos="right">
+                view original
+            </text>
+        </item>
+        <item>
+            <text><bold>o</bold>/<bold>enter</bold></text>
+            <text pos="right">
+                expand/collapse item (list only)
+            </text>
+        </item>
+        <item>
+            <text><bold>c</bold></text>
+            <text pos="right">
+                add comment
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>c</bold></text>
+            <text pos="right">
+                view comments
+            </text>
+        </item>
+        <item>
+            <text><bold>m</bold></text>
+            <text pos="right">
+                mark item as read/unread
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>a</bold></text>
+            <text pos="right">
+                mark all as read
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;Shift&gt;</bold> + <bold>t</bold></text>
+            <text pos="right">
+                open “send to” menu
+            </text>
+        </item>
+    </section>
+    <section title="Application">
+        <item>
+            <text><bold>r</bold></text>
+            <text pos="right">
+                refresh
+            </text>
+        </item>
+        <item>
+            <text><bold>u</bold></text>
+            <text pos="right">
+                toggle full screen mode
+            </text>
+        </item>
+        <item>
+            <text><bold>1</bold></text>
+            <text pos="right">
+                switch to expanded view
+            </text>
+        </item>
+        <item>
+            <text><bold>2</bold></text>
+            <text pos="right">
+                switch to list view
+            </text>
+        </item>
+        <item>
+            <text><bold>/</bold></text>
+            <text pos="right">
+                move cursor to search box
+            </text>
+        </item>
+        <item>
+            <text><bold>a</bold></text>
+            <text pos="right">
+                add a subscription
+            </text>
+        </item>
+        <item>
+            <text><bold>=</bold></text>
+            <text pos="right">
+                increase magnification
+            </text>
+        </item>
+        <item>
+            <text><bold>-</bold></text>
+            <text pos="right">
+                decrease magnification
+            </text>
+        </item>
+    </section>
+</cheatsheet>

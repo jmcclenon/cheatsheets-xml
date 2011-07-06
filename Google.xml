@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Google</name>
+        <author>Google</author>
+        <website>http://www.google.com</website>
+        <original_file>http://www.google.com/help/cheatsheet.html</original_file>
+    </info>
+    <section title="Operator Example">
+        <item>
+            <text>vacation hawaii</text>
+            <text pos="bottom"><light>the words <bold>vacation</bold> and <bold>Hawaii</bold></light></text>
+        </item>
+        <item>
+            <text>Maui <color value="#0000FF">OR</color> Hawaii</text>
+            <text pos="bottom"><light>either the word <bold>Maui</bold> or the word <bold>Hawaii</bold></light></text>
+        </item>
+        <item>
+            <text><color value="#0000FF">"</color>To each his own<color value="#0000FF">"</color></text>
+            <text pos="bottom"><light>the exact phrase <bold>to each his own</bold></light></text>
+        </item>
+        <item>
+            <text>virus <color value="#0000FF">&#x2013;</color>computer</text>
+            <text pos="bottom"><light>the word <bold>virus</bold> but NOT the word <bold>computer</bold></light></text>
+        </item>
+        <item>
+            <text><bold>+</bold>sock</text>
+            <text pos="bottom"><light>Only the word <bold>sock</bold>, and not the plural or any tenses or synonyms</light></text>
+        </item>
+        <item>
+            <text><color value="#0000FF">~</color>auto loan</text>
+            <text pos="bottom"><light>loan info for both the word <bold>auto</bold> and its synonyms: <bold>truck</bold>, <bold>car</bold>, etc.</light></text>
+        </item>
+        <item>
+            <text><color value="#0000FF">define:</color>computer</text>
+            <text pos="bottom"><light>definitions of the word <bold>computer</bold> from around the Web.</light></text>
+        </item>
+        <item>
+            <text>red <color value="#0000FF">*</color> blue</text>
+            <text pos="bottom"><light>the words <bold>red</bold> and <bold>blue</bold> separated by one or more words.</light></text>
+        </item>
+        <item>
+            <text>I'm Feeling Lucky</text>
+            <text pos="bottom"><light>Takes you directly to first web page returned for your query.</light></text>
+        </item>
+    </section>
+    <section title="Calculator Operators">
+        <item>
+            <text width="23%"><color value="#0000FF">+</color></text>
+            <text width="43%">addition</text>
+            <text><bold>45 + 39</bold></text>
+        </item>
+        <item>
+            <text width="23%"><color value="#0000FF">-</color></text>
+            <text width="43%">subtraction</text>
+            <text><bold>45 - 39</bold></text>
+        </item>
+        <item>
+            <text width="23%"><color value="#0000FF">*</color></text>
+            <text width="43%">multiplication</text>
+            <text><bold>45 * 39</bold></text>
+        </item>
+        <item>
+            <text width="23%"><color value="#0000FF">/</color></text>
+            <text width="43%">division</text>
+            <text><bold>45 / 39</bold></text>
+        </item>
+        <item>
+            <text width="23%"><color value="#0000FF">% of</color></text>
+            <text width="43%">percentage of</text>
+            <text><bold>45% of 39</bold></text>
+        </item>
+        <item>
+            <text width="23%"><color value="#0000FF">^</color></text>
+            <text width="43%">raise to a power</text>
+            <text><bold>2^5</bold></text>
+        </item>
+    </section>
+    <split/>
+    <section title="Advanced Operators">
+        <item>
+            <text><color value="#0000FF">site:</color></text>
+            <text pos="right">Search only one website</text>
+            <text pos="bottom"><light>
+                <bold>admission site:www.stanford.edu</bold><br/>
+                (Search Stanford Univ. site for admissions info.) 
+            </light></text>
+        </item>
+        <item>
+            <text><light>[#]</light><color value="#0000FF">...</color><light>[#]</light></text>
+            <text pos="right">Search within a range of numbers</text>
+            <text pos="bottom"><light>
+                <bold>DVD player $100..150</bold><br/>
+                (Search for DVD players between $100 and $150) 
+            </light></text>
+        </item>
+        <item>
+            <text><color value="#0000FF">link:</color></text>
+            <text pos="right">linked pages</text>
+            <text pos="bottom"><light>
+                <bold>link:www.stanford.edu</bold><br/>
+                (Find pages that link to the Stanford University website.)
+            </light></text>
+        </item>
+        <item>
+            <text><color value="#0000FF">info:</color></text>
+            <text pos="right">Info about a page</text>
+            <text pos="bottom"><light>
+                <bold>info:www.stanford.edu</bold><br/>
+                (Find information about the Stanford University website.) 
+            </light></text>
+        </item>
+        <item>
+            <text><color value="#0000FF">related:</color></text>
+            <text pos="right">Related pages</text>
+            <text pos="bottom"><light>
+                <bold>related:www.stanford.edu</bold><br/>
+                (Find websites related to the Stanford University website.)  
+            </light></text>
+        </item>
+    </section>
+</cheatsheet>

@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>jQuery 1.4</name>
+        <author>Cole Thorsen</author>
+        <website>http://labs.impulsestudios.ca</website>
+        <original_file>http://labs.impulsestudios.ca/jquery-cheat-sheet</original_file>
+    </info>
+    <section title="Core">
+        <subsection title="jQuery Function">
+            <item>
+                <code>$(selector, <light>context</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>$(html, <light>owner</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>$(callback)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="No Conflict">
+            <item>
+                <code>jQuery.noConflict(<light>bool</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Attributes">
+        <subsection title="General Attributes">
+            <item>
+                <code>.attr(attribute)</code>
+                <code pos="right">obj</code>
+            </item>
+            <item>
+                <code>.attr(attribute, val)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.attr(attribute, fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.removeAttr(attribute)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.html()</code>
+                <code pos="right">string</code>
+            </item>
+            <item>
+                <code>.html(string)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.text()</code>
+                <code pos="right">string</code>
+            </item><item>
+                <code>.text(string)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.val()</code>
+                <code pos="right">string, array</code>
+            </item>
+            <item>
+                <code>.val(value)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="CSS">
+        <subsection title="Style Properties">
+            <item>
+                <code>.css(property)</code>
+                <code pos="right">string</code>
+            </item>
+            <item>
+                <code>.css(property, val|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Class Attribute">
+            <item>
+                <code>.addClass(name|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.removeClass(name|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.hasClass(name)</code>
+                <code pos="right">bool</code>
+            </item>
+            <item>
+                <code>.toggleClass(name|fn, <light>switch</light>)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Dimensions">
+            <item>
+                <code>.height()</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.height(val)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.width()</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.width(val)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.innerHeight()</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.innerWidth()</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.outerHeight(<light>margin</light>)</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.outerWidth(<light>margin</light>)</code>
+                <code pos="right">int</code>
+            </item>
+        </subsection>
+        <subsection title="Offset">
+            <item>
+                <code>.offset()</code>
+                <code pos="right">obj{top,left}</code>
+            </item>
+            <item>
+                <code>.offset(coordinates)*</code>
+                <code pos="right">obj</code>
+            </item>
+            <item>
+                <code>.position()</code>
+                <code pos="right">obj{top,left}</code>
+            </item>
+            <item>
+                <code>.scrollLeft()</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.scrollLeft(val)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.scrollTop()</code>
+                <code pos="right">int</code>
+            </item>
+            <item>
+                <code>.scrollLeft(val)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Data">
+        <item>
+            <code>jQuery.data(element, key, value)</code>
+            <code pos="right">jQuery</code>
+        </item>
+        <item>
+            <code>jQuery.data(element, key)</code>
+            <code pos="right">obj</code>
+        </item>
+        <item>
+            <code>.queue(<light>queueName</light>)</code>
+            <code pos="right">array</code>
+        </item>
+        <item>
+            <code>.queue(<light>queueName</light>, newQueue|cb)</code>
+            <code pos="right">jQuery</code>
+        </item>
+        <item>
+            <code>.clearQueue(<light>queueName</light>)*</code>
+            <code pos="right">jQuery</code>
+        </item>
+        <item>
+            <code>.dequeue(<light>queueName</light>)</code>
+            <code pos="right">jQuery</code>
+        </item>
+    </section>
+    <section title="Miscellaneous">
+        <subsection title="Collection Manipulation">
+            <item>
+                <code>.each(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Collection Manipulation">
+            <item>
+                <code>.get(<light>index</light>)</code>
+                <code pos="right">element, array</code>
+            </item>
+            <item>
+                <code>.index(<light>selector|element</light>)*</code>
+                <code pos="right">num</code>
+            </item>
+            <item>
+                <code>.size()</code>
+                <code pos="right">num</code>
+            </item>
+            <item>
+                <code>.toArray()*</code>
+                <code pos="right">array</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Selectors">
+        <subsection title="Basic">
+            <item>
+                <code>*</code>
+            </item>
+            <item>
+                <code>#id</code>
+            </item>
+            <item>
+                <code>element</code>
+            </item>
+            <item>
+                <code>.class</code>
+            </item>
+            <item>
+                <code>selector,selectorN</code>
+            </item>
+        </subsection>
+        <subsection title="Hierarchy">
+            <item>
+                <code>parent > child</code>
+            </item>
+            <item>
+                <code>ancestor descendant</code>
+            </item>
+            <item>
+                <code>prev + next</code>
+            </item>
+            <item>
+                <code>prev ~ siblings</code>
+            </item>
+        </subsection>
+        <subsection title="Attribute">
+            <item>
+                <code>[attribute|=val]</code>
+            </item>
+            <item>
+                <code>[attribute*=val]</code>
+            </item>
+            <item>
+                <code>[attribute~=val]</code>
+            </item>
+            <item>
+                <code>[attribute$=val]</code>
+            </item>
+            <item>
+                <code>[attribute=val]</code>
+            </item>
+            <item>
+                <code>[attribute!=val]</code>
+            </item>
+            <item>
+                <code>[attribute^=val]</code>
+            </item>
+            <item>
+                <code>[attribute]</code>
+            </item>
+            <item>
+                <code>[attribute1=val1] [attribute2=val2]</code>
+            </item>
+        </subsection>
+        <subsection title="Basic Filter">
+            <item>
+                <code>:animated</code>
+            </item>
+            <item>
+                <code>:eq(index)</code>
+            </item>
+            <item>
+                <code>:even</code>
+            </item>
+            <item>
+                <code>:odd</code>
+            </item>
+            <item>
+                <code>:first</code>
+            </item>
+            <item>
+                <code>:last</code>
+            </item>
+            <item>
+                <code>:gt(index)</code>
+            </item>
+            <item>
+                <code>:header</code>
+            </item>
+            <item>
+                <code>:lt(index)</code>
+            </item>
+            <item>
+                <code>:not(selector)</code>
+            </item>
+        </subsection>
+        <subsection title="Content Filter">
+            <item>
+                <code>:contains(text)</code>
+            </item>
+            <item>
+                <code>:empty</code>
+            </item>
+            <item>
+                <code>:has(selector)</code>
+            </item>
+            <item>
+                <code>:parent</code>
+            </item>
+        </subsection>
+        <subsection title="Visibility Filter">
+            <item>
+                <code>:hidden</code>
+            </item>
+            <item>
+                <code>:visible</code>
+            </item>
+        </subsection>
+        <subsection title="Child Filter">
+            <item>
+                <code>:first-child</code>
+            </item>
+            <item>
+                <code>:last-child</code>
+            </item>
+            <item>
+                <code>:nth-child(index/even/odd/eq)</code>
+            </item>
+            <item>
+                <code>:only-child</code>
+            </item>
+        </subsection>
+        <subsection title="Form">
+            <item>
+                <code>:button</code>
+            </item>
+            <item>
+                <code>:checkbox</code>
+            </item>
+            <item>
+                <code>:checked</code>
+            </item>
+            <item>
+                <code>:disabled</code>
+            </item>
+            <item>
+                <code>:enabled</code>
+            </item>
+            <item>
+                <code>:file</code>
+            </item>
+            <item>
+                <code>:image</code>
+            </item>
+            <item>
+                <code>:input</code>
+            </item>
+            <item>
+                <code>:password</code>
+            </item>
+            <item>
+                <code>:radio</code>
+            </item>
+            <item>
+                <code>:reset</code>
+            </item>
+            <item>
+                <code>:selected</code>
+            </item>
+            <item>
+                <code>:submit</code>
+            </item>
+            <item>
+                <code>:text</code>
+            </item>
+        </subsection>
+        <subsection title="Properties of the Global jQuery Object">
+            <item>
+                <code>jQuery.support</code>
+                <code pos="right">obj</code>
+            </item>
+            <item>
+                <code>jQuery.browser</code>
+                <code pos="right">map</code>
+            </item>
+            <item>
+                <code>jQuery.browser.version</code>
+                <code pos="right">string</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Effects">
+        <subsection title="Basics">
+            <item>
+                <code>.hide(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.show(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.toggle(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.toggle(showOrHide)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Fading">
+            <item>
+                <code>.fadeIn(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.fadeOut(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.fadeTo(dur, opacity, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Sliding">
+            <item>
+                <code>.slideUp(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.slideDown(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.slideToggle(<light>dur</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Custom">
+            <item>
+                <code>.animate(prop, <light>dur</light>, <light>easing</light>, <light>cb</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.animate(prop, options)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.delay(dur, <light>queueName</light>)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>jQuery.fx.of</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.stop(<light>clearQueue</light>, <light>jumpToEnd</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <split/>
+    <section title="Manipulation">
+        <subsection title="Copying">
+            <item>
+                <code>.clone(withDataAndElements)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="DOM Insertion, Around">
+            <item>
+                <code>.wrap(element|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.wrapAll(element)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.wrapInner(element|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.unwrap()*</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="DOM Insertion, Inside">
+            <item>
+                <code>.append(content|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.appendTo(target)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.prepend(content|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.prependTo(target)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="DOM Insertion, Outside">
+            <item>
+                <code>.after(content|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.before(content|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.insertAfter()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.insertBefore()</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="DOM Removal">
+            <item>
+                <code>.detach(selector)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.empty()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.remove(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="DOM Replacement">
+            <item>
+                <code>.replaceAll()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.replaceWith(content|fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Utilities">
+        <item>
+            <code>jQuery.contains(container, contained)*</code>
+            <code pos="right">bool</code>
+        </item>
+        <item>
+            <code>jQuery.each(obj, fn)</code>
+            <code pos="right">obj</code>
+        </item>
+        <item>
+            <code>jQuery.extend(<light>deep</light>, target, obj, <light>objN</light>)</code>
+            <code pos="right">obj</code>
+        </item>
+        <item>
+            <code>jQuery.globalEval(code)</code>
+        </item>
+        <item>
+            <code>jQuery.grep(array, fn, <light>invert</light>)</code>
+            <code pos="right">array</code>
+        </item>
+        <item>
+            <code>jQuery.inArray(val, array)</code>
+            <code pos="right">num</code>
+        </item>
+        <item>
+            <code>jQuery.isArray(obj)</code>
+            <code pos="right">bool</code>
+        </item>
+        <item>
+            <code>jQuery.isEmptyObject(obj)*</code>
+            <code pos="right">bool</code>
+        </item>
+        <item>
+            <code>jQuery.isFunction()</code>
+            <code pos="right">bool</code>
+        </item>
+        <item>
+            <code>jQuery.isPlainObject(obj)*</code>
+            <code pos="right">bool</code>
+        </item>
+        <item>
+            <code>jQuery.isXMLDoc(node)</code>
+            <code pos="right">bool</code>
+        </item>
+        <item>
+            <code>jQuery.makeArray(obj)</code>
+            <code pos="right">array</code>
+        </item>
+        <item>
+            <code>jQuery.map(array, cb)</code>
+            <code pos="right">array</code>
+        </item>
+        <item>
+            <code>jQuery.merge(array1, array2)</code>
+            <code pos="right">array</code>
+        </item>
+        <item>
+            <code>jQuery.noop*</code>
+            <code pos="right">fn</code>
+        </item>
+        <item>
+            <code>jQuery.trim()</code>
+            <code pos="right">string</code>
+        </item>
+        <item>
+            <code>jQuery.unique(array)</code>
+            <code pos="right">array</code>
+        </item>
+    </section>
+    <section title="Events">
+        <subsection title="Document Loading">
+            <item>
+                <code>.load(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.ready(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.unload(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Event Handler Attachment">
+            <item>
+                <code>.bind(type, <light>data</light>, fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.bind(events)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.unbind(type, fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.unbind(event)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.live(type, <light>data</light>, fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.die(type, <light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.one(type, <light>data</light>, fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>jQuery.proxy(fn, scope)*</code>
+                <code pos="right">fn</code>
+            </item>
+            <item>
+                <code>jQuery.proxy(scope, name)*</code>
+                <code pos="right">fn</code>
+            </item>
+            <item>
+                <code>.trigger(type, params)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.triggerHandler(type, params)</code>
+                <code pos="right"></code>
+            </item>
+        </subsection>
+        <subsection title="Browser Events">
+            <item>
+                <code>.error(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.resize(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.scroll(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Form Events">
+            <item>
+                <code>.blur(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.change(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.focus(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.select(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.submit(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Keyboard Events">
+            <item>
+                <code>.focusin(fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.focusout(fn)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.keydown(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.keypress(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.keyup(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Mouse Events">
+            <item>
+                <code>.click(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.dblclick(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.hover(fn, fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mousedown(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mouseenter(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mouseleave(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mousemove(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mouseout(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mouseover(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.mouseup(<light>fn</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Event Object">
+            <item>
+                <code>event.currentTarget</code>
+                <code pos="right">element</code>
+            </item>
+            <item>
+                <code>event.data</code>
+                <code pos="right">anything</code>
+            </item>
+            <item>
+                <code>event.isDefaultPrevented()</code>
+                <code pos="right">bool</code>
+            </item>
+            <item>
+                <code>event.isImmediatePropagationStopped()</code>
+                <code pos="right">bool</code>
+            </item>
+            <item>
+                <code>event.isPropagationStopped()</code>
+                <code pos="right">bool</code>
+            </item>
+            <item>
+                <code>event.pageX</code>
+                <code pos="right">num</code>
+            </item>
+            <item>
+                <code>event.pageY</code>
+                <code pos="right">num</code>
+            </item>
+            <item>
+                <code>event.preventDefault</code>
+            </item>
+            <item>
+                <code>event.relatedTarget</code>
+                <code pos="right">element</code>
+            </item>
+            <item>
+                <code>event.result</code>
+                <code pos="right">obj</code>
+            </item>
+            <item>
+                <code>event.stopImmediatePropagation()</code>
+            </item>
+            <item>
+                <code>event.target</code>
+                <code pos="right">element</code>
+            </item>
+            <item>
+                <code>event.timeStamp</code>
+                <code pos="right">num</code>
+            </item>
+            <item>
+                <code>event.type</code>
+                <code pos="right">string</code>
+            </item>
+            <item>
+                <code>event.which</code>
+                <code pos="right">string</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Ajax">
+        <subsection title="Global Ajax Event Handlers">
+            <item>
+                <code>.ajaxComplete(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.ajaxError(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.ajaxSend(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.ajaxStart(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.ajaxStop(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.ajaxSuccess(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Helper Functions">
+            <item>
+                <code>jQuery.param(obj, traditional)*</code>
+                <code pos="right">string</code>
+            </item>
+            <item>
+                <code>.serialize()</code>
+                <code pos="right">string</code>
+            </item>
+            <item>
+                <code>.serialzeArray()</code>
+                <code pos="right">array</code>
+            </item>
+        </subsection>
+        <subsection title="Low-Level Interface">
+            <item>
+                <code>jQuery.ajax(settings)</code>
+                <code pos="right">XHR</code>
+            </item>
+            <item>
+                <code>jQuery.ajaxSetup(options)</code>
+            </item>
+        </subsection>
+        <subsection title="Shorthand Methods">
+            <item>
+                <code>jQuery.get(url, <light>data</light>, <light>cb</light>, <light>type</light>)</code>
+                <code pos="right">XHR</code>
+            </item>
+            <item>
+                <code>jQuery.post(url, <light>data</light>, <light>cb</light>, <light>type</light>)</code>
+                <code pos="right">XHR</code>
+            </item>
+            <item>
+                <code>jQuery.getJSON(url, <light>data</light>, <light>cb</light>)</code>
+                <code pos="right">XHR</code>
+            </item>
+            <item>
+                <code>jQuery.getScript(url, <light>cb</light>)</code>
+                <code pos="right">XHR</code>
+            </item>
+            <item>
+                <code>.load(url, <light>data</light>, cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Traversing">
+        <subsection title="Tree Traversal">
+            <item>
+                <code>.children(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.closest(selector, <light>context</light>)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.closest(selectors, <light>context</light>)*</code>
+                <code pos="right">array</code>
+            </item>
+            <item>
+                <code>.find(selector)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.next(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.nextAll(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.nextUntil(<light>selector</light>)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.offsetParent()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.parent(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.parents(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.parentsUntil(<light>selector</light>)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.prev(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.prevAll(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.prevUntil(<light>selector</light>)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.siblings(<light>selector</light>)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Filtering">
+            <item>
+                <code>.eq(index)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.filter(selector)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.filter(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.first()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.last()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.has(selector)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.has(contained)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.is(selector)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.map(cb)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.not(selector)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.not(elements)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.not(fn)</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+        <subsection title="Miscellaneous Traversing">
+            <item>
+                <code>.add(selector)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.add(elements)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.add(html)</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.add(selector, context)*</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.andSelf()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.contents()</code>
+                <code pos="right">jQuery</code>
+            </item>
+            <item>
+                <code>.end()</code>
+                <code pos="right">jQuery</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Legend">
+        <item>
+            <code><light>light text</light></code>
+            <code pos="right">optional parameter</code>
+        </item>
+        <item>
+            <code>item|item</code>
+            <code pos="right">or</code>
+        </item>
+        <item>
+            <code>obj</code>
+            <code pos="right">object</code>
+        </item>
+        <item>
+            <code>bool</code>
+            <code pos="right">boolean</code>
+        </item>
+        <item>
+            <code>fn</code>
+            <code pos="right">function</code>
+        </item>
+        <item>
+            <code>cb</code>
+            <code pos="right">callback</code>
+        </item>
+        <item>
+            <code>num</code>
+            <code pos="right">number</code>
+        </item>
+        <item>
+            <code>val</code>
+            <code pos="right">value</code>
+        </item>
+        <item>
+            <code>dur</code>
+            <code pos="right">duration</code>
+        </item>
+        <item>
+            <code>*</code>
+            <code pos="right">new or updated in 1.4</code>
+        </item>
+    </section>
+</cheatsheet>

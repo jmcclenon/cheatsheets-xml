@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Wikipedia</name>
+        <author>Wikipedia</author>
+        <website>http://en.wikipedia.org</website>
+        <original_file>http://en.wikipedia.org/wiki/Wikipedia:Cheatsheet</original_file>
+    </info>
+    <section title="Works anywhere in the text">
+        <item>
+            <code>''italic''</code>
+            <text pos="right"><italic>italic</italic></text>
+        </item>
+        <item>
+            <code>'''bold'''</code>
+            <text pos="right"><bold>bold</bold></text>
+        </item>
+        <item>
+            <code>'''''bold &amp; italic'''''</code>
+            <text pos="right"><italic><bold>bold &amp; italic</bold></italic></text>
+        </item>
+        <item>
+            <code>
+                [[Name of page]]<br/>
+                [[Name of page|Text to display]]</code>
+            <text pos="right">Link to another Wikipedia page</text>
+        </item>
+        <item>
+            <code>[[File:Wiki.png|thumb|alt=Alt text|Caption]]</code>
+            <text pos="right">Add an image</text>
+        </item>
+        <item>
+            <code>[[Category:Category name]]</code>
+            <text pos="right">Add a page to a category</text>
+        </item>
+        <item>
+            <code>~~~~</code>
+            <text pos="right">
+                Signature <br/>
+                <small>
+                    <italic>Sign your contributions when posting to a Talk Page.</italic><br/>
+                    <italic>Do not sign when contributing to an article.</italic>
+                </small>
+            </text>
+        </item>
+    </section>
+    <split/>
+    <section title="Works only at the beginning of lines">
+        <item>
+            <code>#REDIRECT [[Target page]]</code>
+            <text pos="right">Redirect to another page <br/>
+            <small><italic>Redirects must be placed at the start of the first line.</italic></small></text>
+        </item>
+        <item>
+            <code>
+                == Level 2 ==<br/>
+                === Level 3 ===<br/>
+                ==== Level 4 ====<br/>
+                ===== Level 5 =====<br/>
+                ====== Level 6 ======
+            </code>
+            <text pos="right">
+                Section headings <br/>
+                <small>
+                    <italic>A Table of Contents will automatically 
+                    be generated when four headings are added to an article.</italic><br/>
+                    <italic>=Level 1= should not be used.</italic>
+                </small>
+            </text>
+        </item>
+        <item>
+            <code>
+            * One <br/>
+            * Two <br/>
+            ** Two point one <br/>
+            * Three
+            </code>
+            <text pos="right">Bulleted list</text>
+        </item>
+        <item>
+            <code>
+                # One <br/>
+                # Two <br/>
+                ## Two point one <br/>
+                # Three
+            </code>
+            <text pos="right">Numbered list</text>
+        </item>
+        <item>
+            <code>
+                no indent (normal) <br/> 
+                :first indent <br/>
+                ::second indent <br/>
+                :::third indent
+            </code>
+            <text pos="right">Indenting text <br/>
+            <italic><small>This is generally used when replying on a Talk Page, as it keeps conversations easy to browse.</small></italic></text>
+        </item>
+    </section>
+</cheatsheet>

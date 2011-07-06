@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Git</name>
+        <author>Zack Rusin</author>
+        <website>http://zrusin.blogspot.com</website>
+        <original_file>http://ktown.kde.org/~zrusin/git/git-cheat-sheet-large.png</original_file>
+    </info>
+    <section title="Git basics">
+        <item>
+            <code>master</code>
+            <text pos="right">default development branch</text>
+        </item>
+        <item>
+            <code>origin</code>
+            <text pos="right">default upstream repository</text>
+        </item>
+        <item>
+            <code>HEAD</code>
+            <text pos="right">current branch</text>
+        </item>
+        <item>
+            <code>HEAD^</code>
+            <text pos="right">parent of HEAD</text>
+        </item>
+        <item>
+            <code>HEAD~4</code>
+            <text pos="right">the great-great grandparent of HEAD</text>
+        </item>
+        <item>
+            <code>git command --help</code>
+        </item>
+        <item>
+            <text>Global Git configuration is stored in $HOME/.gitconfig (<code>git config --help</code>)</text>
+        </item>
+    </section>
+    <section title="Create">
+        <item>
+            <text pos="top">From existing data</text>
+            <code>
+                cs ~/projects/myproject<br/>
+                git init<br/>
+                git add<br/>
+            </code>
+        </item>
+        <item>
+            <text pos="top">From existing data</text>
+            <code>
+                cs ~/projects/myproject<br/>
+                git init<br/>
+                git add<br/>
+            </code>
+        </item>
+        <item>
+            <text pos="top">From existing repo</text>
+            <code>
+                git clone ~/existing/repo ~/new/repo<br/>
+                git clone git://host.org/project.git<br/>
+                git clone ssh://you@host.org/proj.git
+            </code>
+        </item>
+    </section>
+    <section title="Show">
+        <item>
+            <text pos="top">Files changed in working directory</text>
+            <code>git status</code>
+        </item>
+        <item>
+            <text pos="top">Changes to tracked files</text>
+            <code>git diff</code>
+        </item>
+        <item>
+            <text pos="top">What changed between <code>$id1</code> and <code>$id2</code></text>
+            <code>git diff $id1 $id2</code>
+        </item>
+        <item>
+            <text pos="top">History of changes</text>
+            <code>git log</code>
+        </item>
+        <item>
+            <text pos="top">History of changes for file with diffs</text>
+            <code>git log -p $file $dir/ec/tory/</code>
+        </item>
+        <item>
+            <text pos="top">Who changed what and when in a file</text>
+            <code>git blame $file</code>
+        </item>
+        <item>
+            <text pos="top">A commit identified by <code>$id</code></text>
+            <code>git show $id</code>
+        </item>
+        <item>
+            <text pos="top">A specific file from a specific <code>$id</code></text>
+            <code>git show $id:$file</code>
+        </item>
+        <item>
+            <text pos="top">All local branches</text>
+            <code>git branch</code>
+        </item>
+    </section>
+    <section title="Revert">
+        <item>
+            <text pos="top">Return to the last committed state</text>
+            <code>git reset --hard</code>
+            <text pos="bottom"><small><light>you cannot undo a hard reset!</light></small></text>
+        </item>
+        <item>
+            <text pos="top">Revert the last commit</text>
+            <code>git revert HEAD</code>
+            <text pos="right"><small><light>Creates a new commit</light></small></text>
+        </item>
+        <item>
+            <text pos="top">Revert specific commit</text>
+            <code>git revert $id</code>
+            <text pos="right"><small><light>Creates a new commit</light></small></text>
+        </item>
+        <item>
+            <text pos="top">Fix the last commit</text>
+            <code>git commit -a --amend</code>
+            <text pos="right"><small><light>(after editing the broken files)</light></small></text>
+        </item>
+        <item>
+            <text pos="top">Checkout the <code>$id</code> version of a file</text>
+            <code>git checkout $id $file</code>
+        </item>
+    </section>
+    <section title="Branch">
+        <item>
+            <text pos="top">Switch to the <code>$id</code> branch</text>
+            <code>git checkout $id</code>
+        </item>
+        <item>
+            <text pos="top">Merge <code>branch1</code> into <code>branch2</code></text>
+            <code>
+                git checkout $branch2<br/>
+                git merge branch1
+            </code>
+        </item>
+        <item>
+            <text pos="top">Create branch named <code>$branch</code> based on the HEAD</text>
+            <code>git branch $branch</code>
+        </item>
+        <item>
+            <text pos="top">Create branch <code>$new_branch</code> based on branch <code>$other</code> and switch to it</text>
+            <code>git checkout -b $new_branch $other</code>
+        </item>
+        <item>
+            <text pos="top">Delete branch <code>$branch</code></text>
+            <code>git branch -d $branch</code>
+        </item>
+    </section>
+    <split/>
+    <section title="Update">
+        <item>
+            <text pos="top">Fetch latest changes from origin</text>
+            <code>git fetch</code>
+            <text pos="right"><small><light>(but this does not merge them)</light></small></text>
+        </item>
+        <item>
+            <text pos="top">Pull latest changes from origin</text>
+            <code>git pull</code>
+            <text pos="right"><small><light>(does a fetch followed by a merge)</light></small></text>
+        </item>
+        <item>
+            <text pos="top">Apply a patch that some sent you</text>
+            <code>git am -3 patch.mbox</code>
+            <text pos="right"><small><light>(in case of a conflict, resolve and use 
+                <code>git am --resolved</code>)</light></small></text>
+        </item>
+    </section>
+    <section title="Publish">
+        <item>
+            <text pos="top">Commit all your local changes</text>
+            <code>git commit -a</code>
+        </item>
+        <item>
+            <text pos="top">Prepare a patch for other developers</text>
+            <code>git format-patch origin</code>
+        </item>
+        <item>
+            <text pos="top">Push changes to origin</text>
+            <code>git push</code>
+        </item>
+        <item>
+            <text pos="top">Mark a version / milestone</text>
+            <code>git tag v1.0</code>
+        </item>
+    </section>
+    <section title="Useful commands">
+        <subsection title="Finding regressions">
+            <item>
+                <code>git bisect start</code>
+                <text pos="right"><small><light>(to start)</light></small></text>
+            </item>
+            <item>
+                <code>git bisect good $id</code>
+                <text pos="right"><small><light>(<code>$id</code> is the last working version)</light></small></text>
+            </item>
+            <item>
+                <code>git bisect bad $id</code>
+                <text pos="right"><small><light>(<code>$id</code> is a broken version)</light></small></text>
+            </item>
+            <hr/>
+            <item>
+                <code>git bisect bad/good</code>
+                <text pos="right"><small><light>(to mark it as bad or good)</light></small></text>
+            </item>
+            <item>
+                <code>git bisect visualize</code>
+                <text pos="right"><small><light>(to launch gitk and mark it)</light></small></text>
+            </item>
+            <item>
+                <code>git bisect reset</code>
+                <text pos="right"><small><light>(once you're done)</light></small></text>
+            </item>
+        </subsection>
+        <item>
+            <text pos="top">Check for errors and cleanup repository</text>
+            <code>
+                git fsck<br/>
+                git gc --prune
+            </code>
+        </item>
+        <item>
+            <text pos="top">Search working directory for foo()</text>
+            <code>git grep "foo()"</code>
+        </item>
+    </section>
+    <section title="Resolve Merge Conflicts">
+        <subsection title="To view the merge conflicts">
+            <item>
+                <code>git diff</code>
+                <text pos="right"><small><light>(complete conflict diff)</light></small></text>
+            </item>
+            <item>
+                <code>git diff --base $file</code>
+                <text pos="right"><small><light>(against base file)</light></small></text>
+            </item>
+            <item>
+                <code>git diff --ours $file</code>
+                <text pos="right"><small><light>(against your changes)</light></small></text>
+            </item>
+            <item>
+                <code>git diff --theirs $file</code>
+                <text pos="right"><small><light>(against other changes)</light></small></text>
+            </item>
+        </subsection>
+        <subsection title="To discard conflicting patch">
+            <item>
+                <code>git reset --hard</code>
+            </item>
+            <item>
+                <code>git rebase --skip</code>
+            </item>
+        </subsection>
+        <subsection title="After resolving conflicts, merge with">
+            <item>
+                <code>git add $conflicting_file</code>
+                <text pos="right"><small><light>(do for all resolved files)</light></small></text>
+            </item>
+            <item>
+                <code>git rebase --continue</code>
+            </item>
+        </subsection>
+    </section>
+</cheatsheet>

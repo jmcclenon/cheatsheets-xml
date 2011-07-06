@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>CSS2</name>
+        <author>Dave Child</author>
+        <website>http://www.addedbytes.com</website>
+        <original_file>http://www.addedbytes.com/cheat-sheets/download/css-cheat-sheet-v2.pdf</original_file>
+    </info>
+    <section title="Selectors">
+        <item>
+            <code>*</code>
+            <text pos="right">All elements</text>
+        </item>
+        <item>
+            <code>div</code>
+            <text pos="right">&lt;div&gt;</text>
+        </item>
+        <item>
+            <code>div *</code>
+            <text pos="right">All elements within &lt;div&gt;</text>
+        </item>
+        <item>
+            <code>div span</code>
+            <text pos="right">&lt;span&gt; within &lt;div&gt;</text>
+        </item>
+        <item>
+            <code>div, span</code>
+            <text pos="right">&lt;div&gt; and &lt;span&gt;</text>
+        </item>
+        <item>
+            <code>div &gt; span</code>
+            <text pos="right">&lt;span&gt; with parent &lt;div&gt;</text>
+        </item>
+        <item>
+            <code>div + span</code>
+            <text pos="right">&lt;span&gt; preceded by &lt;div&gt;</text>
+        </item>
+        <item>
+            <code>.class</code>
+            <text pos="right">Elements of class "class"</text>
+        </item>
+        <item>
+            <code>div.class</code>
+            <text pos="right">&lt;div&gt; of class "class"</text>
+        </item>
+        <item>
+            <code>#itemid</code>
+            <text pos="right">Element with id "itemid"</text>
+        </item>
+        <item>
+            <code>div#itemid</code>
+            <text pos="right">&lt;div&gt; with id "itemid"</text>
+        </item>
+        <item>
+            <code>a[attr]</code>
+            <text pos="right">&lt;a&gt; with attribute "attr"</text>
+        </item>
+        <item>
+            <code>a[attr='x']</code>
+            <text pos="right">&lt;a&gt; when "attr" is "x"</text>
+        </item>
+        <item>
+            <code>a[class~='x']</code>
+            <text pos="right">&lt;a&gt; when class is a list containing 'x'</text>
+        </item>
+        <item>
+            <code>a[lang|='en']</code>
+            <text pos="right">&lt;a&gt; when lang begins "en"</text>
+        </item>
+    </section>
+    <section title="Pseudo-Selectors and Pseudo-Classes">
+        <item>
+            <code>:first-child</code>
+            <text pos="right">First child element</text>
+        </item>
+        <item>
+            <code>:first-line</code>
+            <text pos="right">First line of element</text>
+        </item>
+        <item>
+            <code>:hover</code>
+            <text pos="right">Element with mouse over</text>
+        </item>
+        <item>
+            <code>:active</code>
+            <text pos="right">Active element</text>
+        </item>
+        <item>
+            <code>:focus</code>
+            <text pos="right">Element with focus</text>
+        </item>
+        <item>
+            <code>:link</code>
+            <text pos="right">Unvisited links</text>
+        </item>
+        <item>
+            <code>:visited</code>
+            <text pos="right">Visited links</text>
+        </item>
+        <item>
+            <code>:lang(var)</code>
+            <text pos="right">Element with language "var"</text>
+        </item>
+        <item>
+            <code>:before</code>
+            <text pos="right">Before element</text>
+        </item>
+        <item>
+            <code>:after</code>
+            <text pos="right">After element</text>
+        </item>
+    </section>
+    <section title="Sizes and Colours">
+        <item>
+            <code>0</code>
+            <text pos="right">0 requires no unit</text>
+        </item>
+        <subsection title="Relative Sizes">
+            <item>
+                <code>em</code>
+                <text pos="right">1em equal to font size of parent (same as 100%)</text>
+            </item>
+            <item>
+                <code>ex</code>
+                <text pos="right">Height of lower case "x"</text>
+            </item>
+            <item>
+                <code>%</code>
+                <text pos="right">Percentage</text>
+            </item>
+        </subsection>
+        <subsection title="Absolute Sizes">
+            <item>
+                <code>px</code>
+                <text pos="right">Pixels</text>
+            </item>
+            <item>
+                <code>cm</code>
+                <text pos="right">Centimeters</text>
+            </item>
+            <item>
+                <code>mm</code>
+                <text pos="right">Millimeters</text>
+            </item>
+            <item>
+                <code>in</code>
+                <text pos="right">Inches</text>
+            </item>
+            <item>
+                <code>pt</code>
+                <text pos="right">1pt = 1/72in</text>
+            </item>
+            <item>
+                <code>pc</code>
+                <text pos="right">1pc = 12pt</text>
+            </item>
+        </subsection>
+        <subsection title="Colours">
+            <item>
+                <code>#789abc</code>
+                <text pos="right">RBG Hex Notation</text>
+            </item>
+            <item>
+                <code>#acf</code>
+                <text pos="right">Equals to "#aaccff"</text>
+            </item>
+            <item>
+                <code>rgb(0,25,50)</code>
+                <text pos="right">Value of each of red, green and blue. 0 to 255, may be swapped for percentages.</text>
+            </item>
+        </subsection>
+    </section>
+    <section title="Positioning">
+        <item>
+            <code>display</code>
+            <code pos="right">clear</code>
+        </item>
+        <item>
+            <code>position</code>
+            <code pos="right">z-index</code>
+        </item>
+        <item>
+            <code>top</code>
+            <code pos="right">direction <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>right</code>
+            <code pos="right">unicode-bidi</code>
+        </item>
+        <item>
+            <code>bottom</code>
+            <code pos="right">overflow</code>
+        </item>
+        <item>
+            <code>left</code>
+            <code pos="right">clip</code>
+        </item>
+        <item>
+            <code>float</code>
+            <code pos="right">visibility</code>
+        </item>
+    </section>
+    <section title="Dimensions">
+        <item>
+            <code>width</code>
+            <code pos="right">min-height</code>
+        </item>
+        <item>
+            <code>min-width</code>
+            <code pos="right">max-height</code>
+        </item>
+        <item>
+            <code>max-width</code>
+            <code pos="right">vertical-align</code>
+        </item>
+        <item>
+            <code>height</code>
+        </item>
+    </section>
+    <section title="Color / Background">
+        <item>
+            <code>color <color value="red">+</color></code>
+            <code pos="right">background-repeat</code>
+        </item>
+        <item>
+            <code>background <color value="red">x</color></code>
+            <code pos="right">background-image</code>
+        </item>
+        <item>
+            <code>background-color</code>
+            <code pos="right">background-position</code>
+        </item>
+        <item>
+            <code>background-attachment</code>
+        </item>
+    </section>
+    <split/>
+    <section title="Text">
+        <item>
+            <code>text-indent <color value="red">+</color></code>
+            <code pos="right">word-spacing <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>text-align <color value="red">+</color></code>
+            <code pos="right">text-transform <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>text-decoration</code>
+            <code pos="right">white-space <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>text-shadow</code>
+            <code pos="right">line-height <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>letter-spacing <color value="red">+</color></code>
+        </item>
+    </section>
+    <section title="Fonts">
+        <item>
+            <code>font <color value="red">+</color> <color value="red">x</color></code>
+            <code pos="right">font-weight <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>font-family <color value="red">+</color></code>
+            <code pos="right">font-stretch <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>font-style <color value="red">+</color></code>
+            <code pos="right"> font-size <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>font-variant <color value="red">+</color></code>
+            <code pos="right">font-size-adjust <color value="red">+</color></code>
+        </item>
+    </section>
+    <section title="Boxes">
+        <item>
+            <code>margin <color value="red">x</color></code>
+            <code pos="right">border-color <color value="red">x</color></code>
+        </item>
+        <item>
+            <code>margin-top</code>
+            <code pos="right">border-top-color</code>
+        </item>
+        <item>
+            <code>margin-right</code>
+            <code pos="right">border-right-color</code>
+        </item>
+        <item>
+            <code>margin-bottom</code>
+            <code pos="right">border-bottom-color</code>
+        </item>
+        <item>
+            <code>margin-left</code>
+            <code pos="right">border-left-color</code>
+        </item>
+        <item>
+            <code>padding <color value="red">x</color></code>
+            <code pos="right">border-style <color value="red">x</color></code>
+        </item>
+        <item>
+            <code>padding-top</code>
+            <code pos="right">border-top-style</code>
+        </item>
+        <item>
+            <code>padding-right</code>
+            <code pos="right">border-right-style</code>
+        </item>
+        <item>
+            <code>padding-bottom</code>
+            <code pos="right">border-bottom-style</code>
+        </item>
+        <item>
+            <code>padding-left</code>
+            <code pos="right">border-left-style</code>
+        </item>
+        <item>
+            <code>border <color value="red">x</color></code>
+            <code pos="right">border-width <color value="red">x</color></code>
+        </item>
+        <item>
+            <code>border-top <color value="red">x</color></code>
+            <code pos="right">border-top-width</code>
+        </item>
+        <item>
+            <code>border-right <color value="red">x</color></code>
+            <code pos="right">border-right-width</code>
+        </item>
+        <item>
+            <code>border-bottom <color value="red">x</color></code>
+            <code pos="right">border-bottom-width</code>
+        </item>
+        <item>
+            <code>border-left <color value="red">x</color></code>
+            <code pos="right">border-left-width</code>
+        </item>
+    </section>
+    <section title="Tables">
+        <item>
+            <code>caption-side <color value="red">+</color></code>
+            <code pos="right">border-spacing <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>table-layout</code>
+            <code pos="right">empty-cells <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>border-collapse <color value="red">+</color></code>
+            <code pos="right">speak-header <color value="red">+</color></code>
+        </item>
+    </section>
+    <section title="Pagin">
+        <item>
+            <code>size</code>
+            <code pos="right">page-break-inside <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>marks</code>
+            <code pos="right">page <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>page-break-before</code>
+            <code pos="right">orphans <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>page-break-after</code>
+            <code pos="right">window <color value="red">+</color></code>
+        </item>
+    </section>
+    <section title="Interface">
+        <item>
+            <code>cursor <color value="red">+</color></code>
+            <code pos="right">outline-style</code>
+        </item>
+        <item>
+            <code>outline <color value="red">x</color></code>
+            <code pos="right">outline-color</code>
+        </item>
+        <item>
+            <code>outline-width</code>
+        </item>
+    </section>
+    <section title="Aural">
+        <item>
+            <code>volume <color value="red">+</color></code>
+            <code pos="right">elevation</code>
+        </item>
+        <item>
+            <code>speak <color value="red">+</color></code>
+            <code pos="right">speech-rate</code>
+        </item>
+        <item>
+            <code>pause <color value="red">x</color></code>
+            <code pos="right">voice-family</code>
+        </item>
+        <item>
+            <code>pause-before</code>
+            <code pos="right">pitch</code>
+        </item>
+        <item>
+            <code>pause-after</code>
+            <code pos="right">pitch-range</code>
+        </item>
+        <item>
+            <code>cue <color value="red">x</color></code>
+            <code pos="right">stress</code>
+        </item>
+        <item>
+            <code>cue-before</code>
+            <code pos="right">richness</code>
+        </item>
+        <item>
+            <code>cue-after</code>
+            <code pos="right">speak-punctuation</code>
+        </item>
+        <item>
+            <code>play-during</code>
+            <code pos="right">speak-numeral</code>
+        </item>
+        <item>
+            <code>azimuth <color value="red">+</color></code>
+        </item>
+    </section>
+    <section title="Miscellaneous">
+        <item>
+            <code>content</code>
+            <code pos="right">list-style-type <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>quotes <color value="red">+</color></code>
+            <code pos="right">list-style-image <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>counter-reset</code>
+            <code pos="right">list-style-position <color value="red">+</color></code>
+        </item>
+        <item>
+            <code>counter-increment</code>
+            <code pos="right">marker-offset</code>
+        </item>
+        <item>
+            <code>list-style <color value="red">+</color> <color value="red">x</color></code>
+        </item>
+    </section>
+    <section title="Note">
+        <item>
+            <text>Shorthand properties are marked <color value="red">x</color></text>
+        </item>
+        <item>
+            <text>Properties that inherit are marked <color value="red">+</color></text>
+        </item>
+    </section>
+</cheatsheet>

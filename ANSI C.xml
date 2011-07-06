@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>ANSI C</name>
+        <author>Joseph H. Silverman</author>
+        <website>http://www.math.brown.edu/~jhs/</website>
+        <original_file>http://www.digilife.be/quickreferences/QRC/C%20Reference%20Card%20%28ANSI%29%202.2.pdf</original_file>
+    </info>
+    <section title="Program Structure/Functions">
+        <item>
+            <code>type fnc(type<sub>1</sub>, ...);</code>
+            <text pos="right">function prototype</text>
+        </item>
+        <item>
+            <code>type name;</code>
+            <text pos="right">variable declaration</text>
+        </item>
+        <item>
+            <code>
+                int main(void) {<br/>
+                <indent/>declarations <br/>
+                <indent/>statements<br/>
+                }
+            </code>
+            <text pos="right">main routine<br/>local variable declarations</text>
+        </item>
+        <item>
+            <code>
+                type fnc(arg<sub>1</sub>, ...) {<br/>
+                <indent/>declarations <br/>
+                <indent/>statements <br/>
+                <indent/>return value;<br/>
+                }
+            </code>
+            <text pos="right">function definition <br/>local variable declarations</text>
+        </item>
+        <item>
+            <code>/* */</code>
+            <text pos="right">comments</text>
+        </item>
+        <item>
+            <code>int main(int argc, char *argv[])</code>
+            <text pos="right">main with args</text>
+        </item>
+        <item>
+            <code>exit(arg );</code>
+            <text pos="right">terminate execution</text>
+        </item>
+    </section>
+    <section title="C Preprocessor">
+        <item>
+            <text>include library file</text>
+            <code pos="right">#include &lt;<italic>filename</italic>&gt;</code>
+        </item>
+        <item>
+            <text>include user file</text>
+            <code pos="right">#include "<italic>filename</italic>"</code>
+        </item>
+        <item>
+            <text>replacement text</text>
+            <code pos="right">#define <italic>name text</italic></code>
+        </item>
+        <item>
+            <text>replacement macro</text>
+            <code pos="right">#define <italic>name</italic> (<italic>var</italic>) <italic>text</italic></code>
+            <text pos="bottom">
+                <indent/>Example. <code>#define max(A,B) ((A)>(B) ? (A) : (B))</code>
+            </text>
+        </item>
+        <item>
+            <text>undefine</text>
+            <code pos="right">#undef <italic>name</italic></code>
+        </item>
+        <item>
+            <text>quoted string in replace</text>
+            <code pos="right">#</code>
+            <text pos="bottom"><indent/>Example. <code>#define msg(A) printf("%s = %d", #A, (A))</code></text>
+        </item>
+        <item>
+            <text>concatenate args and rescan</text>
+            <code pos="right">##</code>
+        </item>
+        <item>
+            <text>conditional execution</text>
+            <code pos="right">#if, #else, #elif, #endif</code>
+        </item>
+        <item>
+            <text>is <italic>name</italic> defined, not defined?</text>
+            <code pos="right">#ifdef, #ifndef</code>
+        </item>
+        <item>
+            <text><italic>name</italic> defined?</text>
+            <code pos="right">defined(<italic>name</italic>)</code>
+        </item>
+        <item>
+            <text>line continuation char</text>
+            <code pos="right">\</code>
+        </item>
+    </section>
+    <section title="Data Types/Declarations">
+        <item>
+            <text>character (1 byte)</text>
+            <code pos="right">char</code>
+        </item>
+        <item>
+            <text>integer</text>
+            <code pos="right">int</code>
+        </item>
+        <item>
+            <text>real number (single, double precision)</text>
+            <code pos="right">float, double</code>
+        </item>
+        <item>
+            <text>short (16 bit integer)</text>
+            <code pos="right">short</code>
+        </item>
+        <item>
+            <text>long (32 bit integer)</text>
+            <code pos="right">long</code>
+        </item>
+        <item>
+            <text>double long (64 bit integer)</text>
+            <code pos="right">long long</code>
+        </item>
+        <item>
+            <text>positive or negative	m</text>
+            <code pos="right">signed</code>
+        </item>
+        <item>
+            <text>non-negative modulo 2<sup>m</sup></text>
+            <code pos="right">unsigned</code>
+        </item>
+        <item>
+            <text>pointer to <code>int, float,...</code></text>
+            <code pos="right">int*, float*,...</code>
+        </item>
+        <item>
+            <text>enumeration constant</text>
+            <code pos="right">enum <italic>tag</italic> {<italic>name<sub>1</sub></italic>=<italic>value<sub>1</sub></italic>,. . . };</code>
+        </item>
+        <item>
+            <text>constant (read-only) value</text>
+            <code pos="right"><italic>type</italic> const <italic>name</italic>;</code>
+        </item>
+        <item>
+            <text>declare external variable</text>
+            <code pos="right">extern</code>
+        </item>
+        <item>
+            <text>internal to source file</text>
+            <code pos="right">static</code>
+        </item>
+        <item>
+            <text>local persistent between calls</text>
+            <code pos="right">static</code>
+        </item>
+        <item>
+            <text>no value</text>
+            <code pos="right">void</code>
+        </item>
+        <item>
+            <text>structure</text>
+            <code pos="right">struct <italic>tag</italic> {...}</code>
+        </item>
+        <item>
+            <text>create new name for data type</text>
+            <code pos="right">typedef <italic>type name</italic>;</code>
+        </item>
+        <item>
+            <text>size of an object (type is <code>size_t</code>)</text>
+            <code pos="right">sizeof <italic>object</italic></code>
+        </item>
+        <item>
+            <text>size of a data type (type is <code>size_t</code>)</text>
+            <code pos="right">sizeof(<italic>type</italic>)</code>
+        </item>
+    </section>
+    <section title="Initialization">
+        <item>
+            <text>initialize variable</text>
+            <code pos="right"><italic>type name</italic>=<italic>value</italic>;</code>
+        </item>
+        <item>
+            <text>initialize array</text>
+            <code pos="right"><italic>type name</italic>[]={<italic>value<sub>1</sub>,...</italic>}</code>
+        </item>
+        <item>
+            <text>initialize char string</text>
+            <code pos="right">char <italic>name</italic>[]="<italic>string</italic>";</code>
+        </item>
+    </section>
+    <section title="Constants">
+        <item>
+            <text>suffix: long, unsigned, float</text>
+            <code pos="right">65536L, -1U, 3.0F</code>
+        </item>
+        <item>
+            <text>exponential form</text>
+            <code pos="right">4.2e1</code>
+        </item>
+        <item>
+            <text>prefix: octal, hexadecimal</text>
+            <code pos="right">0, 0x or 0X</code>
+            <text pos="bottom"><indent/>Example. 031 is 25, 0x31 is 49 decimal</text>
+        </item>
+        <item>
+            <text>character constant (char, octal, hex)</text>
+            <code pos="right">'a', '\ooo', '\xhh'</code>
+        </item>
+        <item>
+            <text>newline, cr, tab, backspace</text>
+            <code pos="right">\n, \r, \t, \b</code>
+        </item>
+        <item>
+            <text>special characters</text>
+            <code pos="right">\\, \?, \', \"</code>
+        </item>
+        <item>
+            <text>string constant (ends with '\0')</text>
+            <code pos="right">"abc. . . de"</code>
+        </item>
+    </section>
+    <section title="Pointers, Arrays &amp; Structures">
+        <item>
+            <text>declare pointer to <italic>type</italic></text>
+            <code pos="right"><italic>type *name</italic>;</code>
+        </item>
+        <item>
+            <text>declare function returning pointer to <italic>type</italic></text>
+            <code pos="right"><italic>type</italic> *f();</code>
+        </item>
+        <item>
+            <text>declare pointer to function returning <italic>type</italic></text>
+            <code pos="right"><italic>type</italic> (*pf)();</code>
+        </item>
+        <item>
+            <text>generic pointer type</text>
+            <code pos="right">void *</code>
+        </item>
+        <item>
+            <text>object pointed to by <italic>pointer</italic></text>
+            <code pos="right">*<italic>pointer</italic></code>
+        </item>
+        <item>
+            <text>address of object <italic>name</italic></text>
+            <code pos="right">&amp;<italic>name</italic></code>
+        </item>
+        <item>
+            <text>array</text>
+            <code pos="right"><italic>name</italic>[<italic>dim</italic>]</code>
+        </item>
+        <item>
+            <text>multi-dim	array</text>
+            <code pos="right"><italic>name</italic>[<italic>dim1</italic>][<italic>dim2</italic>]</code>
+        </item>
+        <item>
+            <text pos="top"><bold>Structures</bold></text>
+            <code>
+                struct tag {<br/>
+                <indent/>declarations <br/>
+                };
+            </code>
+            <text pos="right">structure template <br/>declaration of members</text>
+        </item>
+        <item>
+            <text>create structure</text>
+            <code pos="right">struct <italic>tag name</italic></code>
+        </item>
+        <item>
+            <text>member of structure from template</text>
+            <code pos="right"><italic>name.member</italic></code>
+        </item>
+        <item>
+            <text>member of pointed-to structure</text>
+            <code pos="right"><italic>pointer</italic> -> <italic>member</italic></code>
+            <text pos="bottom"><indent/>Example. <code>(*p).x</code> and <code>p->x</code> are the same</text>
+        </item>
+        <item>
+            <text>single object, multiple possible types</text>
+            <code pos="right">union</code>
+        </item>
+        <item>
+            <text>bit field with <italic>b</italic> bits</text>
+            <code pos="right">unsigned <italic>member</italic>: <italic>b</italic>;</code>
+        </item>
+    </section>
+    <section title="Operators (grouped by precedence)">
+        <item>
+            <text>struct member operator</text>
+            <code pos="right"><italic>name</italic>.member</code>
+        </item>
+        <item>
+            <text>struct member through pointer</text>
+            <code pos="right"><italic>pointer</italic>-><italic>member</italic></code>
+        </item>
+        <hr/>
+        <item>
+            <text>increment, decrement</text>
+            <code pos="right">++, --</code>
+        </item>
+        <item>
+            <text>plus, minus, logical not, bitwise not</text>
+            <code pos="right">+, -, !, ~</code>
+        </item>
+        <item>
+            <text>indirection via pointer, address of object</text>
+            <code pos="right">*<italic>pointer</italic>, &amp;<italic>name</italic></code>
+        </item>
+        <item>
+            <text>cast expression to type</text>
+            <code pos="right">(<italic>type</italic>) epr</code>
+        </item>
+        <item>
+            <text>size	of	an	object</text>
+            <code pos="right">sizeof</code>
+        </item>
+        <hr/>
+        <item>
+            <text>multiply, divide, modulus (remainder)</text>
+            <code pos="right">*, /, %</code>
+        </item>
+        <hr/>
+        <item>
+            <text>add, subtract</text>
+            <code pos="right">+, -</code>
+        </item>
+        <item>
+            <text>left, right shift [bit ops]</text>
+            <code pos="right">&lt;&lt;, &gt;&gt;</code>
+        </item>
+        <item>
+            <text>relational comparisons</text>
+            <code pos="right">&gt;, &gt;=, &lt;, &lt;=</code>
+        </item>
+        <item>
+            <text>equality comparisons</text>
+            <code pos="right">==, !=</code>
+        </item>
+        <item>
+            <text>and [bit op]</text>
+            <code pos="right">&amp;</code>
+        </item>
+        <item>
+            <text>exclusive or [bit op]</text>
+            <code pos="right">^</code>
+        </item>
+        <item>
+            <text>or (inclusive) [bit op]</text>
+            <code pos="right">|</code>
+        </item>
+        <item>
+            <text>logical and</text>
+            <code pos="right">&amp;&amp;</code>
+        </item>
+        <item>
+            <text>logical or</text>
+            <code pos="right">||</code>
+        </item>
+        <item>
+            <text>conditional expression</text>
+            <code pos="right"><italic>expr<sub>1</sub></italic> ? <italic>expr<sub>2</sub></italic> : <italic>expr<sub>3</sub></italic></code>
+        </item>
+        <item>
+            <text>assignment operators</text>
+            <code pos="right">+=, -=, *=, . . .</code>
+        </item>
+        <item>
+            <text>expression evaluation separator</text>
+            <code pos="right">,</code>
+        </item>
+        <item>
+            <text>Unary operators, conditional expression and assignment operators group right to left; all others group left to right.</text>
+        </item>
+    </section>
+    <section title="Flow of Control">
+        <item>
+            <text>statement terminator</text>
+            <code pos="right">;</code>
+        </item>
+        <item>
+            <text>block delimiters</text>
+            <code pos="right">{ }</code>
+        </item>
+        <item>
+            <text>exit from <code>switch, while, do, for</code></text>
+            <code pos="right">break;</code>
+        </item>
+        <item>
+            <text>next iteration of <code>while, do, for</code></text>
+            <code pos="right">continue;</code>
+        </item>
+        <item>
+            <text>go to</text>
+            <code pos="right">goto <italic>label</italic>;</code>
+        </item>
+        <item>
+            <text>label</text>
+            <code pos="right"><italic>label</italic>: statement</code>
+        </item>
+        <item>
+            <text>return value from function</text>
+            <code pos="right">return <italic>expr</italic></code>
+        </item>
+        <subsection title="Flow Constructions">
+            <item>
+                <text>if statement</text>
+                <code pos="right">
+                    if (<italic>expr<sub>1</sub></italic>) <italic>statement<sub>1</sub></italic><br/>
+                    else if (<italic>expr<sub>2</sub></italic>) <italic>statement<sub>2</sub></italic><br/>
+                    else <italic>statement<sub>3</sub></italic>
+                </code>
+            </item>
+            <item>
+                <text>while statement</text>
+                <code pos="right">
+                    while (<italic>expr</italic>)<br/>
+                    <indent/><italic>statement</italic>
+                </code>
+            </item>
+            <item>
+                <text>do statement</text>
+                <code pos="right">
+                    do <italic>statement</italic><br/>
+                    while(<italic>expr</italic>);
+                </code>
+            </item>
+            <item>
+                <text>switch statement</text>
+                <code pos="right">
+                    switch (<italic>expr</italic>) {<br/>
+                    <indent/>case <italic>const<sub>1</sub></italic>: <italic>statement<sub>1</sub></italic> break;<br/>
+                    <indent/>case <italic>const<sub>2</sub></italic>: <italic>statement<sub>2</sub></italic> break;<br/>
+                    <indent/>default: <italic>statement</italic><br/>
+                    }
+                </code>
+            </item>
+        </subsection>
+    </section>
+    <section title="ANSI Standard Libraries">
+        <item>
+            <code>&lt;assert.h&gt; &lt;ctype.h&gt; &lt;errno.h&gt;</code>
+            <code pos="right">&lt;float.h&gt; &lt;limits.h&gt;</code>
+        </item>
+        <item>
+            <code>&lt;locale.h&gt; &lt;math.h&gt; &lt;setjmp.h&gt;</code>
+            <code pos="right">&lt;signal.h&gt; &lt;stdarg.h&gt;</code>
+        </item>
+        <item>
+            <code>&lt;stddef.h&gt; &lt;stdio.h&gt; &lt;stdlib.h&gt;</code>
+            <code pos="right">&lt;string.h&gt; &lt;time.h&gt;</code>
+        </item>
+    </section>
+    <section title="Character Class Tests &lt;ctype.h&gt;">
+        <item>
+            <text>alphanumeric?</text>
+            <code pos="right">isalnum(c)</code>
+        </item>
+        <item>
+            <text>alphabetic?</text>
+            <code pos="right">isalpha(c)</code>
+        </item>
+        <item>
+            <text>control character?</text>
+            <code pos="right">iscntrl(c)</code>
+        </item>
+        <item>
+            <text>decimal digit?</text>
+            <code pos="right">isdigit(c)</code>
+        </item>
+        <item>
+            <text>printing character (not incl space)?</text>
+            <code pos="right">isgraph(c)</code>
+        </item>
+        <item>
+            <text>lower case letter?</text>
+            <code pos="right">islower(c)</code>
+        </item>
+        <item>
+            <text>printing character (incl space)?</text>
+            <code pos="right">isprint(c)</code>
+        </item>
+        <item>
+            <text>printing char except space, letter, digit?</text>
+            <code pos="right">ispunct(c)</code>
+        </item>
+        <item>
+            <text>space, formfeed, newline, cr, tab, vtab?</text>
+            <code pos="right">isspace(c)</code>
+        </item>
+        <item>
+            <text>upper case letter?</text>
+            <code pos="right">isupper(c)</code>
+        </item>
+        <item>
+            <text>hexadecimal digit?</text>
+            <code pos="right">isxdigit(c)</code>
+        </item>
+        <item>
+            <text>convert to lower case</text>
+            <code pos="right">tolower(c)</code>
+        </item>
+        <item>
+            <text>convert to upper case</text>
+            <code pos="right">toupper(c)</code>
+        </item>
+    </section>
+    <section title="String Operations &lt;string.h&gt;">
+        <item>
+            <text><light>s is a string; cs, ct are constant strings</light></text>
+        </item>
+        <item>
+            <text>length of <code>s</code></text>
+            <code pos="right">strlen(s)</code>
+        </item>
+        <item>
+            <text>copy <code>ct</code> to <code>s</code></text>
+            <code pos="right">strcpy(s,ct)</code>
+        </item>
+        <item>
+            <text>concatenate <code>ct</code> after <code>s</code></text>
+            <code pos="right">strcat(s,ct)</code>
+        </item>
+        <item>
+            <text>compare <code>cs</code> to <code>ct</code></text>
+            <code pos="right">strcmp(cs,ct)</code>
+        </item>
+        <item>
+            <text><indent/>only first <code>n</code> chars</text>
+            <code pos="right">strncmp(cs,ct,n)</code>
+        </item>
+        <item>
+            <text>pointer to first <code>c</code>in <code>cs</code></text>
+            <code pos="right">strchr(cs,c)</code>
+        </item>
+        <item>
+            <text>pointer to last <code>c</code> in <code>cs</code></text>
+            <code pos="right">strrchr(cs,c)</code>
+        </item>
+        <item>
+            <text>copy <code>n</code> chars from <code>ct</code> to <code>s</code></text>
+            <code pos="right">memcpy(s,ct,n)</code>
+        </item>
+        <item>
+            <text>copy <code>n</code> chars from <code>ct</code> to <code>s</code> (may overlap)</text>
+            <code pos="right">memmove(s,ct,n)</code>
+        </item>
+        <item>
+            <text>compare <code>n</code> chars of <code>cs</code> with <code>ct</code></text>
+            <code pos="right">memcmp(cs,ct,n)</code>
+        </item>
+        <item>
+            <text>pointer to first <code></code> in first <code>n</code> chars of <code>cs</code></text>
+            <code pos="right">memchr(cs,c,n)</code>
+        </item>
+        <item>
+            <text>put <code>c</code> into first <code>n</code> chars of <code>s</code></text>
+            <code pos="right">memset(s,c,n)</code>
+        </item>
+    </section>
+    <split/>
+    <section title="Input/Output &lt;stdio.h&gt;">
+        <subsection title="Standard I/O">
+            <item>
+                <text>standard input stream</text>
+                <code pos="right">stdin</code>
+            </item>
+            <item>
+                <text>standard output stream</text>
+                <code pos="right">stdout</code>
+            </item>
+            <item>
+                <text>standard error stream</text>
+                <code pos="right">stderr</code>
+            </item>
+            <item>
+                <text>end of file (type is <code>int</code>)</text>
+                <code pos="right">EOF</code>
+            </item>
+            <item>
+                <text>get a character</text>
+                <code pos="right">getchar()</code>
+            </item>
+            <item>
+                <text>print a character</text>
+                <code pos="right">putchar(<italic>char</italic>)</code>
+            </item>
+            <item>
+                <text>print	formatted data</text>
+                <code pos="right">printf("<italic>format</italic>",<italic>arg<sub>1</sub></italic>,...)</code>
+            </item>
+            <item>
+                <text>print	to	string	<code>s</code></text>
+                <code pos="right">sprintf(s,"<italic>format</italic>",<italic>arg<sub>1</sub></italic>,...)</code>
+            </item>
+            <item>
+                <text>read	formatted	data</text>
+                <code pos="right">scanf("<italic>format</italic>",&amp;<italic>name<sub>1</sub></italic> ,...)</code>
+            </item>
+            <item>
+                <text>read	from	string	<code>s</code></text>
+                <code pos="right">sscanf(s,"<italic>format</italic>",&amp;<italic>name<sub>1</sub></italic>,...)</code>
+            </item>
+            <item>
+                <text>print string <code>s</code></text>
+                <code pos="right">puts(s)</code>
+            </item>
+        </subsection>
+        <subsection title="File I/O">
+            <item>
+                <text>declare file pointer</text>
+                <code pos="right">FILE *<italic>fp</italic>;</code>
+            </item>
+            <item>
+                <text>pointer to named file</text>
+                <code pos="right">fopen("<italic>name</italic>","<italic>mode</italic>")</code>
+                <text pos="bottom"><indent/>modes: <code>r</code> (read), <code>w</code> (write), <code>a</code> (append), <code>b</code> (binary)</text>
+            </item>
+            <item>
+                <text>get a character</text>
+                <code pos="right">getc(<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>write a character</text>
+                <code pos="right">putc(<italic>chr</italic>,<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>write to file</text>
+                <code pos="right">fprintf(<italic>fp</italic>,"<italic>format</italic>",<italic>arg<sub>1</sub></italic>,...)</code>
+            </item>
+            <item>
+                <text>read from file</text>
+                <code pos="right">fscanf(<italic>fp</italic>,"<italic>format</italic>",<italic>arg<sub>1</sub></italic>,... )</code>
+            </item>
+            <item>
+                <text>read and store <code>n</code> elts to <code>*ptr</code></text>
+                <code pos="right">fread(*ptr,eltsize,n,<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>write n elts from <code>*ptr</code> to file</text>
+                <code pos="right">fwrite(*ptr,eltsize,n,<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>close file</text>
+                <code pos="right">fclose(<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>non-zero if error</text>
+                <code pos="right">ferror(<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>non-zero if already reached EOF</text>
+                <code pos="right">feof(<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>read line to string <code>s</code> (&lt; <code>max</code> chars)</text>
+                <code pos="right">fgets(s,max,<italic>fp</italic>)</code>
+            </item>
+            <item>
+                <text>write string <code>s</code></text>
+                <code pos="right">fputs(s,<italic>fp</italic>)</code>
+            </item>
+        </subsection>
+        <subsection title="Codes for Formatted I/O: &quot;%-+ 0w.pmc&quot;">
+            <item>
+                <code>-</code>
+                <text pos="right">left justify</text>
+            </item>
+            <item>
+                <code>+</code>
+                <text pos="right">print with sign</text>
+            </item>
+            <item>
+                <code><italic>space</italic></code>
+                <text pos="right">print space if no sign</text>
+            </item>
+            <item>
+                <code>0</code>
+                <text pos="right">pad with leading zeros</text>
+            </item>
+            <item>
+                <code><italic>w</italic></code>
+                <text pos="right">min field width</text>
+            </item>
+            <item>
+                <code><italic>p</italic></code>
+                <text pos="right">precision</text>
+            </item>
+            <item>
+                <code><italic>m</italic></code>
+                <text pos="right">conversion character: <code>h</code> short, <code>l</code> long, <code>L</code> long double</text>
+            </item>
+            <item>
+                <text pos="top"><code>c</code> conversion character:</text>
+            </item>
+            <item>
+                <text><indent/><code>di,i</code> integer</text>
+                <text pos="right"><code>u</code> unsigned</text>
+            </item>
+            <item>
+                <text><indent/><code>c</code> single char</text>
+                <text pos="right"><code>s</code> char string</text>
+            </item>
+            <item>
+                <text><indent/><code>f</code> double (<code>printf</code>)</text>
+                <text pos="right"><code>e,E</code> exponential</text>
+            </item>
+            <item>
+                <text><indent/><code>f</code> float (<code>scanf</code>)</text>
+                <text pos="right"><code>lf</code> double (<code>scanf</code>)</text>
+            </item>
+            <item>
+                <text><indent/><code>o</code> octal</text>
+                <text pos="right"><code>x,X</code> hexadecimal</text>
+            </item>
+            <item>
+                <text><indent/><code>p</code> pointer</text>
+                <text pos="right"><code>n</code> number of chars written</text>
+            </item>
+            <item>
+                <text><indent/><code>g,G</code> same as <code>f</code> or <code>e,E</code> depending on exponent</text>
+            </item>
+        </subsection>
+    </section>
+    <section title="Variable Argument Lists &lt;stdarg.h&gt;">
+        <item>
+            <text>declaration of pointer to arguments</text>
+            <code pos="right">va_list <italic>ap</italic>;</code>
+        </item>
+        <item>
+            <text>initialization of argument pointer</text>
+            <code pos="right">va_start(<italic>ap</italic>,<italic>lastarg</italic>);</code>
+            <text pos="bottom"><indent/><code><italic>lastarg</italic></code> is last named parameter of the function</text>
+        </item>
+        <item>
+            <text>access next unnamed arg, update pointer</text>
+            <code pos="right">va_arg(<italic>ap</italic>,<italic>type</italic>)</code>
+        </item>
+        <item>
+            <text>call before exiting function</text>
+            <code pos="right">va_end(<italic>ap</italic>);</code>
+        </item>
+    </section>
+    <section title="Standard Utility Functions	&lt;stdlib.h&gt;">
+        <item>
+            <text>absolute value of <code>int n</code></text>
+            <code pos="right">abs(n)</code>
+        </item>
+        <item>
+            <text>absolute value of <code>long n</code></text>
+            <code pos="right">labs(n)</code>
+        </item>
+        <item>
+            <text>quotient and remainder of <code>ints n,d</code></text>
+            <code pos="right">div(n,d)</code>
+            <text pos="bottom"><indent/>returns structure with <code>div_t.quot</code> and <code>div_t.rem</code></text>
+        </item>
+        <item>
+            <text>quotient and remainder of <code>longs n,d</code></text>
+            <code pos="right">ldiv(n,d)</code>
+            <text pos="bottom">returns structure with <code>ldiv_t.quot</code> and <code>ldiv_t.rem</code></text>
+        </item>
+        <item>
+            <text>pseudo-random integer <code>[0,RAND_MAX]</code></text>
+            <code pos="right">rand()</code>
+        </item>
+        <item>
+            <text>set random seed to <code>n</code></text>
+            <code pos="right">srand(n)</code>
+        </item>
+        <item>
+            <text>terminate program execution</text>
+            <code pos="right">exit(status)</code>
+        </item>
+        <item>
+            <text>pass string <code>s</code> to system for execution</text>
+            <code pos="right">system(s)</code>
+        </item>
+        <subsection title="Conversions">
+            <item>
+                <text>convert string <code>s</code> to <code>double</code></text>
+                <code pos="right">atof(s)</code>
+            </item>
+            <item>
+                <text>convert string <code>s</code> to <code>integer</code></text>
+                <code pos="right">atoi(s)</code>
+            </item>
+            <item>
+                <text>convert string <code>s</code> to <code>long</code></text>
+                <code pos="right">atol(s)</code>
+            </item>
+            <item>
+                <text>convert prefix of <code>s</code> to <code>double</code></text>
+                <code pos="right">strtod(s,&amp;endp)</code>
+            </item>
+            <item>
+                <text>convert prefix of <code>s</code> (base <code>b</code>) to <code>long</code></text>
+                <code pos="right">strtol(s,&amp;endp,b)</code>
+            </item>
+            <item>
+                <text><indent/>same, but <code>unsigned long</code></text>
+                <code pos="right">strtoul(s,&amp;endp,b)</code>
+            </item>
+        </subsection>
+        <subsection title="Storage Allocation">
+            <item>
+                <text>allocate storage</text>
+                <code pos="right">malloc(size), calloc(nobj,size)</code>
+            </item>
+            <item>
+                <text>change size of storage</text>
+                <code pos="right">newptr = realloc(ptr,size);</code>
+            </item>
+            <item>
+                <text>deallocate storage</text>
+                <code pos="right">free(ptr);</code>
+            </item>
+        </subsection>
+        <subsection title="Array Functions">
+            <item>
+                <text>search <code>array</code> for <code>key</code></text>
+                <code pos="right">bsearch(key,array,n,size,cmpf)</code>
+            </item>
+            <item>
+                <text>sort <code>array</code> ascending order</text>
+                <code pos="right">qsort(array,n,size,cmpf)</code>
+            </item>
+        </subsection>
+    </section>
+    <section title="Time and Date Functions &lt;time.h&gt;">
+        <item>
+            <text>processor time used by program</text>
+            <code pos="right">clock()</code>
+            <text pos="bottom"><indent/><italic>Example. </italic><code>clock()/CLOCKS_PER_SEC</code> is time in seconds</text>
+        </item>
+        <item>
+            <text>current calendar time</text>
+            <code pos="right">time()</code>
+        </item>
+        <item>
+            <text><code>time<sub>2</sub>-time<sub>1</sub></code> in seconds (<code>double</code>)</text>
+            <code pos="right">idff(time<sub>2</sub>-time<sub>1</sub>)</code>
+        </item>
+        <item>
+            <text>arithmetic types representing times</text>
+            <code pos="right">clock_t,time_t</code>
+        </item>
+        <item>
+            <text>structure type for calendar time comps</text>
+            <code pos="right">struct tm</code>
+        </item>
+        <item>
+            <text><indent/><code>tm_sec</code> seconds after minute</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_min</code> minutes after hour</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_hour</code> hours since midnight</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_mday</code> day of month</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_mon</code> months since January</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_year</code> years since 1900</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_wday</code> days since Sunday</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_yday</code> days since January 1</text>
+        </item>
+        <item>
+            <text><indent/><code>tm_isdst</code> Daylight Saving Time flag</text>
+        </item>
+        <item>
+            <text>convert local time to calendar time</text>
+            <code pos="right">mktime(tp)</code>
+        </item>
+        <item>
+            <text>convert time in <code>tp </code>to string</text>
+            <code pos="right">asctime(tp)</code>
+        </item>
+        <item>
+            <text>convert calendar time in <code>tp</code> to local time</text>
+            <code pos="right">ctime(tp)</code>
+        </item>
+        <item>
+            <text>convert calendar time to GMT</text>
+            <code pos="right">gmtime(tp)</code>
+        </item>
+        <item>
+            <text>convert calendar time to local time</text>
+            <code pos="right">localtime(tp)</code>
+        </item>
+        <item>
+            <text>format	date	and	time	info</text>
+            <code pos="right">strftime(s,smax,"<italic>format</italic>",tp)</code>
+            <text pos="bottom"><indent/><code>tp</code> is a pointer to a structure of type <code>tm</code></text>
+        </item>
+    </section>
+    <section title="Mathematical Functions &lt;math.h&gt;">
+        <item>
+            <text><light>Arguments and returned values are <code>double</code></light></text>
+        </item>
+        <item>
+            <text>trig functions</text>
+            <code pos="right">sin(x), cos(x), tan(x)</code>
+        </item>
+        <item>
+            <text>inverse trig functions</text>
+            <code pos="right">asin(x), acos(x), atan(x)</code>
+        </item>
+        <item>
+            <text>arctan(<code>y</code>/<code>x</code>)</text>
+            <code pos="right">atan2(y,x)</code>
+        </item>
+        <item>
+            <text>hyperbolic trig functions</text>
+            <code pos="right">sinh(x), cosh(x), tanh(x)</code>
+        </item>
+        <item>
+            <text>exponentials &amp; logs</text>
+            <code pos="right">exp(x), log(x), log10(x)</code>
+        </item>
+        <item>
+            <text>exponentials &amp; logs (2 power)</text>
+            <code pos="right">ldexp(x,n), frexp(x,&amp;e)</code>
+        </item>
+        <item>
+            <text>division &amp; remainder</text>
+            <code pos="right">modf(x,ip), fmod(x,y)</code>
+        </item>
+        <item>
+            <text>powers</text>
+            <code pos="right">pow(x,y), sqrt(x)</code>
+        </item>
+        <item>
+            <text>rounding</text>
+            <code pos="right">ceil(x), floor(x), fabs(x)</code>
+        </item>
+    </section>
+    <section title="Integer Type Limits &lt;limits.h&gt;">
+        <item>
+            <text><light>The numbers given in parentheses are typical values for the
+            constants on a 32-bit Unix system, followed by minimum re- quired values (if significantly different).</light></text>
+        </item>
+        <item>
+            <text width="30%"><code>CHAR_BIT</code></text>
+            <text>bits in <code>char</code></text>
+            <text pos="right">(8)</text>
+        </item>
+        <item>
+            <text width="30%"><code>CHAR_MAX</code></text>
+            <text>max value of <code>char</code></text>
+            <text pos="right">(<code>SCHAR_MAX</code> or <code>UCHAR_MAX</code>)</text>
+        </item>
+        <item>
+            <text width="30%"><code>CHAR_MIN</code></text>
+            <text>min value of <code>char</code></text>
+            <text pos="right">(<code>SCHAR_MIN</code> or 0)</text>
+        </item>
+        <item>
+            <text width="30%"><code>SCHAR_MAX</code></text>
+            <text>max <code>signed char</code></text>
+            <text pos="right">(+127)</text>
+        </item>
+        <item>
+            <text width="30%"><code>SCHAR_MIN</code></text>
+            <text>min <code>signed char</code></text>
+            <text pos="right">(-128)</text>
+        </item>
+        <item>
+            <text width="30%"><code>SHRT_MAX</code></text>
+            <text>max value of <code>short</code></text>
+            <text pos="right">(+32,767)</text>
+        </item>
+        <item>
+            <text width="30%"><code>SHRT_MIN</code></text>
+            <text>min value of <code>short</code></text>
+            <text pos="right">(-32,768)</text>
+        </item>
+        <item>
+            <text width="30%"><code>INT_MAX</code></text>
+            <text>max value of <code>int</code></text>
+            <text pos="right">(+2,147,483,647) (+32,767)</text>
+        </item>
+        <item>
+            <text width="30%"><code>INT_MIN</code></text>
+            <text>min value of <code>int</code></text>
+            <text pos="right">(-2,147,483,648) (-32,767)</text>
+        </item>
+        <item>
+            <text width="30%"><code>LONG_MAX</code></text>
+            <text>max value of <code>long</code></text>
+            <text pos="right">(+2,147,483,647)</text>
+        </item>
+        <item>
+            <text width="30%"><code>LONG_MIN</code></text>
+            <text>min value of <code>long</code></text>
+            <text pos="right">(-2,147,483,648)</text>
+        </item>
+        <item>
+            <text width="30%"><code>UCHAR_MAX</code></text>
+            <text>max <code>unsigned char</code></text>
+            <text pos="right">(255)</text>
+        </item>
+        <item>
+            <text width="30%"><code>USHRT_MAX</code></text>
+            <text>max <code>unsigned short</code></text>
+            <text pos="right">(65,535)</text>
+        </item>
+        <item>
+            <text width="30%"><code>UINT_MAX</code></text>
+            <text>max <code>unsigned int</code></text>
+            <text pos="right">(4,294,967,295) (65,535)</text>
+        </item>
+        <item>
+            <text width="30%"><code>ULONG_MAX</code></text>
+            <text>max <code>unsigned long</code></text>
+            <text pos="right">(4,294,967,295)</text>
+        </item>
+    </section>
+    <section title="Float Type Limits &lt;float.h&gt;">
+        <item>
+            <text><light>The numbers given in parentheses are typical values for the constants on a 32-bit Unix system.</light></text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_RADIX</code></text>
+            <text>radix of exponent rep</text>
+            <text pos="right">(2)</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_ROUNDS</code></text>
+            <text>floating point rounding mode</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_DIG</code></text>
+            <text>decimal digits of precision</text>
+            <text pos="right">(6)</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_EPSILON</code></text>
+            <text>smallest <italic>x</italic> so 1.0f + x &#8800; 1.0f</text>
+            <text pos="right">(1.1E - 7)</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_MANT_DIG</code></text>
+            <text>number of digits in mantissa</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_MAX</code></text>
+            <text>maximum <code>float</code> number</text>
+            <text pos="right">(3.4E38)</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_MAX_EXP</code></text>
+            <text>maximum exponent</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_MIN</code></text>
+            <text>minimum <code>float</code> number</text>
+            <text pos="right">(1.2E - 38)</text>
+        </item>
+        <item>
+            <text width="30%"><code>FLT_MIN_EXP</code></text>
+            <text>minimum exponent</text>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_DIG</code></text>
+            <text>decimal digits of precision</text>
+            <text pos="right">(15)</text>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_EPSILON</code></text>
+            <text>smallest <italic>x</italic> so 1.0 + <italic>x</italic> &#8800; 1.0</text>
+            <text pos="right">(2.2E - 16)</text>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_MANT_DIG</code></text>
+            <text>number of digits in mantissa</text>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_MAX</code></text>
+            <text>max <code>double</code> number</text>
+            <code pos="right">(1.8E308)</code>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_MAX_EXP</code></text>
+            <text>maximum exponent</text>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_MIN</code></text>
+            <text>min <code>double</code> number</text>
+            <code pos="right">(2.2E - 308)</code>
+        </item>
+        <item>
+            <text width="30%"><code>DBL_MIN_EXP</code></text>
+            <text>minimum exponent</text>
+        </item>
+    </section>
+</cheatsheet>

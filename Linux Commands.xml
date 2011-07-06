@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Linux Commands</name>
+        <author>Pádraig Brady</author>
+        <website>http://www.pixelbeat.org</website>
+        <original_file>http://www.pixelbeat.org/cmdline.html</original_file>
+    </info>
+    <section title="General">
+        <item>
+            <text>Examples marked with <color value="#999999">&#x2022;</color> are valid/safe to paste without modification into a terminal.</text>
+        </item>
+        <hr/>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> apropos whatis</bold></code>
+            <text pos="bottom"><light>
+                  Show commands pertinent to string.
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> man -t man | ps2pdf - > man.pdf</bold></code>
+            <text pos="bottom"><light>
+                  make a pdf of a manual page
+            </light></text>
+        </item>
+        <item>
+            <code><bold>which command</bold></code>
+            <text pos="bottom"><light>
+                  Show full path name of command
+            </light></text>
+        </item>
+        <item>
+            <code><bold>time command</bold></code>
+            <text pos="bottom"><light>
+                  	See how long a command takes
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> 	time cat</bold></code>
+            <text pos="bottom"><light>
+                  	Start stopwatch. Ctrl-d to stop.
+            </light></text>
+        </item>
+    </section>
+    <section title="dir navigation">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> 	cd -</bold></code>
+            <text pos="bottom"><light>
+                  Go to previous directory
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> cd</bold></code>
+            <text pos="bottom"><light>
+                  	Go to $HOME directory
+            </light></text>
+        </item>
+        <item>
+            <code><bold>	(cd dir &amp;&amp; command)</bold></code>
+            <text pos="bottom"><light>
+                  Go to dir, execute command and return to current dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> pushd .</bold></code>
+            <text pos="bottom"><light>
+                  Put current dir on stack so you can <bold>popd</bold> back to it
+            </light></text>
+        </item>
+    </section>
+    <section title="file searching">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> alias l='ls -l --color=auto'</bold></code>
+            <text pos="bottom"><light>
+                  quick dir listing
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ls -lrt</bold></code>
+            <text pos="bottom"><light>
+                  	List files by date.
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ls /usr/bin | pr -T9 -W$COLUMNS</bold></code>
+            <text pos="bottom"><light>
+                  	Print in 9 columns to width of terminal
+            </light></text>
+        </item>
+        <item>
+            <code><bold>find -name '*.[ch]' | xargs grep -E 'expr'</bold></code>
+            <text pos="bottom"><light>
+                  	Search 'expr' in this dir and below
+            </light></text>
+        </item>
+        <item>
+            <code><bold>	find -type f -print0 | xargs -r0 grep -F 'example'</bold></code>
+            <text pos="bottom"><light>
+                  Search all regular files for 'example' in this dir and below
+            </light></text>
+        </item>
+        <item>
+            <code><bold>find -maxdepth 1 -type f | xargs grep -F 'example'</bold></code>
+            <text pos="bottom"><light>
+                  Search all regular files for 'example' in this dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>find -maxdepth 1 -type d | while read dir; do echo $dir; echo cmd2; done</bold></code>
+            <text pos="bottom"><light>
+                  Process each item with multiple commands (in while loop)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> find -type f ! -perm -444</bold></code>
+            <text pos="bottom"><light>
+                  Find files not readable by all (useful for web site)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> find -type d ! -perm -111</bold></code>
+            <text pos="bottom"><light>
+                  Find dirs not accessible by all (useful for web site)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> locate -r 'file[^/]*\.txt'</bold></code>
+            <text pos="bottom"><light>
+                  Search cached index for names. This re is like glob *file*.txt
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> look reference</bold></code>
+            <text pos="bottom"><light>
+                  Quickly search (sorted) dictionary for prefix
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> grep --color reference /usr/share/dict/words</bold></code>
+            <text pos="bottom"><light>
+                  Highlight occurances of regular expression in dictionary
+            </light></text>
+        </item>
+    </section>
+    <section title="archives and compression">
+        <item>
+            <code><bold>gpg -c file</bold></code>
+            <text pos="bottom"><light>
+                  Encrypt file
+            </light></text>
+        </item>
+        <item>
+            <code><bold>gpg file.gpg</bold></code>
+            <text pos="bottom"><light>
+                  Decrypt file
+            </light></text>
+        </item>
+        <item>
+            <code><bold>tar -c dir/ | bzip2 > dir.tar.bz2</bold></code>
+            <text pos="bottom"><light>
+                  Make compressed archive of dir/
+            </light></text>
+        </item>
+        <item>
+            <code><bold>bzip2 -dc dir.tar.bz2 | tar -x</bold></code>
+            <text pos="bottom"><light>
+                  Extract archive (use gzip instead of bzip2 for tar.gz files)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>tar -c dir/ | gzip | gpg -c | ssh user@remote 'dd of=dir.tar.gz.gpg'</bold></code>
+            <text pos="bottom"><light>
+                  Make encrypted archive of dir/ on remote machine
+            </light></text>
+        </item>
+        <item>
+            <code><bold>find dir/ -name '*.txt' | tar -c --files-from=- | bzip2 > dir_txt.tar.bz2</bold></code>
+            <text pos="bottom"><light>
+                  Make archive of subset of dir/ and below
+            </light></text>
+        </item>
+        <item>
+            <code><bold>find dir/ -name '*.txt' | xargs cp -a --target-directory=dir_txt/ --parents</bold></code>
+            <text pos="bottom"><light>
+                  Make copy of subset of dir/ and below
+            </light></text>
+        </item>
+        <item>
+            <code><bold>( tar -c /dir/to/copy ) | ( cd /where/to/ &amp;&amp; tar -x -p )</bold></code>
+            <text pos="bottom"><light>
+                  Copy (with permissions) copy/ dir to /where/to/ dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>( cd /dir/to/copy &amp;&amp; tar -c . ) | ( cd /where/to/ &amp;&amp; tar -x -p )</bold></code>
+            <text pos="bottom"><light>
+                  Copy (with permissions) contents of copy/ dir to /where/to/
+            </light></text>
+        </item>
+        <item>
+            <code><bold>( tar -c /dir/to/copy ) | ssh -C user@remote 'cd /where/to/ &amp;&amp; tar -x -p' </bold></code>
+            <text pos="bottom"><light>
+                  Copy (with permissions) copy/ dir to remote:/where/to/ dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>dd bs=1M if=/dev/sda | gzip | ssh user@remote 'dd of=sda.gz'</bold></code>
+            <text pos="bottom"><light>
+                  Backup harddisk to remote machine
+            </light></text>
+        </item>
+    </section>
+    <section title="rsync">
+        <item>
+            <text><light>Network efficient file copier: Use the --dry-run option for testing</light></text>
+        </item>
+        <item>
+            <code><bold>rsync -P rsync://rsync.server.com/path/to/file file</bold></code>
+            <text pos="bottom"><light>
+                  Only get diffs. Do multiple times for troublesome downloads
+            </light></text>
+        </item>
+        <item>
+            <code><bold>rsync --bwlimit=1000 fromfile tofile</bold></code>
+            <text pos="bottom"><light>
+                  Locally copy with rate limit. It's like nice for I/O
+            </light></text>
+        </item>
+        <item>
+            <code><bold>rsync -az -e ssh --delete ~/public_html/ remote.com:'~/public_html'</bold></code>
+            <text pos="bottom"><light>
+                  Mirror web site (using compression and encryption)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>rsync -auz -e ssh remote:/dir/ . &amp;&amp; rsync -auz -e ssh . remote:/dir/</bold></code>
+            <text pos="bottom"><light>
+                  Synchronize current directory with remote one
+            </light></text>
+        </item>
+    </section>
+    <section title="ssh (Secure SHell)">
+        <item>
+            <code><bold>ssh $USER@$HOST command</bold></code>
+            <text pos="bottom"><light>
+                  Run command on $HOST as $USER (default command=shell)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ssh -f -Y $USER@$HOSTNAME xeyes</bold></code>
+            <text pos="bottom"><light>
+                  Run GUI command on $HOSTNAME as $USER
+            </light></text>
+        </item>
+        <item>
+            <code><bold>scp -p -r $USER@$HOST: file dir/</bold></code>
+            <text pos="bottom"><light>
+                  Copy with permissions to $USER's home directory on $HOST
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ssh -g -L 8080:localhost:80 root@$HOST</bold></code>
+            <text pos="bottom"><light>
+                  Forward connections to $HOSTNAME:8080 out to $HOST:80
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ssh -R 1434:imap:143 root@$HOST</bold></code>
+            <text pos="bottom"><light>
+                  Forward connections from $HOST:1434 in to imap:143
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ssh-copy-id $USER@$HOST </bold></code>
+            <text pos="bottom"><light>
+                  Install $USER's public key on $HOST for password-less log in
+            </light></text>
+        </item>
+    </section>
+    <section title="wget">
+        <item>
+            <text><light>multi purpose download tool</light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> (cd dir/ &amp;&amp; wget -nd -pHEKk http://www.pixelbeat.org/cmdline.html)</bold></code>
+            <text pos="bottom"><light>
+                  Store local browsable version of a page to the current dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>wget -c http://www.example.com/large.file</bold></code>
+            <text pos="bottom"><light>
+                  Continue downloading a partially downloaded file
+            </light></text>
+        </item>
+        <item>
+            <code><bold>wget -r -nd -np -l1 -A '*.jpg' http://www.example.com/dir/</bold></code>
+            <text pos="bottom"><light>
+                  Download a set of files to the current directory
+            </light></text>
+        </item>
+        <item>
+            <code><bold>wget ftp://remote/file[1-9].iso/</bold></code>
+            <text pos="bottom"><light>
+                  FTP supports globbing directly
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> wget -q -O- http://www.pixelbeat.org/timeline.html | grep 'a href' | head</bold></code>
+            <text pos="bottom"><light>
+                  Process output directly
+            </light></text>
+        </item>
+        <item>
+            <code><bold>echo 'wget url' | at 01:00</bold></code>
+            <text pos="bottom"><light>
+                  Download url at 1AM to current dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>wget --limit-rate=20k url</bold></code>
+            <text pos="bottom"><light>
+                  Do a low priority download (limit to 20KB/s in this case)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>wget -nv --spider --force-html -i bookmarks.html</bold></code>
+            <text pos="bottom"><light>
+                  Check links in a file
+            </light></text>
+        </item>
+        <item>
+            <code><bold>wget --mirror http://www.example.com/</bold></code>
+            <text pos="bottom"><light>
+                  Efficiently update a local copy of a site (handy from cron)
+            </light></text>
+        </item>
+    </section>
+    <section title="networking">
+        <item>
+            <text><light>Note ifconfig, route, mii-tool, nslookup commands are obsolete</light></text>
+        </item>
+        <item>
+            <code><bold>ethtool eth0</bold></code>
+            <text pos="bottom"><light>
+                  Show status of ethernet interface eth0
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ethtool --change eth0 autoneg off speed 100 duplex full</bold></code>
+            <text pos="bottom"><light>
+                  Manually set ethernet interface speed
+            </light></text>
+        </item>
+        <item>
+            <code><bold>iwconfig eth1</bold></code>
+            <text pos="bottom"><light>
+                  Show status of wireless interface eth1
+            </light></text>
+        </item>
+        <item>
+            <code><bold>iwconfig eth1 rate 1Mb/s fixed</bold></code>
+            <text pos="bottom"><light>
+                  Manually set wireless interface speed
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> iwlist scan</bold></code>
+            <text pos="bottom"><light>
+                  List wireless networks in range
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ip link show</bold></code>
+            <text pos="bottom"><light>
+                  List network interfaces
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ip link set dev eth0 name wan</bold></code>
+            <text pos="bottom"><light>
+                  Rename interface eth0 to wan
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ip link set dev eth0 up</bold></code>
+            <text pos="bottom"><light>
+                  Bring interface eth0 up (or down)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ip addr show</bold></code>
+            <text pos="bottom"><light>
+                  List addresses for interfaces
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ip addr add 1.2.3.4/24 brd + dev eth0</bold></code>
+            <text pos="bottom"><light>
+                  Add (or del) ip and mask (255.255.255.0)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ip route show</bold></code>
+            <text pos="bottom"><light>
+                  routing
+            </light></text>
+        </item>
+        <item>
+            <code><bold>ip route add default via 1.2.3.254</bold></code>
+            <text pos="bottom"><light>
+                  Set default gateway to 1.2.3.254
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> host pixelbeat.org</bold></code>
+            <text pos="bottom"><light>
+                  Lookup DNS ip address for name or vice versa
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> hostname -i</bold></code>
+            <text pos="bottom"><light>
+                  Lookup local ip address (equivalent to host `hostname`)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> whois pixelbeat.org</bold></code>
+            <text pos="bottom"><light>
+                  Lookup whois info for hostname or ip address
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> netstat -tupl</bold></code>
+            <text pos="bottom"><light>
+                  List internet services on a system
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> netstat -tup</bold></code>
+            <text pos="bottom"><light>
+                  List active connections to/from system
+            </light></text>
+        </item>
+    </section>
+    <section title="windows networking">
+        <item>
+            <text><light>Note samba is the package that provides all this windows specific networking support</light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> smbtree</bold></code>
+            <text pos="bottom"><light>
+                  Find windows machines. See also findsmb
+            </light></text>
+        </item>
+        <item>
+            <code><bold>nmblookup -A 1.2.3.4</bold></code>
+            <text pos="bottom"><light>
+                  Find the windows (netbios) name associated with ip address
+            </light></text>
+        </item>
+        <item>
+            <code><bold>smbclient -L windows_box</bold></code>
+            <text pos="bottom"><light>
+                  List shares on windows machine or samba server
+            </light></text>
+        </item>
+        <item>
+            <code><bold>mount -t smbfs -o fmask=666,guest //windows_box/share /mnt/share</bold></code>
+            <text pos="bottom"><light>
+                  Mount a windows share
+            </light></text>
+        </item>
+    </section>
+    <section title="text manipulation">
+        <item>
+            <text><light>Note sed uses stdin and stdout. Newer versions support inplace editing with the -i option</light></text>
+        </item>
+        <item>
+            <code><bold>sed 's/string1/string2/g'</bold></code>
+            <text pos="bottom"><light>
+                  Replace string1 with string2
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed 's/\(.*\)1/\12/g'</bold></code>
+            <text pos="bottom"><light>
+                  Modify anystring1 to anystring2
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed '/ *#/d; /^ *$/d'</bold></code>
+            <text pos="bottom"><light>
+                  Remove comments and blank lines
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed ':a; /\\$/N; s/\\\n//; ta'</bold></code>
+            <text pos="bottom"><light>
+                  Concatenate lines with trailing \
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed 's/[ \t]*$//'</bold></code>
+            <text pos="bottom"><light>
+                  Remove trailing spaces from lines
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed 's/\([`"$\]\)/\\\1/g'</bold></code>
+            <text pos="bottom"><light>
+                  Escape shell metacharacters active within double quotes
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> seq 10 | sed "s/^/      /; s/ *\(.\{7,\}\)/\1/"</bold></code>
+            <text pos="bottom"><light>
+                  Right align numbers
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed -n '1000{p;q}'</bold></code>
+            <text pos="bottom"><light>
+                  Print 1000th line
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed -n '10,20p;20q'</bold></code>
+            <text pos="bottom"><light>
+                  Print lines 10 to 20
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed -n &#x27;s/.*&lt;title&gt;\(.*\)&lt;\/title&gt;.*/\1/ip;T;q&#x27;</bold></code>
+            <text pos="bottom"><light>
+                  Extract title from HTML web page
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sed -i 42d ~/.ssh/known_hosts</bold></code>
+            <text pos="bottom"><light>
+                  Delete a particular line
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sort -t. -k1,1n -k2,2n -k3,3n -k4,4n</bold></code>
+            <text pos="bottom"><light>
+                  Sort IPV4 ip addresses
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo 'Test' | tr '[:lower:]' '[:upper:]'</bold></code>
+            <text pos="bottom"><light>
+                  Case conversion
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> tr -dc &#x27;[:print:]&#x27; &lt; /dev/urandom</bold></code>
+            <text pos="bottom"><light>
+                  Filter non printable characters
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> tr -s &#x27;[:blank:]&#x27; &#x27;\t&#x27; &lt;/proc/diskstats | cut -f4</bold></code>
+            <text pos="bottom"><light>
+                  cut fields separated by blanks
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> history | wc -l</bold></code>
+            <text pos="bottom"><light>
+                  Count lines
+            </light></text>
+        </item>
+    </section>
+    <split/>
+    <section title="set operations ">
+        <item>
+            <text><light>Note you can export LANG=C for speed. Also these assume no duplicate lines within a file</light></text>
+        </item>
+        <item>
+            <code><bold>sort file1 file2 | uniq</bold></code>
+            <text pos="bottom"><light>
+                  Union of unsorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sort file1 file2 | uniq -d</bold></code>
+            <text pos="bottom"><light>
+                  Intersection of unsorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sort file1 file1 file2 | uniq -u</bold></code>
+            <text pos="bottom"><light>
+                  Difference of unsorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>sort file1 file2 | uniq -u</bold></code>
+            <text pos="bottom"><light>
+                  Symmetric Difference of unsorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>join -t'\0' -a1 -a2 file1 file2</bold></code>
+            <text pos="bottom"><light>
+                  Union of sorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>join -t'\0' file1 file2</bold></code>
+            <text pos="bottom"><light>
+                  Intersection of sorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>join -t'\0' -v2 file1 file2</bold></code>
+            <text pos="bottom"><light>
+                  Difference of sorted files
+            </light></text>
+        </item>
+        <item>
+            <code><bold>join -t'\0' -v1 -v2 file1 file2</bold></code>
+            <text pos="bottom"><light>
+                  Symmetric Difference of sorted files
+            </light></text>
+        </item>
+    </section>
+    <section title="math">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo '(1 + sqrt(5))/2' | bc -l</bold></code>
+            <text pos="bottom"><light>
+                  	Quick math (Calculate &#x03C6;).
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo 'pad=20; min=64; (100*10^6)/((pad+min)*8)' | bc</bold></code>
+            <text pos="bottom"><light>
+                  More complex (int) e.g. This shows max FastE packet rate
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo 'pad=20; min=64; print (100E6)/((pad+min)*8)' | python</bold></code>
+            <text pos="bottom"><light>
+                  Python handles scientific notation
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo 'pad=20; plot [64:1518] (100*10**6)/((pad+x)*8)' | gnuplot -persist</bold></code>
+            <text pos="bottom"><light>
+                  Plot FastE packet rate vs packet size
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo 'obase=16; ibase=10; 64206' | bc</bold></code>
+            <text pos="bottom"><light>
+                  Base conversion (decimal to hexadecimal)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo $((0x2dec))</bold></code>
+            <text pos="bottom"><light>
+                  Base conversion (hex to dec) ((shell arithmetic expansion))
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> units -t '100m/9.58s' 'miles/hour'</bold></code>
+            <text pos="bottom"><light>
+                  Unit conversion (metric to imperial)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> units -t '500GB' 'GiB'</bold></code>
+            <text pos="bottom"><light>
+                  Unit conversion (SI to IEC prefixes)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> units -t '1 googol'</bold></code>
+            <text pos="bottom"><light>
+                  Definition lookup
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> seq 100 | (tr '\n' +; echo 0) | bc</bold></code>
+            <text pos="bottom"><light>
+                  Add a column of numbers
+            </light></text>
+        </item>
+    </section>
+    <section title="calendar">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> cal -3</bold></code>
+            <text pos="bottom"><light>
+                  Display a calendar
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> cal 9 1752</bold></code>
+            <text pos="bottom"><light>
+                  Display a calendar for a particular month year
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> date -d fri</bold></code>
+            <text pos="bottom"><light>
+                  What date is it this friday. See also day
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> [ $(date -d "tomorrow" +%d) = "01" ] || exit</bold></code>
+            <text pos="bottom"><light>
+                  exit a script unless it's the last day of the month
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> date --date='25 Dec' +%A</bold></code>
+            <text pos="bottom"><light>
+                  What day does xmas fall on, this year
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> date --date='@2147483647'</bold></code>
+            <text pos="bottom"><light>
+                  Convert seconds since the epoch (1970-01-01 UTC) to date
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> TZ='America/Los_Angeles' date</bold></code>
+            <text pos="bottom"><light>
+                  What time is it on west coast of US (use tzselect to find TZ)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> date --date='TZ="America/Los_Angeles" 09:00 next Fri'</bold></code>
+            <text pos="bottom"><light>
+                  What's the local time for 9AM next Friday on west coast US
+            </light></text>
+        </item>
+    </section>
+    <section title="locales">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> printf "%'d\n" 1234</bold></code>
+            <text pos="bottom"><light>
+                  Print number with thousands grouping appropriate to locale
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> BLOCK_SIZE=\'1 ls -l</bold></code>
+            <text pos="bottom"><light>
+                  Use locale thousands grouping in ls. See also l
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo "I live in `locale territory`"</bold></code>
+            <text pos="bottom"><light>
+                  Extract info from locale database
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> LANG=en_IE.utf8 locale int_prefix</bold></code>
+            <text pos="bottom"><light>
+                  Lookup locale info for specific country
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> locale | cut -d= -f1 | xargs locale -kc | less</bold></code>
+            <text pos="bottom"><light>
+                  List fields available in locale database
+            </light></text>
+        </item>
+    </section>
+    <section title="recode">
+        <item>
+            <text><light>Obsoletes iconv, dos2unix, unix2dos</light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> recode -l | less</bold></code>
+            <text pos="bottom"><light>
+                  Show available conversions (aliases on each line)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>recode windows-1252.. file_to_change.txt</bold></code>
+            <text pos="bottom"><light>
+                  Windows "ansi" to local charset (auto does CRLF conversion)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>recode utf-8/CRLF.. file_to_change.txt</bold></code>
+            <text pos="bottom"><light>
+                  Windows utf8 to local charset
+            </light></text>
+        </item>
+        <item>
+            <code><bold>recode iso-8859-15..utf8 file_to_change.txt</bold></code>
+            <text pos="bottom"><light>
+                  Latin9 (western europe) to utf8
+            </light></text>
+        </item>
+        <item>
+            <code><bold>recode ../b64 &lt; file.txt &gt; file.b64</bold></code>
+            <text pos="bottom"><light>
+                  Base64 encode
+            </light></text>
+        </item>
+        <item>
+            <code><bold>recode /qp.. &lt; file.qp &gt; file.txt</bold></code>
+            <text pos="bottom"><light>
+                  Quoted printable decode
+            </light></text>
+        </item>
+        <item>
+            <code><bold>recode ..HTML &lt; file.txt &gt; file.html</bold></code>
+            <text pos="bottom"><light>
+                  Text to HTML
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> recode -lf windows-1252 | grep euro</bold></code>
+            <text pos="bottom"><light>
+                  Lookup table of characters
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo -n 0x80 | recode latin-9/x1..dump</bold></code>
+            <text pos="bottom"><light>
+                  Show what a code represents in latin-9 charmap
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo -n 0x20AC | recode ucs-2/x2..latin-9/x</bold></code>
+            <text pos="bottom"><light>
+                  Show latin-9 encoding
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> echo -n 0x20AC | recode ucs-2/x2..utf-8/x</bold></code>
+            <text pos="bottom"><light>
+                  Show utf-8 encoding
+            </light></text>
+        </item>
+    </section>
+    <section title="CDs">
+        <item>
+            <code><bold>gzip &lt; /dev/cdrom &gt; cdrom.iso.gz</bold></code>
+            <text pos="bottom"><light>
+                  Save copy of data cdrom
+            </light></text>
+        </item>
+        <item>
+            <code><bold>mkisofs -V LABEL -r dir | gzip > cdrom.iso.gz</bold></code>
+            <text pos="bottom"><light>
+                  Create cdrom image from contents of dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>mount -o loop cdrom.iso /mnt/dir</bold></code>
+            <text pos="bottom"><light>
+                  Mount the cdrom image at /mnt/dir (read only)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>cdrecord -v dev=/dev/cdrom blank=fast</bold></code>
+            <text pos="bottom"><light>
+                  Clear a CDRW
+            </light></text>
+        </item>
+        <item>
+            <code><bold>gzip -dc cdrom.iso.gz | cdrecord -v dev=/dev/cdrom -</bold></code>
+            <text pos="bottom"><light>
+                  Burn cdrom image (use dev=ATAPI -scanbus to confirm dev)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>cdparanoia -B</bold></code>
+            <text pos="bottom"><light>
+                  Rip audio tracks from CD to wav files in current dir
+            </light></text>
+        </item>
+        <item>
+            <code><bold>cdrecord -v dev=/dev/cdrom -audio -pad *.wav</bold></code>
+            <text pos="bottom"><light>
+                  Make audio CD from all wavs in current dir (see also cdrdao)
+            </light></text>
+        </item>
+        <item>
+            <code><bold>oggenc --tracknum='track' track.cdda.wav -o 'track.ogg'</bold></code>
+            <text pos="bottom"><light>
+                  Make ogg file from wav file
+            </light></text>
+        </item>
+    </section>
+    <section title="disk space">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ls -lSr</bold></code>
+            <text pos="bottom"><light>
+                  Show files by size, biggest last
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> du -s * | sort -k1,1rn | head</bold></code>
+            <text pos="bottom"><light>
+                  Show top disk users in current dir. See also dutop
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> du -hs /home/* | sort -k1,1h</bold></code>
+            <text pos="bottom"><light>
+                  Sort paths by easy to interpret disk usage
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> df -h</bold></code>
+            <text pos="bottom"><light>
+                  Show free space on mounted filesystems
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> df -i</bold></code>
+            <text pos="bottom"><light>
+                  Show free inodes on mounted filesystems
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> fdisk -l</bold></code>
+            <text pos="bottom"><light>
+                  Show disks partitions sizes and types (run as root)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> rpm -q -a --qf '%10{SIZE}\t%{NAME}\n' | sort -k1,1n</bold></code>
+            <text pos="bottom"><light>
+                  List all packages by installed size (Bytes) on rpm distros
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> dpkg-query -W -f='${Installed-Size;10}\t${Package}\n' | sort -k1,1n</bold></code>
+            <text pos="bottom"><light>
+                  List all packages by installed size (KBytes) on deb distros
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> dd bs=1 seek=2TB if=/dev/null of=ext3.test</bold></code>
+            <text pos="bottom"><light>
+                  Create a large test file (taking no space).
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> > file</bold></code>
+            <text pos="bottom"><light>
+                  truncate data of file or create an empty file
+            </light></text>
+        </item>
+    </section>
+    <section title="monitoring/debugging">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> tail -f /var/log/messages</bold></code>
+            <text pos="bottom"><light>
+                  Monitor messages in a log file
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> strace -c ls >/dev/null</bold></code>
+            <text pos="bottom"><light>
+                  Summarise/profile system calls made by command
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> strace -f -e open ls >/dev/null</bold></code>
+            <text pos="bottom"><light>
+                  List system calls made by command
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ltrace -f -e getenv ls >/dev/null</bold></code>
+            <text pos="bottom"><light>
+                  List library calls made by command
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> lsof -p $$</bold></code>
+            <text pos="bottom"><light>
+                  List paths that process id has open
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> lsof ~</bold></code>
+            <text pos="bottom"><light>
+                  List processes that have specified path open
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> tcpdump not port 22</bold></code>
+            <text pos="bottom"><light>
+                  Show network traffic except ssh. See also tcpdump_not_me
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ps -e -o pid,args --forest</bold></code>
+            <text pos="bottom"><light>
+                  List processes in a hierarchy
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ps -e -o pcpu,cpu,nice,state,cputime,args --sort pcpu | sed '/^ 0.0 /d'</bold></code>
+            <text pos="bottom"><light>
+                  List processes by % cpu usage
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ps -e -orss=,args= | sort -b -k1,1n | pr -TW$COLUMNS</bold></code>
+            <text pos="bottom"><light>
+                  List processes by mem (KB) usage. See also ps_mem.py
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ps -C firefox-bin -L -o pid,tid,pcpu,state</bold></code>
+            <text pos="bottom"><light>
+                  List all threads for a particular process
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> ps -p 1,2</bold></code>
+            <text pos="bottom"><light>
+                  List info for particular process IDs
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> last reboot</bold></code>
+            <text pos="bottom"><light>
+                  Show system reboot history
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> free -m</bold></code>
+            <text pos="bottom"><light>
+                  Show amount of (remaining) RAM (-m displays in MB)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> watch -n.1 'cat /proc/interrupts'</bold></code>
+            <text pos="bottom"><light>
+                  Watch changeable data continuously
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> udevadm monitor</bold></code>
+            <text pos="bottom"><light>
+                  Monitor udev events to help configure rules
+            </light></text>
+        </item>
+    </section>
+    <section title="system information">
+        <item>
+            <text>'#' means root access is required</text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> uname -a</bold></code>
+            <text pos="bottom"><light>
+                  Show kernel version and system architecture
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> head -n1 /etc/issue</bold></code>
+            <text pos="bottom"><light>
+                  Show name and version of distribution
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> cat /proc/partitions</bold></code>
+            <text pos="bottom"><light>
+                  Show all partitions registered on the system
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> grep MemTotal /proc/meminfo</bold></code>
+            <text pos="bottom"><light>
+                  Show RAM total seen by the system
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> grep "model name" /proc/cpuinfo</bold></code>
+            <text pos="bottom"><light>
+                  Show CPU(s) info
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> lspci -tv</bold></code>
+            <text pos="bottom"><light>
+                  Show PCI info
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> lsusb -tv</bold></code>
+            <text pos="bottom"><light>
+                  Show USB info
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> mount | column -t</bold></code>
+            <text pos="bottom"><light>
+                  List mounted filesystems on the system (and align output)
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> grep -F capacity: /proc/acpi/battery/BAT0/info</bold></code>
+            <text pos="bottom"><light>
+                  Show state of cells in laptop battery
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">#</color> dmidecode -q | less</bold></code>
+            <text pos="bottom"><light>
+                  Display SMBIOS/DMI information
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">#</color> smartctl -A /dev/sda | grep Power_On_Hours</bold></code>
+            <text pos="bottom"><light>
+                  How long has this disk (system) been powered on in total
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">#</color> hdparm -i /dev/sda</bold></code>
+            <text pos="bottom"><light>
+                  Show info about disk sda
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">#</color> hdparm -tT /dev/sda</bold></code>
+            <text pos="bottom"><light>
+                  Do a read speed test on disk sda
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">#</color> badblocks -s /dev/sda</bold></code>
+            <text pos="bottom"><light>
+                  Test for unreadable blocks on disk sda
+            </light></text>
+        </item>
+    </section>
+    <section title="interactive">
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> readline</bold></code>
+            <text pos="bottom"><light>
+                  Line editor used by bash, python, bc, gnuplot, ...
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> screen</bold></code>
+            <text pos="bottom"><light>
+                  Virtual terminals with detach capability, ...
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> mc</bold></code>
+            <text pos="bottom"><light>
+                  Powerful file manager that can browse rpm, tar, ftp, ssh, ...
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> gnuplot</bold></code>
+            <text pos="bottom"><light>
+                  Interactive/scriptable graphing
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> links</bold></code>
+            <text pos="bottom"><light>
+                  Web browser
+            </light></text>
+        </item>
+        <item>
+            <code><bold><color value="#999999">&#x2022;</color> xdg-open .</bold></code>
+            <text pos="bottom"><light>
+                  open a file or url with the registered desktop application
+            </light></text>
+        </item>
+    </section>
+</cheatsheet>

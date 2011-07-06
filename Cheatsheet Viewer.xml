@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Cheatsheet Viewer</name>
+        <author>Steven Chan</author>
+        <website>http://www.cheatsheetviewer.com</website>
+    </info>
+    <section title="Basic Template">
+        <item>
+            <text>Elements marked with <color value="#FF0000">*</color> are required.</text>
+            <text pos="bottom">
+                Check out "Cheatsheet Example" cheatsheet for some examples.
+            </text>
+        </item>
+        <hr/>
+        <item>
+            <code>
+                &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;<br/>
+                &lt;!DOCTYPE cheatsheet SYSTEM &quot;http://cheatsheetviewer.com/cheatsheet.dtd&quot;&gt;<br/>
+                &lt;cheatsheet&gt;<br/>
+                <indent/>&lt;info&gt;<br/>
+                <indent/><indent/>&lt;name&gt;Cheatsheet name&lt;/name&gt;<br/>
+                <indent/><indent/>&lt;author&gt;Author name&lt;/author&gt;<br/>
+                <indent/><indent/>&lt;website&gt;http://...&lt;/website&gt;<br/>
+                <indent/><indent/>&lt;original_file&gt;http://...&lt;/original_file&gt;<br/>
+                <indent/>&lt;/info&gt;<br/>
+                <indent/>&lt;section title=&quot;Section Left&quot;&gt;<br/>
+                <indent/><indent/>&lt;item&gt;...&lt;/item&gt;<br/>
+                <indent/><indent/>&lt;subsection&gt;...&lt;/subsection&gt;<br/>
+                <indent/><indent/>...<br/>
+                <indent/>&lt;/section&gt;<br/>
+                <indent/><bold>&lt;split/&gt;</bold><br/>
+                <indent/>&lt;section title=&quot;Section Right&quot;&gt;<br/>
+                <indent/><indent/>&lt;item&gt;...&lt;/item&gt;<br/>
+                <indent/><indent/>...<br/>
+                <indent/>&lt;/section&gt;<br/>
+                &lt;/cheatsheet&gt;
+            </code>
+        </item>
+        <item>
+            <text>
+                <light>
+                    <code>&lt;author&gt;</code>, <code>&lt;website&gt;</code>, 
+                    <code>&lt;original_file&gt;</code> are optional.<br/>
+                    The <code>&lt;split/&gt;</code> tag splits the cheatsheet 
+                    into left and right.
+                </light>
+            </text>
+        </item>
+    </section>
+    <section title="&lt;info&gt; Tag">
+        <item>
+            <text><light>
+                Info tag contains information about the <italic>original</italic> author of the cheatsheet
+                and where it comes from.
+            </light></text>
+        </item>
+        <subsection title="Attributes">
+            <item>
+                <text>none</text>
+            </item>
+        </subsection>
+        <subsection title="Elements">
+            <item>
+                <code>&lt;name&gt;<color value="#FF0000">*</color></code>
+                <text pos="right">name of the cheatsheet</text>
+            </item>
+            <item>
+                <code>&lt;author&gt;</code>
+                <text pos="right">original author of the cheatsheet</text>
+            </item>
+            <item>
+                <code>&lt;website&gt;</code>
+                <text pos="right">url of the website of the cheatsheet</text>
+            </item>
+            <item>
+                <code>&lt;original_file&gt;</code>
+                <text pos="right">url of the original cheatsheet</text>
+            </item>
+        </subsection>
+    </section>
+    <section title="&lt;section&gt; Tag">
+        <subsection title="Attributes">
+            <item>
+                <code>title<color value="#FF0000">*</color></code>
+                <text pos="right">title of the section</text>
+            </item>
+        </subsection>
+        <subsection title="Elements">
+            <item>
+                <code>&lt;item&gt;</code>
+                <text pos="right">a row in the section</text>
+            </item>
+            <item>
+                <code>&lt;subsection&gt;</code>
+                <text pos="right">subsection</text>
+            </item>
+            <item>
+                <code>&lt;hr/&gt;</code>
+                <text pos="right">horizontal line</text>
+            </item>
+        </subsection>
+    </section>
+    <split/>
+    <section title="&lt;subsection&gt; Tag">
+        <item>
+            <text>Subsection tags contain the same attributes and elements as the section tag except it
+                cannot contain any more subsection tags.</text>
+        </item>
+    </section>
+    <section title="&lt;item&gt; Tag">
+        <subsection title="Attributes">
+            <item>
+                <text>none</text>
+            </item>
+        </subsection>
+        <subsection title="Elements">
+            <item>
+                <code>&lt;text&gt;</code>
+                <text pos="right">Normal text</text>
+            </item>
+            <item>
+                <code>&lt;code&gt;</code>
+                <text pos="right">Fixed width font text</text>
+            </item>
+        </subsection>
+    </section>
+    <section title="&lt;text&gt; and &lt;code&gt; Tag">
+        <subsection title="Attributes">
+            <item>
+                <code>pos</code>
+                <text pos="right">Position of the block</text>
+                <text pos="bottom"><light>
+                    Values: <code>top | right | bottom | left</code><br/>
+                    default is left.
+                </light></text>
+            </item>
+            <item>
+                <code>width</code>
+                <text pos="right">width of the block in percentage</text>
+                <text pos="bottom"><light>Example: 50%</light></text>
+            </item>
+        </subsection>
+        <subsection title="Elements">
+            <item>
+                <code>#PCDATA</code>
+                <text pos="right">parsed character data (or just text)</text>
+            </item>
+            <item>
+                <code>&lt;small&gt;</code>
+                <text pos="right">small</text>
+            </item>
+            <item>
+                <code>&lt;big&gt;</code>
+                <text pos="right">big</text>
+            </item>
+            <item>
+                <code>&lt;italic&gt;</code>
+                <text pos="right">italic</text>
+            </item>
+            <item>
+                <code>&lt;bold&gt;</code>
+                <text pos="right">bold</text>
+            </item>
+            <hr/>
+            <item>
+                <code>&lt;light&gt;</code>
+                <text pos="right">grey color</text>
+            </item>
+            <item>
+                <code>&lt;color value=&quot;HEX color code&quot;&gt;</code>
+                <text pos="right">font color</text>
+                <text pos="bottom"><light>Example: <code>#ABCDEF</code></light></text>
+            </item>
+            <hr/>
+            <item>
+                <code>&lt;sub&gt;</code>
+                <text pos="right">subscript</text>
+            </item>
+            <item>
+                <code>&lt;sup&gt;</code>
+                <text pos="right">superscript</text>
+            </item>
+            <hr/>
+            <item>
+                <code>&lt;code&gt;</code>
+                <text pos="right">inline code</text>
+            </item>
+            <item>
+                <text><italic>Any of the above elements can be nested to produce desire style.</italic></text>
+            </item>
+            <hr/>
+            <item>
+                <code>&lt;br/&gt;</code>
+                <text pos="right">line break</text>
+            </item>
+            <item>
+                <code>&lt;indent/&gt;</code>
+                <text pos="right">indent</text>
+            </item>
+            <item>
+                <code>&lt;placeholder/&gt;</code>
+                <text pos="right">placeholder</text>
+                <text pos="bottom"><light>Example: <placeholder/></light></text>
+            </item>
+        </subsection>
+    </section>
+</cheatsheet>

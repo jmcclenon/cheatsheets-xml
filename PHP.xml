@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>PHP</name>
+        <author>Dave Child</author>
+        <website>http://www.addedbytes.com/</website>
+        <original_file>http://www.addedbytes.com/cheat-sheets/php-cheat-sheet/</original_file>
+    </info>
+    <section title="Array Functions">
+        <item>
+            <code>array_diff(arr1, arr2 ...)</code>
+        </item>
+        <item>
+            <code>array_filter(arr, function)</code>
+        </item>
+        <item>
+            <code>array_flip(arr)</code>
+        </item>
+        <item>
+            <code>array_intersect(arr1, arr2 ...)</code>
+        </item>
+        <item>
+            <code>array_merge(arr1, arr2)</code>
+        </item>
+        <item>
+            <code>array_pop(arr)</code>
+        </item>
+        <item>
+            <code>array_push(arr, var1, var2 ...)</code>
+        </item>
+        <item>
+            <code>array_reverse(arr)</code>
+        </item>
+        <item>
+            <code>array_search(needle, arr)</code>
+        </item>
+        <item>
+            <code>array_walk(arr, function)</code>
+        </item>
+        <item>
+            <code>count(count)</code>
+        </item>
+        <item>
+            <code>in_array(needle, haystack)</code>
+        </item>
+    </section>
+    <section title="String Functions">
+        <item>
+            <code>crypt(str, salt)</code>
+        </item>
+        <item>
+            <code>explode(sep, str)</code>
+        </item>
+        <item>
+            <code>implode(glue, arr)</code>
+        </item>
+        <item>
+            <code>nl2br(str)</code>
+        </item>
+        <item>
+            <code>sprintf(frmt, args)</code>
+        </item>
+        <item>
+            <code>strip_tags(str, allowed_tags)</code>
+        </item>
+        <item>
+            <code>str_replace(search, replace, str)</code>
+        </item>
+        <item>
+            <code>strpos(str, needle)</code>
+        </item>
+        <item>
+            <code>strrev(str)</code>
+        </item>
+        <item>
+            <code>strstr(str, needle)</code>
+        </item>
+        <item>
+            <code>strtolower(str)</code>
+        </item>
+        <item>
+            <code>strtoupper(str)</code>
+        </item>
+        <item>
+            <code>substr(string, start, len)</code>
+        </item>
+    </section>
+    <section title="Filesystem Functions">
+        <item>
+            <code>clearstatcache()</code>
+        </item>
+        <item>
+            <code>copy(source, dest)</code>
+        </item>
+        <item>
+            <code>fclose(handle)</code>
+        </item>
+        <item>
+            <code>fgets(handle, len)</code>
+        </item>
+        <item>
+            <code>file(file)</code>
+        </item>
+        <item>
+            <code>filemtime(file)</code>
+        </item>
+        <item>
+            <code>filesize(file)</code>
+        </item>
+        <item>
+            <code>file_exists(file)</code>
+        </item>
+        <item>
+            <code>fopen(file, mode)</code>
+        </item>
+        <item>
+            <code>fread(handle, len)</code>
+        </item>
+        <item>
+            <code>fwrite(handle, len)</code>
+        </item>
+        <item>
+            <code>readfile(file)</code>
+        </item>
+    </section>
+    <section title="fopen() Modes">
+        <item>
+            <code>r</code>
+            <text pos="right">Read</text>
+        </item>
+        <item>
+            <code>r+</code>
+            <text pos="right">Read and write, prepend</text>
+        </item>
+        <item>
+            <code>w</code>
+            <text pos="right">Write, truncate</text>
+        </item>
+        <item>
+            <code>w+</code>
+            <text pos="right">Read and write, truncate</text>
+        </item>
+        <item>
+            <code>a</code>
+            <text pos="right">Write, append</text>
+        </item>
+        <item>
+            <code>a+</code>
+            <text pos="right">Read and write, append</text>
+        </item>
+    </section>
+    <section title="Regular Expression Functions">
+        <item>
+            <code>ereg(pattern, str)</code>
+        </item>
+        <item>
+            <code>split(pattern, str)</code>
+        </item>
+        <item>
+            <code>ereg_replace(pattern, replace, str)</code>
+        </item>
+        <item>
+            <code>preg_grep(pattern, arr)</code>
+        </item>
+        <item>
+            <code>preg_match(pattern, str)</code>
+        </item>
+        <item>
+            <code>preg_match_all(pattern, str, arr)</code>
+        </item>
+        <item>
+            <code>preg_replace(pattern, str)</code>
+        </item>
+    </section>
+    <section title="Regular Expressions Syntax">
+        <item>
+            <code>^</code>
+            <text pos="right">Start of string</text>
+        </item>
+        <item>
+            <code>$</code>
+            <text pos="right">End of string</text>
+        </item>
+        <item>
+            <code>.</code>
+            <text pos="right">Any single character</text>
+        </item>
+        <item>
+            <code>(a|b)</code>
+            <text pos="right">a or b</text>
+        </item>
+        <item>
+            <code>(...)</code>
+            <text pos="right">Group section</text>
+        </item>
+        <item>
+            <code>[abc]</code>
+            <text pos="right">Item in range (a, b or c)</text>
+        </item>
+        <item>
+            <code>[^abc]</code>
+            <text pos="right">Not in range (not a, b or c)</text>
+        </item>
+        <item>
+            <code>\s</code>
+            <text pos="right">White space</text>
+        </item>
+        <item>
+            <code>a?</code>
+            <text pos="right">Zero or one of a</text>
+        </item>
+        <item>
+            <code>a*</code>
+            <text pos="right">Zero or more of a</text>
+        </item>
+        <item>
+            <code>a*?</code>
+            <text pos="right">Zero or more of a, ungreedy</text>
+        </item>
+        <item>
+            <code>a+</code>
+            <text pos="right">One or more of a</text>
+        </item>
+        <item>
+            <code>a+?</code>
+            <text pos="right">One or more of a, ungreedy</text>
+        </item>
+        <item>
+            <code>a{3}</code>
+            <text pos="right">Exactly 3 of a</text>
+        </item>
+        <item>
+            <code>a{3,}</code>
+            <text pos="right">3 or more of a</text>
+        </item>
+        <item>
+            <code>a{,6}</code>
+            <text pos="right">Up to 6 of a</text>
+        </item>
+        <item>
+            <code>a{3,6}</code>
+            <text pos="right">3 to 6 of a</text>
+        </item>
+        <item>
+            <code>a{3,6}?</code>
+            <text pos="right">3 to 6 of a, ungreedy</text>
+        </item>
+        <item>
+            <code>\</code>
+            <text pos="right">Escape character</text>
+        </item>
+        <item>
+            <code>[:punct:]</code>
+            <text pos="right">Any punctuation symbol</text>
+        </item>
+        <item>
+            <code>[:space:]</code>
+            <text pos="right">Any space character</text>
+        </item>
+        <item>
+            <code>[:blank:]</code>
+            <text pos="right">Space or tab</text>
+        </item>
+    </section>
+    <split/>
+    <section title="PCRE Modifiers">
+        <item>
+            <code>i</code>
+            <text pos="right">Case-insensitive</text>
+        </item>
+        <item>
+            <code>s</code>
+            <text pos="right">Period matches newline</text>
+        </item>
+        <item>
+            <code>m</code>
+            <text pos="right">^ and $ match lines</text>
+        </item>
+        <item>
+            <code>U</code>
+            <text pos="right">Ungreedy matching</text>
+        </item>
+        <item>
+            <code>e</code>
+            <text pos="right">Evaluate replacement</text>
+        </item>
+        <item>
+            <code>x</code>
+            <text pos="right">Pattern over several lines</text>
+        </item>
+    </section>
+    <section title="Date and Time Functions">
+        <item>
+            <code>checkdate(month, day, year)</code>
+        </item>
+        <item>
+            <code>date(format, timestamp)</code>
+        </item>
+        <item>
+            <code>getdate(timestamp)</code>
+        </item>
+        <item>
+            <code>mktime(hr, min, sec, month, day, yr)</code>
+        </item>
+        <item>
+            <code>strftime(formatstring, timestamp)</code>
+        </item>
+        <item>
+            <code>strtotime(str)</code>
+        </item>
+        <item>
+            <code>time()</code>
+        </item>
+    </section>
+    <section title="Date Formatting">
+        <item>
+            <code>Y</code>
+            <text pos="right">4 digit year(2008)</text>
+        </item>
+        <item>
+            <code>y</code>
+            <text pos="right">2 digit year (08)</text>
+        </item>
+        <item>
+            <code>F</code>
+            <text pos="right">Long month (January)</text>
+        </item>
+        <item>
+            <code>M</code>
+            <text pos="right">Short month (Jan)</text>
+        </item>
+        <item>
+            <code>m</code>
+            <text pos="right">Month<sup>4</sup> (01 to 12)</text>
+        </item>
+        <item>
+            <code>n</code>
+            <text pos="right">Month (1 to 12)</text>
+        </item>
+        <item>
+            <code>D</code>
+            <text pos="right">Short day name (Mon)</text>
+        </item>
+        <item>
+            <code>l</code>
+            <text pos="right">Long day name (Monday)<br/><light>(lowercase L)</light></text>
+        </item>
+        <item>
+            <code>d</code>
+            <text pos="right">Day<sup>4</sup> (01 to 31)</text>
+        </item>
+        <item>
+            <code>j</code>
+            <text pos="right">Day (1 to 31)</text>
+        </item>
+        <hr/>
+        <item>
+            <code>h</code>
+            <text pos="right">12 Hour<sup>4</sup> (01 to 12)</text>
+        </item>
+        <item>
+            <code>g</code>
+            <text pos="right">12 Hour (1 to 12)</text>
+        </item>
+        <item>
+            <code>H</code>
+            <text pos="right">24 Hour<sup>4</sup> (00 to 23)</text>
+        </item>
+        <item>
+            <code>G</code>
+            <text pos="right">24 Hour (0 to 23)</text>
+        </item>
+        <item>
+            <code>i</code>
+            <text pos="right">Minutes<sup>4</sup> (00 to 59)</text>
+        </item>
+        <item>
+            <code>s</code>
+            <text pos="right">Seconds<sup>4</sup> (00 to 59)</text>
+        </item>
+        <hr/>
+        <item>
+            <code>w</code>
+            <text pos="right">Day of week<sup>1</sup> (0 to 6)</text>
+        </item>
+        <item>
+            <code>z</code>
+            <text pos="right">Day of year (0 to 365)</text>
+        </item>
+        <item>
+            <code>W</code>
+            <text pos="right">Week of year<sup>2</sup> (1 to 53)</text>
+        </item>
+        <item>
+            <code>t</code>
+            <text pos="right">Days in month (28 to 31)</text>
+        </item>
+        <hr/>
+        <item>
+            <code>a</code>
+            <text pos="right">am or pm</text>
+        </item>
+        <item>
+            <code>A</code>
+            <text pos="right">AM or PM</text>
+        </item>
+        <item>
+            <code>B</code>
+            <text pos="right">Swatch Internet Time (000 to 999)</text>
+        </item>
+        <item>
+            <code>S</code>
+            <text pos="right">Ordinal Suffix (st, nd, rd, th)</text>
+        </item>
+        <hr/>
+        <item>
+            <code>T</code>
+            <text pos="right">Timezone of machine (GMT)</text>
+        </item>
+        <item>
+            <code>Z</code>
+            <text pos="right">Timezone offset (seconds)</text>
+        </item>
+        <item>
+            <code>O</code>
+            <text pos="right">Difference to GMT (hours)<br/><light>(e.g., +0200)</light></text>
+        </item>
+        <item>
+            <code>I</code>
+            <text pos="right">Daylight saving (1 or 0)</text>
+        </item>
+        <item>
+            <code>L</code>
+            <text pos="right">Leap year (1 or 0)</text>
+        </item>
+        <hr/>
+        <item>
+            <code>U</code>
+            <text pos="right">Seconds since Epoch<sup>3</sup></text>
+        </item>
+        <item>
+            <code>c</code>
+            <text pos="right">ISO 8601 (PHP 5)</text>
+            <text pos="bottom"><light>2008-07-31T18:30:13+01:00</light></text>
+        </item>
+        <item>
+            <code>r</code>
+            <text pos="right">RFC 2822</text>
+            <text pos="bottom">Thu, 31 Jul 2008 18:30:13 +0100</text>
+        </item>
+        <hr/>
+        <item>
+            <text><light>1. 0 is Sunday, 6 is Saturday.</light></text>
+        </item>
+        <item>
+            <text><light>2. Week that overlaps two years belongs to year that contains 
+                most days of that week. Hence week number for 1st January of a 
+                given year can be 53 if week belongs to previous year.
+                <code>date("W", mktime(0, 0, 0, 12, 8, $year))</code>
+                always gives correct number of weeks in <code>$year</code>.</light></text>
+        </item>
+        <item>
+            <text><light>3. The Epoch is the 1st January 1970.</light></text>
+        </item>
+        <item>
+            <text><light>4. With leading zeros</light></text>
+        </item>
+    </section>
+</cheatsheet>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>HTML4</name>
+        <author>Dave Child</author>
+        <website>http://www.addedbytes.com</website>
+        <original_file>http://www.addedbytes.com/cheat-sheets/download/html-cheat-sheet-v1.pdf</original_file>
+    </info>
+    <section title="Document Outline">
+        <item>
+            <code>&lt;!DOCTYPE&gt;</code>
+            <text pos="right">Version of (X)HTML</text>
+        </item>
+        <item>
+            <code>&lt;html&gt;</code>
+            <text pos="right">HTML document</text>
+        </item>
+        <item>
+            <code>&lt;head&gt;</code>
+            <text pos="right">Page information</text>
+        </item>
+        <item>
+            <code>&lt;body&gt;</code>
+            <text pos="right">Page contents</text>
+        </item>
+    </section>
+    <section title="Comments">
+        <item>
+            <code>&lt;!-- Comment Text --&gt;</code>
+        </item>
+    </section>
+    <section title="Page Information">
+        <item>
+            <code>&lt;base /&gt;</code>
+            <text pos="right">Base URL</text>
+        </item>
+        <item>
+            <code>&lt;meta&gt;</code>
+            <text pos="right">Meta data</text>
+        </item>
+        <item>
+            <code>&lt;title&gt;</code>
+            <text pos="right">Title</text>
+        </item>
+        <item>
+            <code>&lt;link&gt;</code>
+            <text pos="right">Relevant resource</text>
+        </item>
+        <item>
+            <code>&lt;style&gt;</code>
+            <text pos="right">Style resource</text>
+        </item>
+        <item>
+            <code>&lt;script&gt;</code>
+            <text pos="right">Script resource</text>
+        </item>
+    </section>
+    <section title="Document Structure">
+        <item>
+            <code>&lt;h[1-6]&gt;</code>
+            <text pos="right">Heading</text>
+        </item>
+        <item>
+            <code>&lt;div&gt;</code>
+            <text pos="right">Page section</text>
+        </item>
+        <item>
+            <code>&lt;span&gt;</code>
+            <text pos="right">Inline section</text>
+        </item>
+        <item>
+            <code>&lt;p&gt;</code>
+            <text pos="right">Paragraph</text>
+        </item>
+        <item>
+            <code>&lt;br /&gt;</code>
+            <text pos="right">Line break</text>
+        </item>
+        <item>
+            <code>&lt;hr /&gt;</code>
+            <text pos="right">Horizontal rule</text>
+        </item>
+    </section>
+    <section title="Links">
+        <item>
+            <code>&lt;a href=""&gt;</code>
+            <text pos="right">Page link</text>
+        </item>
+        <item>
+            <code>&lt;a href="mailto:"&gt;</code>
+            <text pos="right">Email link</text>
+        </item>
+        <item>
+            <code>&lt;a name="name"&gt;</code>
+            <text pos="right">Anchor</text>
+        </item>
+        <item>
+            <code>&lt;a href="#name"&gt;</code>
+            <text pos="right">Link to anchor</text>
+        </item>
+    </section>
+    <section title="Text Markup">
+        <item>
+            <code>&lt;strong&gt;</code>
+            <text pos="right">Strong emphasis</text>
+        </item>
+        <item>
+            <code>&lt;em&gt;</code>
+            <text pos="right">Emphasis</text>
+        </item>
+        <item>
+            <code>&lt;blockquote&gt;</code>
+            <text pos="right">Long quotation</text>
+        </item>
+        <item>
+            <code>&lt;q&gt;</code>
+            <text pos="right">Short quotation</text>
+        </item>
+        <item>
+            <code>&lt;abbr&gt;</code>
+            <text pos="right">Abbreviation</text>
+        </item>
+        <item>
+            <code>&lt;acronym&gt;</code>
+            <text pos="right">Acronym</text>
+        </item>
+        <item>
+            <code>&lt;address&gt;</code>
+            <text pos="right">Address</text>
+        </item>
+        <item>
+            <code>&lt;pre&gt;</code>
+            <text pos="right">Pre-formatted text</text>
+        </item>
+        <item>
+            <code>&lt;dfn&gt;</code>
+            <text pos="right">Definition</text>
+        </item>
+        <item>
+            <code>&lt;code&gt;</code>
+            <text pos="right">Code</text>
+        </item>
+        <item>
+            <code>&lt;cite&gt;</code>
+            <text pos="right">Citation</text>
+        </item>
+        <item>
+            <code>&lt;del&gt;</code>
+            <text pos="right">Deleted text</text>
+        </item>
+        <item>
+            <code>&lt;ins&gt;</code>
+            <text pos="right">Inserted text</text>
+        </item>
+        <item>
+            <code>&lt;sub&gt;</code>
+            <text pos="right">Subscript</text>
+        </item>
+        <item>
+            <code>&lt;sup&gt;</code>
+            <text pos="right">Superscript</text>
+        </item>
+        <item>
+            <code>&lt;bdo&gt;</code>
+            <text pos="right">Text direction</text>
+        </item>
+    </section>
+    <section title="Lists">
+        <item>
+            <code>&lt;ol&gt;</code>
+            <text pos="right">Ordered list</text>
+        </item>
+        <item>
+            <code>&lt;ul&gt;</code>
+            <text pos="right">Unordered list</text>
+        </item>
+        <item>
+            <code>&lt;li&gt;</code>
+            <text pos="right">List item</text>
+        </item>
+        <item>
+            <code>&lt;dl&gt;</code>
+            <text pos="right">Definition list</text>
+        </item>
+        <item>
+            <code>&lt;dt&gt;</code>
+            <text pos="right">Definition term</text>
+        </item>
+        <item>
+            <code>&lt;dd&gt;</code>
+            <text pos="right">Term description</text>
+        </item>
+    </section>
+    <section title="Forms">
+        <item>
+            <code>&lt;form&gt;</code>
+            <text pos="right">Form</text>
+        </item>
+        <item>
+            <code>&lt;fieldset&gt;</code>
+            <text pos="right">Collection of fields</text>
+        </item>
+        <item>
+            <code>&lt;legend&gt;</code>
+            <text pos="right">Form legend</text>
+        </item>
+        <item>
+            <code>&lt;label&gt;</code>
+            <text pos="right">Input label</text>
+        </item>
+        <item>
+            <code>&lt;input /&gt;</code>
+            <text pos="right">Form input</text>
+        </item>
+        <item>
+            <code>&lt;select&gt;</code>
+            <text pos="right">Drop-down box</text>
+        </item>
+        <item>
+            <code>&lt;optgroup&gt;</code>
+            <text pos="right">Group of options</text>
+        </item>
+        <item>
+            <code>&lt;option&gt;</code>
+            <text pos="right">Drop-down options</text>
+        </item>
+        <item>
+            <code>&lt;textarea&gt;</code>
+            <text pos="right">Large text input</text>
+        </item>
+        <item>
+            <code>&lt;button&gt;</code>
+            <text pos="right">Button</text>
+        </item>
+    </section>
+    <split/>
+    <section title="Tables">
+        <item>
+            <code>&lt;table&gt;</code>
+            <text pos="right">Table</text>
+        </item>
+        <item>
+            <code>&lt;caption&gt;</code>
+            <text pos="right">Caption</text>
+        </item>
+        <item>
+            <code>&lt;thead&gt;</code>
+            <text pos="right">Table header</text>
+        </item>
+        <item>
+            <code>&lt;tbody&gt;</code>
+            <text pos="right">Table body</text>
+        </item>
+        <item>
+            <code>&lt;tfoot&gt;</code>
+            <text pos="right">Table footer</text>
+        </item>
+        <item>
+            <code>&lt;colgroup&gt;</code>
+            <text pos="right">Column group</text>
+        </item>
+        <item>
+            <code>&lt;col /&gt;</code>
+            <text pos="right">Column</text>
+        </item>
+        <item>
+            <code>&lt;tr&gt;</code>
+            <text pos="right">Table row</text>
+        </item>
+        <item>
+            <code>&lt;th&gt;</code>
+            <text pos="right">Header cell</text>
+        </item>
+        <item>
+            <code>&lt;td&gt;</code>
+            <text pos="right">Table cell</text>
+        </item>
+    </section>
+    <section title="Images and Image Maps">
+        <item>
+            <code>&lt;img /&gt;</code>
+            <text pos="right">Image</text>
+        </item>
+        <item>
+            <code>&lt;map&gt;</code>
+            <text pos="right">Image Map</text>
+        </item>
+        <item>
+            <code>&lt;area /&gt;</code>
+            <text pos="right">Area of Image Map</text>
+        </item>
+    </section>
+    <section title="Common Character Entities">
+        <item>
+            <code width="30%">&amp;#34;</code>
+            <text>"</text>
+            <text pos="right">Quotation mark</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#38;</code>
+            <text>&amp;</text>
+            <text pos="right">Ampersand</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#60;</code>
+            <text>&lt;</text>
+            <text pos="right">Less than</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#62;</code>
+            <text>&gt;</text>
+            <text pos="right">Greater than</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#64;</code>
+            <text>@</text>
+            <text pos="right">"At" symbol</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#8364;</code>
+            <text>&#8364;</text>
+            <text pos="right">Euro</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#8482;</code>
+            <text>&#8482;</text>
+            <text pos="right">Trademark</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#163;</code>
+            <text>&#163;</text>
+            <text pos="right">Pound</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#160;</code>
+            <text pos="right">Non-breaking space</text>
+        </item>
+        <item>
+            <code width="30%">&amp;#169;</code>
+            <text>&#169;</text>
+            <text pos="right">Copyright symbol</text>
+        </item>
+    </section>
+    <section title="Objects">
+        <item>
+            <code>&lt;object&gt;</code>
+            <text pos="right">Object</text>
+        </item>
+        <item>
+            <code>&lt;param&gt;</code>
+            <text pos="right">Parameter</text>
+        </item>
+    </section>
+    <section title="Empty Elements">
+        <item>
+            <code>&lt;area /&gt;</code>
+            <code pos="right">&lt;img /&gt;</code>
+        </item>
+        <item>
+            <code>&lt;base /&gt;</code>
+            <code pos="right">&lt;input /&gt;</code>
+        </item>
+        <item>
+            <code>&lt;br /&gt;</code>
+            <code pos="right">&lt;link /&gt;</code>
+        </item>
+        <item>
+            <code>&lt;col /&gt;</code>
+            <code pos="right">&lt;meta /&gt;</code>
+        </item>
+        <item>
+            <code>&lt;hr /&gt;</code>
+            <code pos="right">&lt;param /&gt;</code>
+        </item>
+    </section>
+    <section title="Core Attributes">
+        <item>
+            <code>class</code>
+            <code pos="right">style</code>
+        </item>
+        <item>
+            <code>id</code>
+            <code pos="right">title</code>
+        </item>
+        <item>
+            <text><light><italic>Note: Core Attributes may not be used in base, head, html, meta, param, script, style or title elements.</italic></light></text>
+        </item>
+    </section>
+    <section title="Language Attributes">
+        <item>
+            <code>dir</code>
+            <code pos="right">lang</code>
+        </item>
+        <item>
+            <text><light><italic>Note: Language Attributes may not be used in base, br, frame, frameset, hr, iframe, param or script elements.</italic></light></text>
+        </item>
+    </section>
+    <section title="Keyboard Attributes">
+        <item>
+            <code>accesskey</code>
+            <code pos="right">tabindex</code>
+        </item>
+    </section>
+    <section title="Window Events">
+        <item>
+            <code>onLoad</code>
+            <code pos="right">onUnload</code>
+        </item>
+    </section>
+    <section title="Form Events">
+        <item>
+            <code>onBlur</code>
+            <code pos="right">onReset</code>
+        </item>
+        <item>
+            <code>onChange</code>
+            <code pos="right">onSelect</code>
+        </item>
+        <item>
+            <code>onFocus</code>
+            <code pos="right">onSubmit</code>
+        </item>
+    </section>
+    <section title="Keyboard Events">
+        <item>
+            <code>onKeydown</code>
+            <code pos="right">onKeyup</code>
+        </item>
+        <item>
+            <code>onKeypress</code>
+        </item>
+    </section>
+    <section title="Mouse Events">
+        <item>
+            <code>onClick</code>
+            <code pos="right">onMouseout</code>
+        </item>
+        <item>
+            <code>onDblclick</code>
+            <code pos="right">onMouseover</code>
+        </item>
+        <item>
+            <code>onMousedown</code>
+            <code pos="right">onMouseup</code>
+        </item>
+        <item>
+            <code>onMousemove</code>
+        </item>
+    </section>
+</cheatsheet>

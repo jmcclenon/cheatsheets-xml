@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Gmail Keyboard Shortcuts</name>
+        <author>Google</author>
+        <website>http://mail.google.com/support/</website>
+        <original_file>http://mail.google.com/support/bin/answer.py?hl=en%26answer=6594</original_file>
+    </info>
+    <section title="Jumping">
+        <item>
+            <text><bold>g</bold> then <bold>i</bold></text>
+            <text pos="right">
+                Go to Inbox
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>s</bold></text>
+            <text pos="right">
+                Go the Starred conversations
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>t</bold></text>
+            <text pos="right">
+                Go to Sent messages
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>d</bold></text>
+            <text pos="right">
+                Go to Drafts
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>a</bold></text>
+            <text pos="right">
+                Go to All mail
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>c</bold></text>
+            <text pos="right">
+                Go to Contacts
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>b</bold></text>
+            <text pos="right">
+                Go to Buzz
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>k</bold></text>
+            <text pos="right">
+                Go to Tasks
+            </text>
+        </item>
+        <item>
+            <text><bold>g</bold> then <bold>l</bold></text>
+            <text pos="right">
+                Go to Label
+            </text>
+        </item>
+    </section>
+    <section title="Threadlist selection">
+        <item>
+            <text><bold>*</bold> then <bold>a</bold></text>
+            <text pos="right">
+                Select all conversations
+            </text>
+        </item>
+        <item>
+            <text><bold>*</bold> then <bold>n</bold></text>
+            <text pos="right">
+                Deselect all conversations
+            </text>
+        </item>
+        <item>
+            <text><bold>*</bold> then <bold>r</bold></text>
+            <text pos="right">
+                Select read conversations
+            </text>
+        </item>
+        <item>
+            <text><bold>*</bold> then <bold>u</bold></text>
+            <text pos="right">
+                Select unread conversations
+            </text>
+        </item>
+        <item>
+            <text><bold>*</bold> then <bold>s</bold></text>
+            <text pos="right">
+                Select starred conversations
+            </text>
+        </item>
+        <item>
+            <text><bold>*</bold> then <bold>t</bold></text>
+            <text pos="right">
+                Select unstarred conversations
+            </text>
+        </item>
+    </section>
+    <section title="Navigation">
+        <item>
+            <text><bold>u</bold></text>
+            <text pos="right">
+                Back to threadlist
+            </text>
+        </item>
+        <item>
+            <text><bold>k</bold>/<bold>j</bold></text>
+            <text pos="right">
+                Newer/older conversation
+            </text>
+        </item>
+        <item>
+            <text><bold>o</bold> or <bold>&lt;enter&gt;</bold></text>
+            <text pos="right">
+                Open conversation;<br/>collapse/expand conversation
+            </text>
+        </item>
+        <item>
+            <text><bold>p</bold>/<bold>n</bold></text>
+            <text pos="right">
+                Read previous/next message
+            </text>
+        </item>
+    </section>
+    <section title="Application">
+        <item>
+            <text><bold>c</bold></text>
+            <text pos="right">
+                Compose
+            </text>
+        </item>
+        <item>
+            <text><bold>/</bold></text>
+            <text pos="right">
+                Search
+            </text>
+        </item>
+        <item>
+            <text><bold>q</bold></text>
+            <text pos="right">
+                Focus chart contant search
+            </text>
+        </item>
+        <item>
+            <text><bold>?</bold></text>
+            <text pos="right">
+                Open shortcut help
+            </text>
+        </item>
+    </section>
+    <split/>
+    <section title="Actions">
+        <item>
+            <text><bold>x</bold></text>
+            <text pos="right">
+                Select conversation
+            </text>
+        </item>
+        <item>
+            <text><bold>s</bold></text>
+            <text pos="right">
+                Star conversation
+            </text>
+        </item>
+        <item>
+            <text><bold>y</bold></text>
+            <text pos="right">
+                Remove label
+            </text>
+        </item>
+        <item>
+            <text><bold>e</bold></text>
+            <text pos="right">
+                Archive
+            </text>
+        </item>
+        <item>
+            <text><bold>m</bold></text>
+            <text pos="right">
+                Ignore conversation
+            </text>
+        </item>
+        <item>
+            <text><bold>!</bold></text>
+            <text pos="right">
+                Report as spam
+            </text>
+        </item>
+        <item>
+            <text><bold>#</bold></text>
+            <text pos="right">
+                Move to trash
+            </text>
+        </item>
+        <item>
+            <text><bold>r</bold></text>
+            <text pos="right">
+                Reply
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>r</bold></text>
+            <text pos="right">
+                Reply in a new window
+            </text>
+        </item>
+        <item>
+            <text><bold>a</bold></text>
+            <text pos="right">
+                Reply all
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>a</bold></text>
+            <text pos="right">
+                Reply all in a new window
+            </text>
+        </item>
+        <item>
+            <text><bold>f</bold></text>
+            <text pos="right">
+                Forward
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>f</bold></text>
+            <text pos="right">
+                Forward in a new window
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>n</bold></text>
+            <text pos="right">
+                Update conversation
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;tab&gt;</bold> then <bold>&lt;enter&gt;</bold></text>
+            <text pos="right">
+                Send mail
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;esc&gt;</bold></text>
+            <text pos="right">
+                Focus last chat mole
+            </text>
+        </item>
+        <item>
+            <text><bold>]</bold> / <bold>[</bold></text>
+            <text pos="right">
+                Remove conversation from current view and go previous/next
+            </text>
+        </item>
+        <item>
+            <text><bold>}</bold> / <bold>{</bold></text>
+            <text pos="right">
+                Archive conversation and go previous/next
+            </text>
+        </item>
+        <item>
+            <text><bold>z</bold></text>
+            <text pos="right">
+                Undo last action
+            </text>
+        </item>
+        <item>
+            <text><bold>.</bold></text>
+            <text pos="right">
+                Open more actions menu
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>i</bold></text>
+            <text pos="right">
+                Mark as read
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>u</bold></text>
+            <text pos="right">
+                Mark as unread
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>s</bold></text>
+            <text pos="right">
+                Save draft
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>l</bold></text>
+            <text pos="right">
+                Like
+            </text>
+        </item>
+        <item>
+            <text><bold>&lt;shift&gt;</bold> + <bold>t</bold></text>
+            <text pos="right">
+                Add conversation to Tasks
+            </text>
+        </item>
+    </section>
+    <section title="Turn on/off Shortcut">
+        <item>
+            <text>Click Settings, and then pick an option next to <bold>Keyboard shortcuts</bold></text>
+        </item>
+    </section>
+</cheatsheet>
+
+
+
+
+
+
+
